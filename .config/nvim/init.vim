@@ -1,7 +1,8 @@
 set nocompatible
 filetype off
 
-syntax on
+syntax enable
+set number
 colorscheme tropikos
 
 " Vundle plugin manager
