@@ -1,7 +1,7 @@
-!/bin/bash
+#!/bin/bash
 
 dir=~/dotfiles
-cd dir
+cd $dir
 
 files="gitconfig githelpers tmux.conf zshrc"
 
