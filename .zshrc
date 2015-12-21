@@ -105,6 +105,9 @@ alias home="cd ~/"
 alias sites="cd /Applications/MAMP/htdocs"
 alias downloads="cd ~/Downloads/"
 
+# list shortcuts
+alias lsh='ls -d .*'
+
 # directory jumping
 alias path='echo -e ${PATH//:/\\n}'
 alias up="cd .."
