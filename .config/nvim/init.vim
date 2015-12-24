@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
 
+" Theming
 syntax enable
 set number
 colorscheme tropikos
