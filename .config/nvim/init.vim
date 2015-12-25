@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+filetype plugin indent on
 
 " Theming
 syntax enable
@@ -11,11 +11,6 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-" Python tab setting
-autocmd FileType python set sw=4
-autocmd FileType python set ts=4
-autocmd FileType python set sts=4
 
 " Vundle plugin manager
 set rtp+=~/.nvim/bundle/Vundle.vim
