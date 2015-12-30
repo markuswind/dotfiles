@@ -7,8 +7,8 @@
   default = matching
 [alias]
   s = status
-  head = !git smalltree -1
-  smalltree = !GIT_NO_PAGER=1 git largetree -30
+  head = !git tree -1
+  tree = !GIT_NO_PAGER=1 git largetree -30
   largetree = "!. ~/.githelpers && pretty_git_log"
 [color]
   branch = auto
