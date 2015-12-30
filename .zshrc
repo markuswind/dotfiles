@@ -11,9 +11,9 @@ ZSH_THEME="bullet-train"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # tmux stuff
-if [[ $TMUX ]]; then
-	
-fi
+# if [[ $TMUX ]]; then
+#	
+# fi
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
