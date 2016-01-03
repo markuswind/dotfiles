@@ -7,6 +7,12 @@ syntax enable
 set number
 colorscheme tropikos
 
+" set list + shortcut
+set list
+set listchars=tab:▸\ ,eol:¬
+
+nmap <leader>l :set list!<CR>
+
 " Disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
