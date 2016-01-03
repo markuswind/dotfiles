@@ -19,6 +19,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'lambdalisue/vim-django-support'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'https://github.com/keith/swift.vim'
 
 call vundle#end()
-filetype plugin indent on
