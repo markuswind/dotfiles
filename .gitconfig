@@ -7,6 +7,7 @@
 	default = matching
 [alias]
 	s = status
+	ci = commit --verbose
 
 	# log aliases
 	head = !git tree -1
