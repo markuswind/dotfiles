@@ -7,6 +7,7 @@
 	default = matching
 [alias]
 	s = status
+	aa = add .
 	ci = commit --verbose
 
 	# log aliases
