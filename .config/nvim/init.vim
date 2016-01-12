@@ -36,8 +36,9 @@ endfunction
 call plug#begin()
 
 Plug 'VundleVim/Vundle.vim',
-Plug 'lambdalisue/vim-django-support',
 Plug 'tmux-plugins/vim-tmux-focus-events',
+
+Plug 'lambdalisue/vim-django-support',
 Plug 'keith/swift.vim', { 'for': 'swift' }
 
 call plug#end()
