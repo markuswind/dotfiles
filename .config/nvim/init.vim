@@ -20,12 +20,11 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Vundle plugin manager
-set rtp+=~/.nvim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'lambdalisue/vim-django-support'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'https://github.com/keith/swift.vim'
+Plug 'VundleVim/Vundle.vim',
+Plug 'lambdalisue/vim-django-support',
+Plug 'tmux-plugins/vim-tmux-focus-events',
+Plug 'keith/swift.vim', { 'for': 'swift' }
 
-call vundle#end()
+call plug#end()
