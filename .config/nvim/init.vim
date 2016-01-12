@@ -35,9 +35,7 @@ endfunction
 " plugin manager
 call plug#begin()
 
-Plug 'VundleVim/Vundle.vim',
 Plug 'tmux-plugins/vim-tmux-focus-events',
-
 Plug 'lambdalisue/vim-django-support',
 Plug 'keith/swift.vim', { 'for': 'swift' }
 
