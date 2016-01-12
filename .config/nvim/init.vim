@@ -19,7 +19,20 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" Vundle plugin manager
+" Tab for autocompletion
+inoremap    <expr>   <Tab>      InsertTabWrapper()
+inoremap    <silent> <S-Tab>    <C-p>
+
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<Tab>"
+    else
+        return "\<C-n>"
+    endif
+endfunction
+
+" plugin manager
 call plug#begin()
 
 Plug 'VundleVim/Vundle.vim',
