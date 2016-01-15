@@ -21,8 +21,8 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Tab for autocompletion
-inoremap    <expr>   <Tab>      InsertTabWrapper()
-inoremap    <silent> <S-Tab>    <C-p>
+inoremap  <expr> <Tab> InsertTabWrapper()
+inoremap  <silent> <S-Tab> <C-p>
 
 function! InsertTabWrapper()
     let col = col('.') - 1
