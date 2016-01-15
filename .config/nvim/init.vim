@@ -5,6 +5,7 @@ filetype plugin indent on
 " Theming
 syntax enable
 set number
+set cursorline
 colorscheme tropikos
 
 " set list + shortcut
