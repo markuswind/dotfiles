@@ -13,7 +13,7 @@ colorscheme tropikos
 " tab size settings
 autocmd Filetype html  setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby  setlocal ts=2 sw=2 expandtab
-autocmd Filetype swift setlocal ts=2 sw=2 expandtab
+autocmd Filetype swift setlocal ts=4 sw=4 expandtab
 
 " set list
 set list
