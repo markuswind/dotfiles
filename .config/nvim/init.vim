@@ -52,6 +52,7 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Plugin configuration
+let g:netrw_list_hide= '.*\.pyc,\.DS_Store'
 let g:airline_theme = 'bubblegum'
 let g:airline_powerline_fonts = 1
 
