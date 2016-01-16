@@ -39,5 +39,7 @@ call plug#begin()
 Plug 'tmux-plugins/vim-tmux-focus-events',
 Plug 'lambdalisue/vim-django-support',
 Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()

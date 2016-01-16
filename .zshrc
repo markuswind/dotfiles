@@ -83,6 +83,9 @@ alias path='echo -e ${PATH//:/\\n}'
 alias up="cd .."
 alias ..="cd .."
 
+# Xcode
+alias xcblist="xcodebuild -list -project *.xcodeproj"
+
 # Django
 alias dj="python manage.py"
 alias drs="python manage.py runserver"
