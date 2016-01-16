@@ -8,7 +8,7 @@ set number
 set cursorline
 colorscheme tropikos
 
-" set list + shortcut
+" set list
 set list
 set listchars=tab:▸\ ,eol:¬
 
