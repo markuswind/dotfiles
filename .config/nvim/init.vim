@@ -10,6 +10,10 @@ set cursorline
 set noshowmode
 colorscheme tropikos
 
+" tab size settings
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+
 " set list
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -39,7 +43,6 @@ endfunction
 call plug#begin()
 
 Plug 'vim-airline/vim-airline'
-Plug 'tmux-plugins/vim-tmux-focus-events',
 Plug 'lambdalisue/vim-django-support',
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'tpope/vim-fugitive'
@@ -49,5 +52,5 @@ call plug#end()
 
 " Plugin configuration
 let g:airline_powerline_fonts = 1
-let g:airline_detect_whitespace = 0
+let g:airline#extensions#whitespace#show_message = 0
 let g:airline_theme = 'bubblegum'
