@@ -1,5 +1,6 @@
 set nocompatible
 set nrformats=
+set noswapfile
 filetype plugin indent on
 
 " Theming
