@@ -49,4 +49,5 @@ call plug#end()
 
 " Plugin configuration
 let g:airline_powerline_fonts = 1
+let g:airline_detect_whitespace = 0
 let g:airline_theme = 'bubblegum'
