@@ -51,6 +51,7 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Plugin configuration
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#whitespace#show_message = 0
 let g:airline_theme = 'bubblegum'
+let g:airline_powerline_fonts = 1
+
+autocmd VimEnter * AirlineToggleWhitespace
