@@ -6,6 +6,7 @@ filetype plugin indent on
 syntax enable
 set number
 set cursorline
+set noshowmode
 colorscheme tropikos
 
 " set list
@@ -36,6 +37,7 @@ endfunction
 " plugin manager
 call plug#begin()
 
+Plug 'vim-airline/vim-airline'
 Plug 'tmux-plugins/vim-tmux-focus-events',
 Plug 'lambdalisue/vim-django-support',
 Plug 'keith/swift.vim', { 'for': 'swift' }
@@ -43,3 +45,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
+
+" Plugin configuration
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'bubblegum'
