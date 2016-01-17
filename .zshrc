@@ -7,11 +7,19 @@ export ZSH=/Users/markus/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bullet-train"
 
-# disable tab auto titling in iTerm2
-DISABLE_AUTO_TITLE="true"
+# load oh-my-zsh if installed
+if [ -f $ZSH/oh-my-zsh.sh ]; then
+  source $ZSH/oh-my-zsh.sh
+else
+  echo 'oh-my-zsh is not installed'
+fi
 
-# zsh-syntax-hightlighting (brew install)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh-syntax-hightlighting
+if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  echo "run 'brew install zsh-syntax-highlighting' to enable syntaxhighlighting"
+fi
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -27,12 +35,6 @@ plugins=(git)
 # User configuration
 export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/markus/bin/:/Users/markus/Library/Android/sdk/tools:/Users/markus/Library/Android/sdk/platform-tools:/usr/local/mysql/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-if [ -f $ZSH/oh-my-zsh.sh ]; then
-  source $ZSH/oh-my-zsh.sh
-else
-  echo 'oh-my-zsh is not installed'
-fi
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -59,6 +61,8 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # iTerm2 tab naming
+DISABLE_AUTO_TITLE="true"
+
 function tabname() {
   echo -ne "\033]0;$1\007"
 }
