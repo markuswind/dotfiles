@@ -18,7 +18,7 @@ fi
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
-  echo "run 'brew install zsh-syntax-highlighting' to enable syntaxhighlighting"
+  echo "zsh-syntax-highlighting is not installed (check: https://github.com/zsh-users/zsh-syntax-highlighting for instructions)"
 fi
 
 # Uncomment the following line to enable command auto-correction.
