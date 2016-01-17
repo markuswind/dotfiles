@@ -5,10 +5,11 @@ filetype plugin indent on
 
 " Theming
 syntax enable
+colorscheme tropikos
+
 set number
 set cursorline
 set noshowmode
-colorscheme tropikos
 
 " tab size settings
 autocmd Filetype html  setlocal ts=2 sw=2 expandtab
