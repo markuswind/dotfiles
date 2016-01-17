@@ -10,11 +10,6 @@ ZSH_THEME="bullet-train"
 # zsh-syntax-hightlighting (brew install)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# tmux stuff
-# if [[ $TMUX ]]; then
-#	
-# fi
-
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
