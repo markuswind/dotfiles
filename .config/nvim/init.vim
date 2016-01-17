@@ -31,15 +31,6 @@ noremap <Right> <NOP>
 inoremap  <expr> <Tab> InsertTabWrapper()
 inoremap  <silent> <S-Tab> <C-p>
 
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<Tab>"
-    else
-        return "\<C-n>"
-    endif
-endfunction
-
 " plugin manager
 call plug#begin()
 
@@ -56,4 +47,16 @@ let g:netrw_list_hide= '.*\.pyc,\.DS_Store'
 let g:airline_theme = 'bubblegum'
 let g:airline_powerline_fonts = 1
 
+" Disable airline whitespace indicator
 autocmd VimEnter * AirlineToggleWhitespace
+
+" Functions
+
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<Tab>"
+    else
+        return "\<C-n>"
+    endif
+endfunction
