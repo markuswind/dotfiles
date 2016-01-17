@@ -31,7 +31,7 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bi
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 else
-  echo 'oh-my-zsh not installed'
+  echo 'oh-my-zsh is not installed'
 fi
 
 # You may need to manually set your language environment
@@ -50,6 +50,7 @@ fi
 # Virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/DjangoProjects
+
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Source aliases
