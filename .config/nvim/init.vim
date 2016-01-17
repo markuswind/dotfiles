@@ -52,7 +52,6 @@ let g:airline_powerline_fonts = 1
 autocmd VimEnter * AirlineToggleWhitespace
 
 " Functions
-
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
