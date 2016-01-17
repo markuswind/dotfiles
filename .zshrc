@@ -50,7 +50,12 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Source aliases
 if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
+  source ~/.bash_aliases
 else
-    print " ~/.bash_aliases not found."
+  print "~/.bash_aliases not found."
 fi
+
+# iTerm2 tab naming
+function tabname() {
+  echo -ne "\033]0;$1\007"
+}

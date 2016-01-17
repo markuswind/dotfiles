@@ -11,7 +11,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-  ¬
+
 # servers¬
 alias mysql="/Applications/MAMP/Library/bin/mysql"¬
 alias startftp="sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
