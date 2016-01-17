@@ -11,10 +11,12 @@ set number
 set cursorline
 set noshowmode
 
-" tab size settings
+" filetype settings
 autocmd Filetype html  setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby  setlocal ts=2 sw=2 expandtab
 autocmd Filetype swift setlocal ts=4 sw=4 expandtab
+
+au BufNewFile,BufRead .bash_aliases call SetFileTypeSH("bash")
 
 " enable whitespace indicators
 set list
