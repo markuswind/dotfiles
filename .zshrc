@@ -63,6 +63,6 @@ fi
 # iTerm2 tab naming
 DISABLE_AUTO_TITLE="true"
 
-function tabname() {
+function nametab() {
   echo -ne "\033]0;$1\007"
 }
