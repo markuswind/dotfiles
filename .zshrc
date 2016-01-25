@@ -65,8 +65,8 @@ export PROJECT_HOME=$HOME/DjangoProjects
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Source aliases
-if [ -f ~/.bash_aliases ]; then
-  source ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+  source $HOME/.bash_aliases
 fi
 
 # iTerm2 tab naming
