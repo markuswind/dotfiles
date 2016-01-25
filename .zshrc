@@ -52,6 +52,16 @@ export PROJECT_HOME=$HOME/DjangoProjects
 
 source /usr/local/bin/virtualenvwrapper.sh
 
+# Source git-completion
+if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
+  source $HOME/dotfiles/.bin/git-completion.bash
+fi
+
+# Source django-completion 
+if [ -f $HOME/dotfiles/.bin/django_bash_completion ]; then
+  . $HOME/dotfiles/.bin/django_baash_completion
+fi
+
 # Source aliases
 if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
