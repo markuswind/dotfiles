@@ -54,6 +54,10 @@ if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash
 fi
 
+if [ -f $HOME/dotfiles/.bin/djang_bash_completion ]; then
+  . $HOME/dotfiles/.bin/django_baash_completion
+fi
+
 # Virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/DjangoProjects
