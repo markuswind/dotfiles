@@ -2,9 +2,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="bullet-train"
 
 # load oh-my-zsh if installed
@@ -49,15 +46,6 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Source git-completion
-if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
-  source $HOME/dotfiles/.bin/git-completion.bash
-fi
-
-if [ -f $HOME/dotfiles/.bin/djang_bash_completion ]; then
-  . $HOME/dotfiles/.bin/django_baash_completion
-fi
-
 # Virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/DjangoProjects
@@ -65,8 +53,8 @@ export PROJECT_HOME=$HOME/DjangoProjects
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Source aliases
-if [ -f $HOME/.bash_aliases ]; then
-  source $HOME/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+  source ~/.bash_aliases
 fi
 
 # iTerm2 tab naming

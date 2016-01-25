@@ -2,12 +2,16 @@ set nocompatible
 set ttyfast
 
 set nrformats=
-set noswapfile
-set nobackup
 set autoread
 set ignorecase
 
-filetype plugin indent on
+" Set centralize backups, swapfiles and undo history
+set backupdir=~/dotfiles/.config/nvim/backups
+set directory=~/dotfiles/.config/nvim/swaps
+
+if exists("&undodir")
+  set undodir=~/~dotfiles/.config/nvim/undo
+endif
 
 " Theming
 syntax enable
@@ -21,6 +25,8 @@ set noshowmode
 set scrolloff=10
 
 " filetype settings
+filetype plugin indent on
+
 set tabstop=4
 set smarttab
 
