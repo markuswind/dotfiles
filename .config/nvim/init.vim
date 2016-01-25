@@ -1,6 +1,12 @@
 set nocompatible
+set ttyfast
+
 set nrformats=
 set noswapfile
+set nobackup
+set autoread
+set ignorecase
+
 filetype plugin indent on
 
 " Theming
@@ -8,10 +14,16 @@ syntax enable
 colorscheme tropikos
 
 set number
+set nowrap
+set showmatch
 set cursorline
 set noshowmode
+set scrolloff=10
 
 " filetype settings
+set tabstop=4
+set smarttab
+
 autocmd Filetype html  setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby  setlocal ts=2 sw=2 expandtab
 autocmd Filetype swift setlocal ts=4 sw=4 expandtab
@@ -39,7 +51,7 @@ call plug#begin()
 
 Plug 'vim-airline/vim-airline'
 Plug 'lambdalisue/vim-django-support',
-Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'keith/swift.vim',
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
