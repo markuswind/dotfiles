@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -33,7 +33,7 @@ HIST_STAMPS="dd/mm/yyyy"
 plugins=(git)
 
 # User configuration
-export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/bin:~/dotfiles/bin"
+export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/bin:$HOME/dotfiles/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
