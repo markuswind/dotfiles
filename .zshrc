@@ -49,6 +49,11 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Source git-completion
+if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
+  source $HOME/dotfiles/.bin/git-completion.bash
+fi
+
 # Virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/DjangoProjects
