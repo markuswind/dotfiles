@@ -63,8 +63,8 @@ if [ -f $HOME/dotfiles/.bin/django_bash_completion ]; then
 fi
 
 # Source aliases
-if [ -f ~/.bash_aliases ]; then
-  source ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+  source $HOME/.bash_aliases
 fi
 
 # iTerm2 tab naming
