@@ -22,7 +22,7 @@ set nowrap
 set showmatch
 set cursorline
 set noshowmode
-set scrolloff=10
+set scrolloff=30
 
 " filetype settings
 filetype plugin indent on
