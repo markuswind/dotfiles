@@ -28,6 +28,8 @@ alias lstree='find . -type f'
 alias path='echo -e ${PATH//:/\\n}'
 
 # Xcode
+alias purgeallbuilds='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
+
 alias iPhone4s="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-4s"
 alias iPhone5s="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-5"
 alias iPhone6="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6"
