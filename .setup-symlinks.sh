@@ -3,7 +3,7 @@
 dir=~/dotfiles
 cd $dir
 
-files="bash_aliases gitconfig githelpers tmux.conf zshrc"
+files="bash_aliases gitconfig githelpers tmux.conf zshrc xvimrc"
 
 for file in $files;
 do
