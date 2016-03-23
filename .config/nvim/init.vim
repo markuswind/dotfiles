@@ -6,6 +6,8 @@ set autoread
 set ignorecase
 
 " Set centralize backups, swapfiles and undo history
+set clipboard=unnamedplus
+
 set backupdir=~/dotfiles/.config/nvim/backups
 set directory=~/dotfiles/.config/nvim/swaps
 
