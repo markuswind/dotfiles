@@ -63,3 +63,38 @@ pretty_git_log() {
             less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
         fi
 }
+
+push_wip()
+{
+    branch="$(git rev-parse --abbrev-ref HEAD)"
+    remote="$(git config "branch.$branch.remote")"
+    tag="wip-$(whoami)"
+
+    git stash -a
+    git push "$remote" "+refs/stash:refs/tags/$tag"
+}
+
+pull_wip()
+{
+    branch="$(git rev-parse --abbrev-ref HEAD)"
+    remote="$(git config "branch.$branch.remote")"
+    tag="wip-$(whoami)"
+    ref="refs/tags/$tag"
+
+    object="$(git ls-remote origin "$ref" | awk '{ print $1 }')"
+    git="$(git rev-parse --show-cdup).git"
+
+    # Download wip object
+    git fetch "$remote" "$ref"
+
+    # Tell Git this is a stash thing
+    echo "$object" > "$git/refs/stash"
+    git log "$object" -1 --format="0000000000000000000000000000000000000000 %H %an <%ae> %ad   %s" \
+        --date=format:"%s %z" > "$git/logs/refs/stash"
+
+    # Pop it
+    git stash pop
+
+    # Delete remote wip object
+    git push "$remote" ":$ref"
+}

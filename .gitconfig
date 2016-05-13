@@ -11,8 +11,11 @@
 	aa = add .
 	ci = commit --verbose
 
+    # wip 'remote' stash
+    push-wip = "!. ~/.githelpers && push_wip"
+	pull-wip = "!. ~/.githelpers && pull_wip"
+
 	# log aliases
-    difflog = !git log -p -2
 	head = !git tree -1
 	tree = !GIT_NO_PAGER=1 git largetree -30
 	largetree = "!. ~/.githelpers && pretty_git_log"
