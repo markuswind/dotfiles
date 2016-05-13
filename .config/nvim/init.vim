@@ -62,6 +62,7 @@ Plug 'lambdalisue/vim-django-support',
 Plug 'keith/swift.vim',
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
