@@ -1,5 +1,9 @@
 [core]
 	excludesfile = /Users/markus/.gitignore_global
+[credential]
+    helper = osxkeychain	
+[crential "https://github.com"]
+    username = markuswind
 [user]
 	name = Markus Wind
 	email = markuswind@gmail.com

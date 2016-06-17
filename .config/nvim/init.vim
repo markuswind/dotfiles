@@ -17,7 +17,7 @@ endif
 
 " Theming
 syntax enable
-colorscheme tropikos
+colorscheme tomorrow-night 
 
 set number
 set nowrap
@@ -57,9 +57,10 @@ inoremap  <silent> <S-Tab> <C-p>
 " plugin manager
 call plug#begin()
 
-Plug 'vim-airline/vim-airline'
-Plug 'lambdalisue/vim-django-support',
 Plug 'keith/swift.vim',
+Plug 'vim-airline/vim-airline'
+Plug 'cfdrake/vim-carthage'
+Plug 'lambdalisue/vim-django-support',
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'

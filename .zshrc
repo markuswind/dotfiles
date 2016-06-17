@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="bullet-train"
+ZSH_THEME="dstufft"
 
 # load oh-my-zsh if installed
 if [ -f $ZSH/oh-my-zsh.sh ]; then

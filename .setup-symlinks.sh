@@ -3,6 +3,7 @@
 dir=~/dotfiles
 cd $dir
 
+YELLOW = '\033[0;31m'
 files="bash_aliases gitconfig githelpers tmux.conf zshrc xvimrc"
 
 for file in $files;

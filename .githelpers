@@ -14,10 +14,10 @@
 # used to split on them. A } in the commit subject or any other field will
 # break this.
 
-HASH="%C(yellow)%h%Creset"
-RELATIVE_TIME="%Cgreen(%ad)%Creset"
-AUTHOR="%C(bold blue)<%an>%Creset"
-REFS="%C(bold red)%d%Creset"
+HASH="%h"
+RELATIVE_TIME="%C(green)%ad%Creset"
+AUTHOR="by %C(yellow)%an%Creset"
+REFS="%C(magenta)%d%Creset"
 SUBJECT="%s"
 
 FORMAT="${HASH}ጶ${RELATIVE_TIME}ጶ${AUTHOR}ጶ$REFS $SUBJECT"
