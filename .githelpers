@@ -4,7 +4,7 @@ FORMAT="%h%C(reset)  %C(green)%ar%C(reset) %C(magenta)% D%C(reset)%n  %w($(($(tp
 
 show_git_head()
 {
-    pretty_git_log -1
+    pretty_head_log -1
     git show -p --pretty="tformat:"
 }
 
@@ -12,8 +12,8 @@ pretty_git_log()
 {
     git log --color=always --graph --pretty="tformat:${FORMAT}" $* |
         sed -Ee 's/\|/│/g' \
-             -e 's/\/(\x1b\[m)/╱\1/g' \
-             -e 's/\\(\x1b\[m)/╲\1/g' |
+        -e 's/\/(\x1b\[m)/╱\1/g' \
+        -e 's/\\(\x1b\[m)/╲\1/g' |
 
         # Page only if we're asked to.
         if [ -n "$GIT_NO_PAGER" ]; then
