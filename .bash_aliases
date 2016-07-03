@@ -20,6 +20,9 @@ alias home="cd ~/"
 alias sites="cd ~/Sites/"
 alias downloads="cd ~/Downloads/"
 
+# macvim shortcuts
+alias mvim='open -a MacVim'
+
 # list shortcuts
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
