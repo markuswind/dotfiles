@@ -53,18 +53,6 @@ export PROJECT_HOME=$HOME/DjangoProjects
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Library/Cocos2D/cocos2d-x-3.10/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Library/Cocos2D
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Library/Cocos2D/cocos2d-x-3.10/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
-
 # Source git-completion
 if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash
