@@ -1,3 +1,7 @@
+# MANUAL INSTALLATION::
+# xcode
+# macvim - https://github.com/alloy/macvim/wiki/Building
+
 # install & setup brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 sh .setup-brew.sh

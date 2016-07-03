@@ -19,6 +19,7 @@ endif
 " Theming
 syntax enable
 colorscheme tropikos
+set background=dark
 
 set number
 set nowrap
@@ -67,6 +68,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
+
+" Set wildignores for macvim's file explorer
+set wildignore+=.DS_Store,.git
 
 " Functions
 function! InsertTabWrapper()
