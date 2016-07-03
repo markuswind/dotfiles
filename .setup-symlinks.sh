@@ -3,7 +3,6 @@
 dir=~/dotfiles
 cd $dir
 
-YELLOW = '\033[0;31m'
 files="bash_aliases gitconfig githelpers zshrc vimrc xvimrc"
 
 for file in $files;

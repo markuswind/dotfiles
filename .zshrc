@@ -51,8 +51,6 @@ fi
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/DjangoProjects
 
-source /usr/local/bin/virtualenvwrapper.sh
-
 # Source git-completion
 if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash
