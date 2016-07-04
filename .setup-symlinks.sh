@@ -12,5 +12,4 @@ do
 done
 
 echo "Creating symlink to .vim folder"
-mkdir -p ~/.vim
 ln -sf $dir/.vim ~/.vim
