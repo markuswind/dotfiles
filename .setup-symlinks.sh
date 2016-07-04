@@ -12,5 +12,5 @@ do
 done
 
 echo "Creating symlink to .vim folder"
-mkdir -p $dir/.vim
+mkdir -p ~/.vim
 ln -sf $dir/.vim ~/.vim
