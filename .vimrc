@@ -18,7 +18,7 @@ endif
 
 " Theming
 syntax enable
-colorscheme tropikos
+colorscheme base16-ocean
 set background=dark
 
 set number
@@ -39,7 +39,8 @@ autocmd Filetype html  setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby  setlocal ts=2 sw=2 expandtab
 autocmd Filetype swift setlocal ts=4 sw=4 expandtab
 
-au BufNewFile,BufRead .bash_aliases call SetFileTypeSH("bash")
+au BufNewFile,BufRead .* call SetFileTypeSH("bash")
+au BufNewFile,BufRead *.swift set filetype=swift
 
 " enable whitespace indicators
 set list
