@@ -5,6 +5,7 @@ brew install zsh-syntax-highlighting
 brew install mercurial
 brew install openssl
 brew install wget
+brew install node
 
 brew cask install dropbox
 brew cask install flux
