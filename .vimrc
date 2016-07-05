@@ -42,6 +42,9 @@ autocmd Filetype swift setlocal ts=4 sw=4 expandtab
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
 au BufNewFile,BufRead *.swift set filetype=swift
 
+" enable react highlighting for .js extension
+let g:jsx_ext_required = 0
+
 " enable whitespace indicators
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -67,6 +70,8 @@ Plugin 'cfdrake/vim-carthage'
 Plugin 'lambdalisue/vim-django-support'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 call vundle#end()
 filetype plugin indent on
 
