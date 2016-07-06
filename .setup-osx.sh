@@ -207,21 +207,10 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission DownloadAsk -bool false
 defaults write org.m0k.transmission MagnetOpenAsk -bool false
 
-# Set up security
 defaults write org.m0k.transmission EncryptionRequire -bool true
 defaults write org.m0k.transmission RandomPort -bool true
 defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 defaults write org.m0k.transmission BlocklistNew -bool true
 defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
-
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-
-###############################################################################
-# END OF SCRIPT                                                               #
-###############################################################################
 
 echo "Reboot to apply changes & settings!"
