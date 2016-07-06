@@ -1,22 +1,25 @@
-# download macvim with file explorer
 git clone git://github.com/alloy/macvim.git
 cd macvim/src
 
-# configure & build
 ./configure --with-features=huge \
               --enable-rubyinterp \
               --enable-pythoninterp \
               --enable-perlinterp \
               --enable-luainterp \
-              --enable-cscope
+              --enable-cscope \
+              --with-luajit \
+              --with-lua-prefix=/usr/local/bin/lua
 
 make
 
-# install finsihed, move to applications
+echo "Copying application files.."
 cp -r MacVim/Build/Release/* /Applications/
 
-# done, remove downloaded folder
+echo "Cleaning downloaded files..."
 cd ../../
 rm -rf macvim
 
-# TODO: copy new toolbar images
+echo "Copying toolbar icons.."
+cp -r ~/dotfiles/assets/macvim-icons/* /Applications/MacVim.app/Contents/Resources
+
+echo "MacVim installation finished!"
