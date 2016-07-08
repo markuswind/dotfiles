@@ -46,13 +46,13 @@ fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+   export EDITOR='vi'
 else
-  export EDITOR='vim'
+  export EDITOR='vi'
 fi
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
