@@ -8,9 +8,14 @@ brew install openssl
 brew install wget
 brew install zsh-syntax-highlighting
 
-brew install node
+# react native libraries
+brew install nvm
 brew install flow
 brew install watchman
+
+nvm install iojs
+nvm alias default iojs
+npm install -g react-native-cli
 
 brew cask install dropbox
 brew cask install flux

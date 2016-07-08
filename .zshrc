@@ -58,6 +58,10 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/DjangoProjects
 
+# Set nvm directory
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Source git-completion
 if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash
