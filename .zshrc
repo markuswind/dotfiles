@@ -31,9 +31,8 @@ plugins=(git)
 
 # User configuration
 export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4.1_1"
-export MAMP="/Applications/MAMP/Library/bin"
 export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
-export PATH="$PATH:$MAMP:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -42,10 +41,10 @@ export LC_CTYPE="utf-8"
 
 # use brew vim if present
 /usr/local/bin/vim --version > /dev/null 2>&1
-BREW_VIM_INSTALLED=$?  
-if [ $BREW_VIM_INSTALLED -eq 0 ]; then  
+BREW_VIM_INSTALLED=$?
+if [ $BREW_VIM_INSTALLED -eq 0 ]; then
   alias vi="/usr/local/bin/vim"
-fi  
+fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -66,7 +65,7 @@ if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash
 fi
 
-# Source django-completion 
+# Source django-completion
 if [ -f $HOME/dotfiles/.bin/django_bash_completion ]; then
   . $HOME/dotfiles/.bin/django_baash_completion
 fi
