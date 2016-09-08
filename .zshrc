@@ -30,7 +30,10 @@ HIST_STAMPS="dd/mm/yyyy"
 plugins=(git)
 
 # User configuration
-export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/bin:$HOME/dotfiles/bin"
+export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4.1_1"
+export MAMP="/Applications/MAMP/Library/bin"
+export PATH="/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
+export PATH="$PATH:$MAMP:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -46,9 +49,9 @@ fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vi'
+   export EDITOR='vim'
 else
-  export EDITOR='vi'
+  export EDITOR='vim'
 fi
 
 # ssh
@@ -57,10 +60,6 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # Virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/DjangoProjects
-
-# Set nvm directory
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 # Source git-completion
 if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
@@ -83,3 +82,4 @@ DISABLE_AUTO_TITLE="true"
 function nametab() {
   echo -ne "\033]0;$1\007"
 }
+export PATH="/usr/local/bin:$PATH"
