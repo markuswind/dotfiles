@@ -1,0 +1,35 @@
+"*":
+  "atom-scrolloff":
+    scrolloff: 30
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "tree-view"
+      "linter"
+    ]
+    themes: [
+      "one-dark-ui"
+      "base16-ocean-dark-syntax-theme"
+    ]
+  editor:
+    fontFamily: "Droid Sans Mono for Powerline"
+    fontSize: 12
+    scrollPastEnd: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "b954c330-a1da-6b26-e53e-cff316c396e7"
+  linter:
+    errorPanelHeight: 24
+  welcome:
+    showOnStartup: false
