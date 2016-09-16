@@ -29,6 +29,7 @@ brew cask install gimp
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
+brew cask install macvim
 brew cask install slack
 brew cask install telegram
 brew cask install transmission

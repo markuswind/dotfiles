@@ -1,6 +1,8 @@
 "*":
   "atom-scrolloff":
     scrolloff: 30
+  "autocomplete-plus":
+    confirmCompletion: "enter"
   core:
     customFileTypes:
       "source.ini": [
@@ -27,9 +29,13 @@
     fontSize: 12
     scrollPastEnd: true
     showInvisibles: true
+    tabLength: 4
   "exception-reporting":
     userId: "b954c330-a1da-6b26-e53e-cff316c396e7"
   linter:
     errorPanelHeight: 24
+  nuclide:
+    "nuclide-home":
+      showHome: false
   welcome:
     showOnStartup: false
