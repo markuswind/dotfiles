@@ -16,6 +16,9 @@
       "source.python": [
         "BUCK"
       ]
+      "source.js": [
+          "js"
+      ]
     disabledPackages: [
       "tree-view"
       "linter"

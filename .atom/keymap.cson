@@ -1,6 +1,6 @@
 'atom-text-editor':
   'ctrl-k': 'core:move-up'
   'ctrl-j': 'core:move-down'
-  
+
 'atom-text-editor.vim-mode:not(.insert-mode)':
   ': w': 'core:save'
