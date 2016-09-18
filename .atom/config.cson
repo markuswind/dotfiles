@@ -9,6 +9,9 @@
         ".buckconfig"
         ".flowconfig"
       ]
+      "source.js": [
+        "js"
+      ]
       "source.json": [
         ".arcconfig"
         "BUCK.autodeps"
@@ -16,12 +19,9 @@
       "source.python": [
         "BUCK"
       ]
-      "source.js": [
-          "js"
-      ]
     disabledPackages: [
-      "tree-view"
       "linter"
+      "tree-view"
     ]
     ignoredNames: [
       ".git"
@@ -56,10 +56,15 @@
     "nuclide-home":
       showHome: false
     use:
+      "nuclide-current-working-directory": false
+      "nuclide-datatip": false
+      "nuclide-hg-conflict-resolver": false
+      "nuclide-hg-repository": false
       "nuclide-quick-open": false
       "nuclide-source-control-side-bar": false
       "nuclide-ui": false
-      "nuclide-working-sets": false
+      "nuclide-workspace-view-locations": false
+      "nuclide-workspace-views": false
   welcome:
     showOnStartup: false
 ".ansi.text":

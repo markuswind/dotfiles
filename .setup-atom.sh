@@ -10,6 +10,7 @@ apm install language-javascript-jsx
 apm install linter
 apm install linter-eslint
 apm install nuclide
+apm install pigments
 apm install pinned-tabs
 apm install prime-file-icons
 apm install set-syntax
