@@ -10,5 +10,8 @@ sh .setup-brew.sh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 sh .setup-symlinks.sh
 
+# install atom
+sh .setup-atom.sh
+
 # setup osx settings
 sh .setup-osx.sh

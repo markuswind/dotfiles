@@ -1,7 +1,21 @@
 // atom
-@font-size: 11px;
-html, body, .tree-view, .tab-bar .tab {
-  font-size: @font-size;
+
+.tab-bar {
+  ::before {
+      display:none;
+  }
+
+  .tab {
+    max-width: 12.5em;
+  }
+}
+
+html, body, .tab-bar .tab {
+  font-size: 12.5;
+}
+
+.highlight {
+    background-color: rgb(37, 41, 50);
 }
 
 .pane.active {
@@ -11,9 +25,20 @@ html, body, .tree-view, .tab-bar .tab {
 // nuclide
 
 .nuclide-btn-group {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
+    display: none;
+}
+
+.omnisearch-modal {
+
+    .omnisearch-tabs {
+        .key-binding {
+            display: none;
+        }
+    }
+
+    .omnisearch-open-all.btn {
+        display: none;
+    }
 }
 
 // vim-mode

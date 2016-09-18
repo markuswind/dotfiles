@@ -15,4 +15,5 @@ apm install prime-file-icons
 apm install set-syntax
 apm install vim-mode
 
+rm -rf ~/.atom
 ln -sf ~/dotfiles/.atom ~/

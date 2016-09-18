@@ -20,6 +20,15 @@
       "tree-view"
       "linter"
     ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+    ]
     themes: [
       "one-dark-ui"
       "base16-ocean-dark-syntax-theme"
@@ -32,10 +41,33 @@
     tabLength: 4
   "exception-reporting":
     userId: "b954c330-a1da-6b26-e53e-cff316c396e7"
+  "git-diff":
+    showIconsInEditorGutter: true
   linter:
     errorPanelHeight: 24
   nuclide:
+    "nuclide-distraction-free-mode": {}
+    "nuclide-file-tree":
+      allowKeyboardPrefixNavigation: false
+      showOpenFiles: false
     "nuclide-home":
       showHome: false
+    use:
+      "nuclide-quick-open": false
+      "nuclide-source-control-side-bar": false
+      "nuclide-ui": false
+      "nuclide-working-sets": false
   welcome:
     showOnStartup: false
+".ansi.text":
+  editor:
+    tabLength: 4
+".hack.html.text":
+  editor:
+    tabLength: 4
+".hackfragment.source":
+  editor:
+    tabLength: 4
+".hg-commit.text":
+  editor:
+    tabLength: 4
