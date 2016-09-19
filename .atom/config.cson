@@ -61,8 +61,10 @@
       "nuclide-hg-conflict-resolver": false
       "nuclide-hg-repository": false
       "nuclide-quick-open": false
+      "nuclide-remote-projects": false
       "nuclide-source-control-side-bar": false
       "nuclide-ui": false
+      "nuclide-working-sets": false
       "nuclide-workspace-view-locations": false
       "nuclide-workspace-views": false
   welcome:
