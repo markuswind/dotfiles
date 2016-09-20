@@ -38,7 +38,7 @@
     ]
   editor:
     fontFamily: "Droid Sans Mono for Powerline"
-    fontSize: 12
+    fontSize: 13
     scrollPastEnd: true
     showInvisibles: true
     tabLength: 4

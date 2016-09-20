@@ -1,6 +1,7 @@
 brew cask install atom
 
 apm install atom-react-native-autocomplete
+apm install autocomplete-paths
 apm install base16-ocean-dark-syntax-theme
 apm install git-blame
 apm install highlight-line
