@@ -15,6 +15,7 @@ apm install pigments
 apm install pinned-tabs
 apm install prime-file-icons
 apm install set-syntax
+apm install swift-language
 apm install vim-mode
 
 rm -rf ~/.atom
