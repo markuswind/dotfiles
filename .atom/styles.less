@@ -1,5 +1,10 @@
-// atom
+@import 'ui-variables';
 
+atom-text-editor {
+  // background-color: RGB(50, 54, 67)
+}
+
+// atom
 .pane {
     padding-top: 0px;
 }
@@ -30,6 +35,14 @@ html, body, .tab-bar .tab {
     display: none;
 }
 
+.current-path {
+    font-size: 13.5px;
+}
+
+.tooltip {
+  display: none !important;
+}
+
 // nuclide
 
 .nuclide-btn-group,
@@ -50,14 +63,8 @@ html, body, .tab-bar .tab {
     }
 }
 
-.highlight-warning {
-    color: white;
-    background-color: rgb(235, 203, 139);
-}
-
-.highlight-error {
-    color: white;
-    background-color: rgb(191, 97, 106);
+.nuclide-diagnostics-highlight-group {
+    display: none;
 }
 
 .nuclide-ui-toolbar__left {

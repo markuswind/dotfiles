@@ -38,7 +38,7 @@
     ]
   editor:
     fontFamily: "Droid Sans Mono for Powerline"
-    fontSize: 13
+    fontSize: 12
     scrollPastEnd: true
     showInvisibles: true
     tabLength: 4
@@ -46,6 +46,7 @@
     userId: "b954c330-a1da-6b26-e53e-cff316c396e7"
   "git-diff":
     showIconsInEditorGutter: true
+  "highlight-line": {}
   linter:
     errorPanelHeight: 24
   nuclide:
