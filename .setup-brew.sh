@@ -7,6 +7,7 @@ brew install zsh-syntax-highlighting
 brew install mercurial
 brew install node
 brew install openssl
+brew install pidcat
 brew install wget
 brew install redis
 brew install vim
