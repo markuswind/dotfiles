@@ -43,6 +43,9 @@ alias iPhone6Plus="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDevic
 
 alias iPadAir="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPad-Air"
 
+# Android devices
+alias nexus5="emulator @Nexus_5_API_23 -dns-server 8.8.8.8"
+
 # Django¬
 alias dj="python manage.py"
 alias dm="python manage.py migrate"
