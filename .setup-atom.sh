@@ -8,6 +8,8 @@ apm install highlight-line
 apm install highlight-selected
 apm install language-babel
 apm install language-javascript-jsx
+apm install language-tex
+apm install latex
 apm install linter
 apm install linter-eslint
 apm install nuclide
