@@ -1,10 +1,17 @@
-@import 'ui-variables';
+// atom
 
 atom-text-editor {
-  // background-color: RGB(50, 54, 67)
+  background-color: rgb(50, 54, 67);
 }
 
-// atom
+atom-text-editor::shadow .gutter {
+    background-color: rgb(50, 54, 67);
+}
+
+.tree-view::before {
+    width: 0px;
+}
+
 .pane {
     padding-top: 0px;
 }
@@ -36,7 +43,12 @@ html, body, .tab-bar .tab {
 }
 
 .current-path {
-    font-size: 13.5px;
+    font-weight: lighter;
+    font-size: 13.0px;
+}
+
+.cursor-position {
+    display: none;
 }
 
 .tooltip {

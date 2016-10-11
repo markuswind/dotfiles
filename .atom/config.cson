@@ -21,7 +21,6 @@
       ]
     disabledPackages: [
       "linter"
-      "tree-view"
     ]
     ignoredNames: [
       ".git"
@@ -49,25 +48,6 @@
   "highlight-line": {}
   linter:
     errorPanelHeight: 24
-  nuclide:
-    "nuclide-distraction-free-mode": {}
-    "nuclide-file-tree":
-      allowKeyboardPrefixNavigation: false
-      showOpenFiles: false
-    "nuclide-home":
-      showHome: false
-    use:
-      "nuclide-current-working-directory": false
-      "nuclide-datatip": false
-      "nuclide-hg-conflict-resolver": false
-      "nuclide-hg-repository": false
-      "nuclide-quick-open": false
-      "nuclide-remote-projects": false
-      "nuclide-source-control-side-bar": false
-      "nuclide-ui": false
-      "nuclide-working-sets": false
-      "nuclide-workspace-view-locations": false
-      "nuclide-workspace-views": false
   welcome:
     showOnStartup: false
 ".ansi.text":
