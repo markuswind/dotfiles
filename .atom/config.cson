@@ -19,9 +19,6 @@
       "source.python": [
         "BUCK"
       ]
-    disabledPackages: [
-      "linter"
-    ]
     ignoredNames: [
       ".git"
       ".hg"
@@ -31,10 +28,12 @@
       "Thumbs.db"
       "node_modules"
     ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "base16-ocean-dark-syntax-theme"
     ]
+    useCustomTitleBar: true
   editor:
     fontFamily: "Droid Sans Mono for Powerline"
     fontSize: 12
@@ -47,7 +46,13 @@
     showIconsInEditorGutter: true
   "highlight-line": {}
   linter:
+    displayLinterInfo: false
+    displayLinterStatus: false
     errorPanelHeight: 24
+    gutterPosition: "Left"
+    showErrorTabFile: false
+    showErrorTabProject: false
+    statusIconScope: "File"
   welcome:
     showOnStartup: false
 ".ansi.text":

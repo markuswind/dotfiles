@@ -43,8 +43,7 @@ html, body, .tab-bar .tab {
 }
 
 .current-path {
-    font-weight: lighter;
-    font-size: 13.0px;
+    display:none;
 }
 
 .cursor-position {
@@ -55,40 +54,17 @@ html, body, .tab-bar .tab {
   display: none !important;
 }
 
-// nuclide
-
-.nuclide-btn-group,
-.nuclide-remote-projects-status-icon {
+// linter
+.badge {
     display: none;
 }
 
-.omnisearch-modal {
-
-    .omnisearch-tabs {
-        .key-binding {
-            display: none;
-        }
-    }
-
-    .omnisearch-open-all.btn {
-        display: none;
-    }
-}
-
-.nuclide-diagnostics-highlight-group {
-    display: none;
-}
-
-.nuclide-ui-toolbar__left {
-    display: none;
-}
-
-.nuclide-ui-toolbar--top {
-    display: none;
-}
-
-.nuclide-ui-checkbox-label {
-    display: none;
+.linter-highlight.error:not(.line-number) {
+    background-color: transparent;
+    text-weight: bolder;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: rgb(183, 86, 95);
 }
 
 // vim-mode
