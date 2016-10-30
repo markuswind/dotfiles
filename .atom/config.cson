@@ -8,6 +8,7 @@
       "source.ini": [
         ".buckconfig"
         ".flowconfig"
+        ".hgrc"
       ]
       "source.js": [
         "js"
@@ -30,18 +31,21 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "one-dark-ui"
-      "base16-ocean-dark-syntax-theme"
+      "native-ui"
+      "base16-mexico-light-syntax-theme"
     ]
-    useCustomTitleBar: true
+    useCustomTitleBar: false
   editor:
     fontFamily: "Droid Sans Mono for Powerline"
-    fontSize: 12
+    fontSize: 11
     scrollPastEnd: true
     showInvisibles: true
     tabLength: 4
   "exception-reporting":
     userId: "b954c330-a1da-6b26-e53e-cff316c396e7"
+  "file-icons":
+    coloured: false
+    tabPaneIcon: false
   "git-diff":
     showIconsInEditorGutter: true
   "highlight-line": {}
@@ -55,15 +59,3 @@
     statusIconScope: "File"
   welcome:
     showOnStartup: false
-".ansi.text":
-  editor:
-    tabLength: 4
-".hack.html.text":
-  editor:
-    tabLength: 4
-".hackfragment.source":
-  editor:
-    tabLength: 4
-".hg-commit.text":
-  editor:
-    tabLength: 4
