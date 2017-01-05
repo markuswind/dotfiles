@@ -32,12 +32,13 @@
     telemetryConsent: "no"
     themes: [
       "native-ui"
-      "base16-mexico-light-syntax-theme"
+      "base-16-mexico-light-syntax-theme"
     ]
     useCustomTitleBar: false
   editor:
     fontFamily: "Droid Sans Mono for Powerline"
     fontSize: 11
+    preferredLineLength: 500
     scrollPastEnd: true
     showInvisibles: true
     tabLength: 4
@@ -59,3 +60,5 @@
     statusIconScope: "File"
   welcome:
     showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false

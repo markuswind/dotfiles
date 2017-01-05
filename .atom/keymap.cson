@@ -4,3 +4,7 @@
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
   ': w': 'core:save'
+
+'.platform-darwin atom-text-editor:not(mini)':
+  'cmd-k': 'multi-cursor:expandUp'
+  'cmd-j': 'multi-cursor:expandDown'

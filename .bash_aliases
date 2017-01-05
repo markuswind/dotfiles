@@ -30,6 +30,8 @@ alias mvim='open -a MacVim'
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
 
+alias npmls='npm ls --only=prod --depth=0'
+
 # echo $PATH
 alias path='echo -e ${PATH//:/\\n}'
 
@@ -40,6 +42,7 @@ alias iPhone4s="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceTy
 alias iPhone5s="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-5"
 alias iPhone6="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6"
 alias iPhone6Plus="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6-Plus"
+alias iPhoneSE="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-SE"
 
 alias iPadAir="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPad-Air"
 

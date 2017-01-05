@@ -26,7 +26,7 @@ set nowrap
 set showmatch
 set cursorline
 set noshowmode
-set scrolloff=0
+set scrolloff=30
 
 " file type settings
 filetype plugin indent on
@@ -48,7 +48,7 @@ let g:jsx_ext_required = 0
 
 " enable whitespace indicators
 set list
-set listchars=tab:▸\ ,eol:¬
+" set listchars=tab:▸\ ,eol:¬
 
 nmap <leader>l :set list!<CR>
 
