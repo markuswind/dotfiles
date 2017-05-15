@@ -3,6 +3,7 @@ brew upgrade
 
 brew install android-sdk
 brew install carthage
+brew install cmus
 brew install zsh-syntax-highlighting
 brew install mercurial
 brew install node
