@@ -1,5 +1,3 @@
-set nocompatible
-set ttyfast
 
 set nrformats=
 set autoread
@@ -19,9 +17,11 @@ endif
 " Theming
 syntax enable
 colorscheme base16-ocean
+let base16colorspace=256
 set background=dark
 
 set number
+set nolist
 set nowrap
 set showmatch
 set cursorline
@@ -38,7 +38,7 @@ set smarttab
 autocmd Filetype html  setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby  setlocal ts=2 sw=2 expandtab
 autocmd Filetype swift setlocal ts=4 sw=4 expandtab
-autocmd Filetype js    setlocal ts=4 sw=4 expandtab
+autocmd Filetype js    setlocal ts=2 sw=2 expandtab
 
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
 au BufNewFile,BufRead *.swift set filetype=swift
@@ -66,6 +66,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'moll/vim-bbye'
+Plugin 'chriskempson/base16-vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Shougo/unite.vim'
 Plugin 'shougo/vimfiler.vim'
