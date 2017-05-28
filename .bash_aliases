@@ -30,6 +30,10 @@ alias mvim='open -a MacVim'
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
 
+alias tree1="tree -L 1"
+alias tree2="tree -L 2"
+alias tree3="tree -L 3"
+
 alias npmls='npm ls --only=prod --depth=0'
 
 # echo $PATH
@@ -47,7 +51,9 @@ alias iPhoneSE="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceTy
 alias iPadAir="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPad-Air"
 
 # Android devices
-alias nexus5="emulator @Nexus_5_API_23 -dns-server 8.8.8.8"
+alias nexus4="emulator -avd Nexus_4_API_16"
+alias nexus5="emulator -avd Nexus_5_API_25"
+alias nexusS="emulator -avd Nexus_S_API_25"
 
 # Django¬
 alias dj="python manage.py"

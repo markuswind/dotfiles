@@ -9,6 +9,7 @@ brew install mercurial
 brew install node
 brew install openssl
 brew install pidcat
+brew install tree
 brew install wget
 brew install vim
 brew install zsh-syntax-highlighting
@@ -31,7 +32,9 @@ brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
 brew cask install macvim
+brew cask install react-native-debugger
 brew cask install slack
+brew cakk install sublime-text
 brew cask install telegram
 brew cask install transmission
 
