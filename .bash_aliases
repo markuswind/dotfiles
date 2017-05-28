@@ -29,10 +29,7 @@ alias mvim='open -a MacVim'
 # list shortcuts
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
-
-alias tree1="tree -L 1"
-alias tree2="tree -L 2"
-alias tree3="tree -L 3"
+alias tree="tree -C -I node_modules"
 
 alias npmls='npm ls --only=prod --depth=0'
 
