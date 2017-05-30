@@ -1,8 +1,8 @@
 # Bin aliases
-alias zshconfig="nvim ~/.zshrc"
+alias aliasconfig="vim ~/.bash_aliases"
+alias zshconfig="vim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
-alias tmuxconfig="nvim ~/.tmux.conf"
-alias sourcetmux="tmux source ~/.tmux.conf"
+alias vimconfig="vim ~/.vimrc"
 
 # Empty the Trash on all mounted volumes and the main HDD
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
@@ -20,8 +20,10 @@ alias up="cd .."
 alias ..="cd .."
 
 alias home="cd ~/"
-alias sites="cd ~/Sites/"
+alias dotfiles="nametab DOTFILES && cd ~/dotfiles/" 
 alias downloads="cd ~/Downloads/"
+alias react="cd ~/ReactProjects/"
+alias work="cd ~/ReactProjects/simplicate-native/"
 
 # macvim shortcuts
 alias mvim='open -a MacVim'
@@ -52,14 +54,5 @@ alias nexus4="emulator -avd Nexus_4_API_16"
 alias nexus5="emulator -avd Nexus_5_API_25"
 alias nexusS="emulator -avd Nexus_S_API_25"
 
-# Django¬
-alias dj="python manage.py"
-alias dm="python manage.py migrate"
-alias dt="python manage.py test"
-
-alias drs="python manage.py runserver"
-alias dsh="python manage.py shell"
-alias dsm="python manage.py schemamigration"
-alias dms="python manage.py makemigrations"
-alias ddd="python manage.py dumpdata"
-alias dld="python manage.py loaddata"
+# npm shortcuts
+alias npmstart="nametab NODE && clear && npm start --reset-cache"
