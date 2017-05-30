@@ -101,6 +101,7 @@ set wildignore+=Carthage/*,node_modules/*
 set hidden
 nnoremap <C-h> :bprev<CR>
 nnoremap <C-l> :bnext<CR>
+nnoremap <C-w> :Bdelete<CR>
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = {
