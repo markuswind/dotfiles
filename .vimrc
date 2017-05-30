@@ -99,8 +99,8 @@ set wildignore+=Carthage/*,node_modules/*
 
 " Buftabline settings
 set hidden
-nnoremap <C-h> :bnext<CR>
-nnoremap <C-l> :bprev<CR>
+nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bnext<CR>
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = {
