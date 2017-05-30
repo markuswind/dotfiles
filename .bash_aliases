@@ -29,6 +29,7 @@ alias work="cd ~/ReactProjects/simplicate-native/"
 alias mvim='open -a MacVim'
 
 # list shortcuts
+alias ll="ls -lhA"
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
 alias tree="tree -C -I node_modules"
@@ -56,3 +57,11 @@ alias nexusS="emulator -avd Nexus_S_API_25"
 
 # npm shortcuts
 alias npmstart="nametab NODE && clear && npm start --reset-cache"
+
+# react native shortcuts
+alias rnra="react-native run-android"
+alias rnba="react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug"
+alias rngba="./android/.gradlew assembleRelease"
+
+alias rnri="react-native run-ios | xcpretty"
+alias rnbi="react-native bundle --platform ios --entry-file index.ios.js --dev false --bundle-output ./ios/main.jsbundle --assets-dest ./ios --sourcemap-output ./ios/sourcemap.js"
