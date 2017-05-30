@@ -49,7 +49,7 @@ let g:jsx_ext_required = 0
 
 " (disabled) enable whitespace indicators
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,trail:·,eol:¬
 
 nmap <leader>l :set list!<CR>
 
