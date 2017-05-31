@@ -32,10 +32,19 @@ alias work="cd ~/ReactProjects/simplicate-native/"
 alias mvim='open -a MacVim'
 
 # list shortcuts
-alias ll="ls -lhA"
+alias ls="ls -CF"
+alias ll="ls -CFlhA"
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
 alias tree="tree -C -I node_modules"
+
+## colorize the grep command output
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# typos
+alias sl="ls"
 
 alias npmls='npm ls --only=prod --depth=0'
 
