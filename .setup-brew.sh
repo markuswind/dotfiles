@@ -4,7 +4,6 @@ brew upgrade
 brew install android-sdk
 brew install carthage
 brew install cmus
-brew install zsh-syntax-highlighting
 brew install htop
 brew install mercurial
 brew install node
@@ -22,6 +21,8 @@ brew install watchman
 
 nvm install iojs
 nvm alias default iojs
+
+npm install -g ios-sim
 npm install -g react-native-cli
 
 brew cask install alfred
@@ -41,4 +42,3 @@ brew cask install transmission
 
 # gems
 gem install xcpretty
-gem install react-native-logcat

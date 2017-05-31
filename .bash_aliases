@@ -46,8 +46,6 @@ alias fgrep='fgrep --color=auto'
 # typos
 alias sl="ls"
 
-alias npmls='npm ls --only=prod --depth=0'
-
 # echo $PATH
 alias path='echo -e ${PATH//:/\\n}'
 
@@ -69,6 +67,8 @@ alias nexusS="emulator -avd Nexus_S_API_25"
 
 # npm shortcuts
 alias npmstart="nametab NODE && clear && npm start --reset-cache"
+alias npmglist="npm list -g --depth=0 2>/dev/null"
+alias npmlist="npm list --depth=0 2>/dev/null"
 
 # android debugging
 alias pidcat="clear && pidcat --clear --current"
