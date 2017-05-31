@@ -32,6 +32,9 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Possible values: WhenScrolling, Automatic and Always
 defaults write -g AppleShowScrollBars -string "Always"
 
+# Enable arrow scrolling behaviour in iterm2
+defaults write com.googlecode.iterm2 AlternateMouseScroll -bool true
+
 # Expand save panel by default
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
