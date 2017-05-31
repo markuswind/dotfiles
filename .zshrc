@@ -80,10 +80,7 @@ if [ -f $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
 fi
 
-# iTerm2 tab naming
-DISABLE_AUTO_TITLE="true"
-
-function nametab() {
-  echo -ne "\033]0;$1\007"
-}
-export PATH="/usr/local/bin:$PATH"
+# Source iterm2 helpers
+if [ -f $HOME/.itermhelpers ]; then
+  source $HOME/.itermhelpers
+fi

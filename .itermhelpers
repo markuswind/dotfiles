@@ -1,0 +1,47 @@
+# iTerm2 tab naming + coloring
+DISABLE_AUTO_TITLE="true"
+
+function nametab() {
+  echo -ne "\033]0;$1\007"
+}
+
+# TODO: - seems duplicate?
+function colortab {
+  case $1 in
+    red)
+      echo -e "\033]6;1;bg;red;brightness;190\a"
+      echo -e "\033]6;1;bg;green;brightness;88\a"
+      echo -e "\033]6;1;bg;blue;brightness;78\a"
+    ;;
+    orange)
+      echo -e "\033]6;1;bg;red;brightness;208\a"
+      echo -e "\033]6;1;bg;green;brightness;143\a"
+      echo -e "\033]6;1;bg;blue;brightness;78\a"
+    ;;
+    yellow)
+      echo -e "\033]6;1;bg;red;brightness;202\a"
+      echo -e "\033]6;1;bg;green;brightness;187\a"
+      echo -e "\033]6;1;bg;blue;brightness;103\a"
+    ;;
+    green)
+      echo -e "\033]6;1;bg;red;brightness;147\a"
+      echo -e "\033]6;1;bg;green;brightness;182\a"
+      echo -e "\033]6;1;bg;blue;brightness;109\a"
+    ;;
+    blue)
+      echo -e "\033]6;1;bg;red;brightness;97\a"
+      echo -e "\033]6;1;bg;green;brightness;156\a"
+      echo -e "\033]6;1;bg;blue;brightness;201\a"
+    ;;
+    purple)
+      echo -e "\033]6;1;bg;red;brightness;164\a"
+      echo -e "\033]6;1;bg;green;brightness;127\a"
+      echo -e "\033]6;1;bg;blue;brightness;187\a"
+    ;;
+    grey)
+      echo -e "\033]6;1;bg;red;brightness;246\a"
+      echo -e "\033]6;1;bg;green;brightness;246\a"
+      echo -e "\033]6;1;bg;blue;brightness;246\a"
+    ;;
+  esac
+}
