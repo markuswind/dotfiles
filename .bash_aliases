@@ -1,55 +1,52 @@
-# Bin aliases
+# config
 alias aliasconfig="vim ~/.bash_aliases"
 alias zshconfig="vim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc"
 
-# Empty the Trash on all mounted volumes and the main HDD
+# general
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
 # file/dir creation
 alias mkdir="mkdir -pv"
 
-# IP addresses
+# colorize the grep command output
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# network
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
-# MAMP Bins
-alias mysql="/Applications/MAMP/library/bin/mysql"
+alias openports='netstat -tulanp'
 
 # directory jumping
 alias up="cd .."
 alias ..="cd .."
 
 alias home="cd ~/"
-alias dotfiles="nametab DOTFILES && colortab grey && cd ~/dotfiles/" 
+alias dotfiles="nametab DOTFILES && colortab grey && clear && cd ~/dotfiles/" 
 alias downloads="cd ~/Downloads/"
 alias react="cd ~/ReactProjects/"
 alias work="cd ~/ReactProjects/simplicate-native/"
-
-# tab naming + coloring
-alias tabbuild="nametab BUILD && colortab blue && clear"
-alias tabgit="nametab GIT && colortab red && clear"
-alias tabnode="nametab NODE && colortab orange && clear"
-
-# macvim shortcuts
-alias mvim='open -a MacVim'
 
 # list shortcuts
 alias ls="ls -CF"
 alias ll="ls -CFlhA"
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
+alias sl="ls" # typo
 alias tree="tree -C -I node_modules"
 
-## colorize the grep command output
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+# iterm tab naming + coloring
+alias tabbuild="nametab BUILD && colortab blue && clear"
+alias tabgit="nametab GIT && colortab red && clear"
+alias tabnode="nametab NODE && colortab orange && clear"
 
-# typos
-alias sl="ls"
+# macvim
+alias mvim='open -a MacVim'
 
 # echo $PATH
 alias path='echo -e ${PATH//:/\\n}'
@@ -76,13 +73,13 @@ alias npmglist="npm list -g --depth=0 2>/dev/null"
 alias npmlist="npm list --depth=0 2>/dev/null"
 
 # android debugging
-alias pidcat="clear && pidcat --clear --current"
+alias pidcat="nametab DEBUG && colortab purple && clear && pidcat --clear --current"
 
 # react native shortcuts
 alias rnra="react-native run-android"
 alias rnla="nametab DEBUG && colortab purple && clear && pidcat --clear --current -t ReactNativeJS"
 alias rnba="react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug"
-alias rngba="./android/.gradlew assembleRelease"
+alias rngba="cd android && ./gradlew assembleRelease && cd .."
 
 alias rnri="react-native run-ios | xcpretty"
 alias rnli="nametab DEBUG && colortab purple && clear && react-native log-ios"
