@@ -81,6 +81,6 @@ if [ -f $HOME/.bash_aliases ]; then
 fi
 
 # Source iterm2 helpers
-if [ -f $HOME/.itermhelpers ]; then
-  source $HOME/.itermhelpers
+if [ -f $HOME/dotfiles/.itermhelpers ]; then
+  source $HOME/dotfiles/.itermhelpers
 fi

@@ -23,10 +23,15 @@ alias up="cd .."
 alias ..="cd .."
 
 alias home="cd ~/"
-alias dotfiles="nametab DOTFILES && cd ~/dotfiles/" 
+alias dotfiles="nametab DOTFILES && colortab grey && cd ~/dotfiles/" 
 alias downloads="cd ~/Downloads/"
 alias react="cd ~/ReactProjects/"
 alias work="cd ~/ReactProjects/simplicate-native/"
+
+# tab naming + coloring
+alias tabbuild="nametab BUILD && colortab blue && clear"
+alias tabgit="nametab GIT && colortab red && clear"
+alias tabnode="nametab NODE && colortab orange && clear"
 
 # macvim shortcuts
 alias mvim='open -a MacVim'
@@ -75,10 +80,10 @@ alias pidcat="clear && pidcat --clear --current"
 
 # react native shortcuts
 alias rnra="react-native run-android"
-alias rnla="nametab DEBUG && clear && pidcat --clear --current -t ReactNativeJS"
+alias rnla="nametab DEBUG && colortab purple && clear && pidcat --clear --current -t ReactNativeJS"
 alias rnba="react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug"
 alias rngba="./android/.gradlew assembleRelease"
 
 alias rnri="react-native run-ios | xcpretty"
-alias rnli="nametab DEBUG && clear && react-native log-ios"
+alias rnli="nametab DEBUG && colortab purple && clear && react-native log-ios"
 alias rnbi="react-native bundle --platform ios --entry-file index.ios.js --dev false --bundle-output ./ios/main.jsbundle --assets-dest ./ios --sourcemap-output ./ios/sourcemap.js"

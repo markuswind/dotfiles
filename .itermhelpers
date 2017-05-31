@@ -9,9 +9,9 @@ function nametab() {
 function colortab {
   case $1 in
     red)
-      echo -e "\033]6;1;bg;red;brightness;190\a"
-      echo -e "\033]6;1;bg;green;brightness;88\a"
-      echo -e "\033]6;1;bg;blue;brightness;78\a"
+      echo -e "\033]6;1;bg;red;brightness;243\a"
+      echo -e "\033]6;1;bg;green;brightness;59\a"
+      echo -e "\033]6;1;bg;blue;brightness;57\a"
     ;;
     orange)
       echo -e "\033]6;1;bg;red;brightness;208\a"
@@ -39,9 +39,9 @@ function colortab {
       echo -e "\033]6;1;bg;blue;brightness;187\a"
     ;;
     grey)
-      echo -e "\033]6;1;bg;red;brightness;246\a"
-      echo -e "\033]6;1;bg;green;brightness;246\a"
-      echo -e "\033]6;1;bg;blue;brightness;246\a"
+      echo -e "\033]6;1;bg;red;brightness;221\a"
+      echo -e "\033]6;1;bg;green;brightness;221\a"
+      echo -e "\033]6;1;bg;blue;brightness;221\a"
     ;;
   esac
 }
