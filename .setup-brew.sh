@@ -28,7 +28,6 @@ npm install -g react-native-cli
 brew cask install alfred
 brew cask install android-studio
 brew cask install dropbox
-brew cask install flux
 brew cask install gimp
 brew cask install google-chrome
 brew cask install iterm2

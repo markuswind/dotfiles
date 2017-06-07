@@ -69,6 +69,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'moll/vim-bbye'
 Plugin 'ap/vim-buftabline'
 Plugin 'chriskempson/base16-vim'
+Bundle 'daviesjamie/vim-base16-lightline'
 Plugin 'Shougo/unite.vim'
 Plugin 'shougo/vimfiler.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -117,7 +118,7 @@ set encoding=utf-8
 scriptencoding utf-8
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'base16',
       \ 'component': {
       \   'readonly': '%{&readonly?"⭤":""}',
       \ },
