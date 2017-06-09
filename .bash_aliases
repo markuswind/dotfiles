@@ -31,6 +31,7 @@ alias dotfiles="nametab DOTFILES && colortab grey && clear && cd ~/dotfiles/"
 alias downloads="cd ~/Downloads/"
 alias react="cd ~/ReactProjects/"
 alias work="cd ~/ReactProjects/simplicate-native/"
+alias selectinput="cd ~/ReactProjects/react-native-select-input-ios/"
 
 # list shortcuts
 alias ls="ls -CF"
@@ -42,6 +43,7 @@ alias tree="tree -C -I node_modules"
 
 # iterm tab naming + coloring
 alias tabbuild="nametab BUILD && colortab blue && clear"
+alias tabdebug="nametab DEBUG && colortab purple && clear"
 alias tabgit="nametab GIT && colortab red && clear"
 alias tabnode="nametab NODE && colortab orange && clear"
 

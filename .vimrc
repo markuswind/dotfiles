@@ -67,7 +67,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'moll/vim-bbye'
-Plugin 'ap/vim-buftabline'
+" Plugin 'ap/vim-buftabline'
 Plugin 'chriskempson/base16-vim'
 Bundle 'daviesjamie/vim-base16-lightline'
 Plugin 'Shougo/unite.vim'
