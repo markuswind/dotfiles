@@ -9,6 +9,7 @@ brew install mercurial
 brew install node
 brew install openssl
 brew install pidcat
+brew install ripgrep
 brew install tree
 brew install wget
 brew install vim

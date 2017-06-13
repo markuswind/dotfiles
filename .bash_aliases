@@ -11,7 +11,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 alias mkdir="mkdir -pv"
 
 # colorize the grep command output
-alias grep='grep --color=auto'
+alias grep='rg'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
@@ -68,6 +68,7 @@ alias iPadAir="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceTyp
 alias nexus4="emulator -avd Nexus_4_API_16"
 alias nexus5="emulator -avd Nexus_5_API_25"
 alias nexusS="emulator -avd Nexus_S_API_25"
+alias pixelXL="emulator -avd Pixel_XL_API_26"
 
 # npm shortcuts
 alias npmstart="nametab NODE && colortab orange && clear && npm start --reset-cache"
