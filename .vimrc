@@ -13,12 +13,35 @@ if exists("&undodir")
   set undodir=~/~dotfiles/.config/vim/undo
 endif
 
+" plugin manager
+call plug#begin('~/.vim/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'moll/vim-bbye'
+Plug 'chriskempson/base16-vim'
+Plug 'Shougo/unite.vim'
+Plug 'shougo/vimfiler.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mhinz/vim-startify'
+Plug 'kopischke/vim-stay'
+Plug 'keith/swift.vim'
+Plug 'cfdrake/vim-carthage'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+call plug#end()
+filetype plugin indent on
+
 " Theming
 syntax enable
-colorscheme base16-ocean
-let base16colorspace=256
-set background=dark
+colorscheme PaperColor
+
+set background=light
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+
 let g:Powerline_symbols = 'fancy'
 
 set number
@@ -62,30 +85,6 @@ noremap <Right> <NOP>
 " Jump out of a block of parentheses (uses Delitmate)
 imap <C-j> <C-g>g
 
-" plugin manager
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'moll/vim-bbye'
-" Plugin 'ap/vim-buftabline'
-Plugin 'chriskempson/base16-vim'
-Bundle 'daviesjamie/vim-base16-lightline'
-Plugin 'Shougo/unite.vim'
-Plugin 'shougo/vimfiler.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mhinz/vim-startify'
-Plugin 'kopischke/vim-stay'
-Plugin 'keith/swift.vim'
-Plugin 'cfdrake/vim-carthage'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-call vundle#end()
-filetype plugin indent on
-
 autocmd VimEnter * silent! autocmd! Explore
 
 " file explorer settings
@@ -98,11 +97,11 @@ set viewoptions=cursor,folds,slash,unix
 set wildignore+=.DS_Store,.git
 set wildignore+=Carthage/*,node_modules/*
 
-" Buftabline settings
+" tab settings
 set hidden
-nnoremap <C-h> :bprev<CR>
-nnoremap <C-l> :bnext<CR>
-nnoremap <C-w> :Bdelete<CR>
+nnoremap <C-h> :tabprev<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-w> :tabclose<CR>
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = {
@@ -118,7 +117,7 @@ set encoding=utf-8
 scriptencoding utf-8
 
 let g:lightline = {
-      \ 'colorscheme': 'base16',
+      \ 'colorscheme': 'PaperColor',
       \ 'component': {
       \   'readonly': '%{&readonly?"⭤":""}',
       \ },
