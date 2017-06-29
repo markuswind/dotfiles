@@ -1,3 +1,4 @@
+set noeol
 set nrformats=
 set autoread
 set ignorecase
@@ -75,6 +76,14 @@ autocmd Filetype js    setlocal ts=4 sw=4
 
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
 au BufNewFile,BufRead *.swift set filetype=swift
+
+" turn off auto indenting
+set nocindent
+set nosmartindent
+set noautoindent
+set indentexpr=
+filetype indent off
+filetype plugin indent off
 
 " enable react highlighting for .js extension
 let g:jsx_ext_required = 0
