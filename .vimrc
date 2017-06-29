@@ -1,37 +1,18 @@
-set noeol
-set autoread
-set ignorecase
-
-" Set centralize backups, swap files and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-set shortmess+=A
-
-if exists("&undodir")
-  set undodir=~/~dotfiles/.config/vim/undo
-endif
-
-" yank to clipboard
-if has("clipboard")
-  set clipboard=unnamed
-
-  if has("unnamedplus")
-    set clipboard+=unnamedplus
-  endif
-endif
-
 " plugin manager
 call plug#begin('~/.vim/plugged')
-Plug 'VundleVim/Vundle.vim'
-Plug 'moll/vim-bbye'
-Plug 'zefei/cake16'
-Plug 'lilydjwg/colorizer'
+" file plugins
 Plug 'shougo/unite.vim' " used by vimfiler
 Plug 'shougo/vimfiler.vim'
 Plug 'ctrlpvim/ctrlp.vim'
+" theming plugins
+Plug 'zefei/cake16'
+Plug 'lilydjwg/colorizer'
 Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
+" syntax coloring
 Plug 'sheerun/vim-polyglot'
+" utilities
+Plug 'moll/vim-bbye'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
 " Plug 'vim-syntastic/syntastic'
@@ -39,23 +20,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 filetype plugin indent on
-
-" Theming
-syntax enable
-colorscheme cake16 " PaperColor
-
-set background=light
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
-let g:Powerline_symbols = 'fancy'
-
-" editor settings
-set number
-set nolist
-set nowrap
-set showmatch
-set cursorline
-set noshowmode
-set scrolloff=30
 
 " file type settings
 filetype plugin indent on
@@ -71,11 +35,32 @@ autocmd Filetype js    setlocal ts=4 sw=4
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
 au BufNewFile,BufRead *.swift set filetype=swift
 
+" Theming
+syntax enable
+colorscheme cake16 " PaperColor
+
+set background=light
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+let g:Powerline_symbols = 'fancy'
+
+" editor settings
+set noeol
+set autoread
+set ignorecase
+set number
+set nolist
+set nowrap
+set showmatch
+set cursorline
+set noshowmode
+set scrolloff=30
+
 " turn off auto indenting
 set nocindent
 set nosmartindent
 set autoindent
 set indentexpr=
+
 filetype indent off
 filetype plugin indent off
 
@@ -136,3 +121,22 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+
+" Set centralize backups, swap files and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+set shortmess+=A
+
+if exists("&undodir")
+  set undodir=~/~dotfiles/.config/vim/undo
+endif
+
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed
+
+  if has("unnamedplus")
+    set clipboard+=unnamedplus
+  endif
+endif
+
