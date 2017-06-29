@@ -3,8 +3,6 @@ set autoread
 set ignorecase
 
 " Set centralize backups, swap files and undo history
-set clipboard=unnamedplus
-
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set shortmess+=A
@@ -13,37 +11,49 @@ if exists("&undodir")
   set undodir=~/~dotfiles/.config/vim/undo
 endif
 
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed
+
+  if has("unnamedplus")
+    set clipboard+=unnamedplus
+  endif
+endif
+
+" show hidden files in netrw
+let g:netrw_list_hide = '^\./$'
+let g:netrw_hide = 1
+
 " plugin manager
 call plug#begin('~/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
 Plug 'moll/vim-bbye'
-Plug 'chriskempson/base16-vim'
+Plug 'zefei/cake16'
 Plug 'Shougo/unite.vim'
 Plug 'shougo/vimfiler.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
+" Plug 'vim-syntastic/syntastic'
 Plug 'keith/swift.vim'
 Plug 'cfdrake/vim-carthage'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 call plug#end()
 filetype plugin indent on
 
 " Theming
 syntax enable
-colorscheme PaperColor
+colorscheme cake16 " PaperColor
 
 set background=light
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
-
 let g:Powerline_symbols = 'fancy'
 
+" editor settings
 set number
 set nolist
 set nowrap
@@ -56,13 +66,12 @@ set scrolloff=30
 filetype plugin indent on
 
 set tabstop=4
-" set expandtab
-" set smarttab
+set expandtab
 
-autocmd Filetype html  setlocal ts=2 sw=2 expandtab
-autocmd Filetype ruby  setlocal ts=2 sw=2 expandtab
-autocmd Filetype swift setlocal ts=4 sw=4 expandtab
-autocmd Filetype js    setlocal ts=4 sw=2 expandtab
+autocmd Filetype html  setlocal ts=2 sw=2
+autocmd Filetype ruby  setlocal ts=2 sw=2
+autocmd Filetype swift setlocal ts=4 sw=4
+autocmd Filetype js    setlocal ts=4 sw=4
 
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
 au BufNewFile,BufRead *.swift set filetype=swift
@@ -119,7 +128,7 @@ scriptencoding utf-8
 let g:lightline = {
       \ 'colorscheme': 'PaperColor',
       \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
+      \   'readonly': '%{&readonly?"#":""}',
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
