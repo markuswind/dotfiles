@@ -1,5 +1,4 @@
 set noeol
-set nrformats=
 set autoread
 set ignorecase
 
@@ -21,16 +20,13 @@ if has("clipboard")
   endif
 endif
 
-" show hidden files in netrw
-let g:netrw_list_hide = '^\./$'
-let g:netrw_hide = 1
-
 " plugin manager
 call plug#begin('~/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
 Plug 'moll/vim-bbye'
 Plug 'zefei/cake16'
-Plug 'Shougo/unite.vim'
+Plug 'lilydjwg/colorizer'
+Plug 'shougo/unite.vim' " used by vimfiler
 Plug 'shougo/vimfiler.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
@@ -39,8 +35,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
 " Plug 'vim-syntastic/syntastic'
-Plug 'keith/swift.vim'
-Plug 'cfdrake/vim-carthage'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
@@ -80,7 +74,7 @@ au BufNewFile,BufRead *.swift set filetype=swift
 " turn off auto indenting
 set nocindent
 set nosmartindent
-set noautoindent
+set autoindent
 set indentexpr=
 filetype indent off
 filetype plugin indent off
@@ -95,9 +89,9 @@ set listchars=tab:▸\ ,trail:·,eol:¬
 nmap <leader>l :set list!<CR>
 
 " Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
+noremap <Up>    <NOP>
+noremap <Down>  <NOP>
+noremap <Left>  <NOP>
 noremap <Right> <NOP>
 
 " Jump out of a block of parentheses (uses Delitmate)
@@ -105,8 +99,9 @@ imap <C-j> <C-g>g
 
 autocmd VimEnter * silent! autocmd! Explore
 
-" file explorer settings
-let g:vimfiler_as_default_explorer = 1
+" vimfiler settings
+let g:vimfiler_as_default_explorer  = 1
+let g:vimfiler_safe_mode_by_default = 0
 
 " vim-stay settings
 set viewoptions=cursor,folds,slash,unix
@@ -123,10 +118,9 @@ nnoremap <C-w> :tabclose<CR>
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v[\/]\.(git|hg|svn|node_modules)$',
-\ 'file': '\v\.(exe|so|dll)$',
-\ 'link': 'some_bad_symbolic_links',
-\ }
+  \ 'dir':  '\v[\/](doc|tmp|node_modules|build|gradle)',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 " lightline settings
 set laststatus=2
