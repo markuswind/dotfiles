@@ -12,7 +12,6 @@ brew install pidcat
 brew install ripgrep
 brew install tree
 brew install wget
-brew install vim
 brew install zsh-syntax-highlighting
 
 # react native libraries
@@ -39,6 +38,10 @@ brew cask install slack
 brew cakk install sublime-text
 brew cask install telegram
 brew cask install transmission
+
+# install brew vim with clipboard support
+brew cask isntall xquartz
+brew install vim --with-client-server
 
 # gems
 gem install xcpretty
