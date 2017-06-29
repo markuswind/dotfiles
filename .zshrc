@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-ZSH_THEME="dstufft"
-
 # load oh-my-zsh if installed
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
@@ -11,9 +8,9 @@ else
   echo 'oh-my-zsh is not installed (check: https://github.com/robbyrussell/oh-my-zsh for instructions)'
 fi
 
-# enable base16 shell (https://github.com/chriskempson/base16-shell)
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+# load spaceship theme + settings
+ZSH_THEME="spaceship"
+source $HOME/dotfiles/.spaceshiptheme
 
 # zsh-syntax-highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
@@ -43,13 +40,6 @@ export NVM_DIR="$HOME/.nvm"
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_CTYPE="utf-8"
-
-# use brew vim if present
-/usr/local/bin/vim --version > /dev/null 2>&1
-BREW_VIM_INSTALLED=$?
-if [ $BREW_VIM_INSTALLED -eq 0 ]; then
-  alias vi="/usr/local/bin/vim"
-fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
