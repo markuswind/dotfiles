@@ -3,16 +3,20 @@ call plug#begin('~/.vim/plugged')
 " file plugins
 Plug 'shougo/unite.vim' " used by vimfiler
 Plug 'shougo/vimfiler.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'wincent/command-t', {
+    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+    \ }
 " theming plugins
 Plug 'zefei/cake16'
 Plug 'lilydjwg/colorizer'
 Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
-" syntax coloring
+" syntax highlighting 
 Plug 'sheerun/vim-polyglot'
 " utilities
 Plug 'moll/vim-bbye'
+Plug 'ap/vim-buftabline'
+Plug 'paradigm/vim-multicursor'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
 " Plug 'vim-syntastic/syntastic'
@@ -37,7 +41,7 @@ au BufNewFile,BufRead *.swift set filetype=swift
 
 " Theming
 syntax enable
-colorscheme cake16 " PaperColor
+colorscheme cake16
 
 set background=light
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
@@ -73,12 +77,6 @@ set listchars=tab:▸\ ,trail:·,eol:¬
 
 nmap <leader>l :set list!<CR>
 
-" Disable arrow keys
-noremap <Up>    <NOP>
-noremap <Down>  <NOP>
-noremap <Left>  <NOP>
-noremap <Right> <NOP>
-
 " Jump out of a block of parentheses (uses Delitmate)
 imap <C-j> <C-g>g
 
@@ -87,6 +85,7 @@ autocmd VimEnter * silent! autocmd! Explore
 " vimfiler settings
 let g:vimfiler_as_default_explorer  = 1
 let g:vimfiler_safe_mode_by_default = 0
+let g:vimfiler_time_format          = ''
 
 " vim-stay settings
 set viewoptions=cursor,folds,slash,unix
@@ -97,15 +96,26 @@ set wildignore+=Carthage/*,node_modules/*
 
 " tab settings
 set hidden
-nnoremap <C-h> :tabprev<CR>
-nnoremap <C-l> :tabnext<CR>
-nnoremap <C-w> :tabclose<CR>
+nnoremap <C-h> :bprevious<CR>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-w> :bdelete<CR>
 
-" ctrlp settings
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](doc|tmp|node_modules|build|gradle)',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
+" disable arrow keys
+noremap <Up>    <Nop>
+noremap <Down>  <Nop>
+noremap <Left>  <Nop>
+noremap <Right> <Nop>
+
+" binds for split movement
+noremap <Alt-k> :wincmd k<CR>
+noremap <Alt-j> :wincmd j<CR>
+noremap <Alt-h> :wincmd h<CR>
+noremap <Alt-l> :wincmd l<CR>
+
+" cmd-t settings
+nnoremap <C-p> :CommandT<Cr>
+
+let g:CommandTWildIgnore=&wildignore . ",*.pyc,node_modules,build,carthage,coverage,gradle"
 
 " lightline settings
 set laststatus=2
@@ -114,13 +124,13 @@ set encoding=utf-8
 scriptencoding utf-8
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"#":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
+  \ 'colorscheme': 'PaperColor',
+  \ 'component': {
+  \   'readonly': '%{&readonly?"#":""}',
+  \ },
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' }
+  \ }
 
 " Set centralize backups, swap files and undo history
 set backupdir=~/.vim/backups
