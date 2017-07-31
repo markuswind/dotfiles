@@ -19,7 +19,7 @@ Plug 'ap/vim-buftabline'
 Plug 'paradigm/vim-multicursor'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
-" Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
@@ -131,6 +131,21 @@ let g:lightline = {
   \ 'separator': { 'left': '', 'right': '' },
   \ 'subseparator': { 'left': '', 'right': '' }
   \ }
+
+" syntastic settings
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': ['javascript'],
+                            \ 'passive_filetypes': [] }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Set centralize backups, swap files and undo history
 set backupdir=~/.vim/backups
