@@ -36,6 +36,7 @@ export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 export MANPATH="/usr/local/man:$MANPATH"
 export NVM_DIR="$HOME/.nvm"
+export WRITE_GOOD_GIT_ALLOW=1
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
