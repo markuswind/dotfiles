@@ -11,7 +11,7 @@ Plug 'zefei/cake16'
 Plug 'lilydjwg/colorizer'
 Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
-" syntax highlighting 
+" syntax highlighting
 Plug 'sheerun/vim-polyglot'
 " utilities
 Plug 'moll/vim-bbye'
@@ -41,7 +41,7 @@ au BufNewFile,BufRead *.swift set filetype=swift
 
 " Theming
 syntax enable
-colorscheme cake16
+colorscheme PaperColor
 
 set background=light
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
@@ -133,9 +133,11 @@ let g:lightline = {
   \ }
 
 " syntastic settings
-let g:syntastic_mode_map = { 'mode': 'active',
-                            \ 'active_filetypes': ['javascript'],
-                            \ 'passive_filetypes': [] }
+let g:syntastic_mode_map = {
+  \ 'mode': 'active',
+  \ 'active_filetypes': ['javascript'],
+  \ 'passive_filetypes': []
+  \ }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
