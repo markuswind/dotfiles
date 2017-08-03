@@ -7,15 +7,15 @@ Plug 'wincent/command-t', {
     \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
     \ }
 " theming plugins
-Plug 'zefei/cake16'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'lilydjwg/colorizer'
-Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
 " syntax highlighting
 Plug 'sheerun/vim-polyglot'
 " utilities
 Plug 'moll/vim-bbye'
-Plug 'ap/vim-buftabline'
+" Plug 'ap/vim-buftabline'
 Plug 'paradigm/vim-multicursor'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
@@ -23,7 +23,6 @@ Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
-filetype plugin indent on
 
 " file type settings
 filetype plugin indent on
@@ -114,23 +113,17 @@ noremap <Alt-l> :wincmd l<CR>
 
 " cmd-t settings
 nnoremap <C-p> :CommandT<Cr>
-
 let g:CommandTWildIgnore=&wildignore . ",*.pyc,node_modules,build,carthage,coverage,gradle"
 
-" lightline settings
+" airline settings
 set laststatus=2
 set encoding=utf-8
 
 scriptencoding utf-8
 
-let g:lightline = {
-  \ 'colorscheme': 'PaperColor',
-  \ 'component': {
-  \   'readonly': '%{&readonly?"#":""}',
-  \ },
-  \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '', 'right': '' }
-  \ }
+let g:airline_powerline_fonts = 1
+let g:airline_theme='papercolor'
+let g:airline#extensions#tabline#enabled = 1
 
 " syntastic settings
 let g:syntastic_mode_map = {
