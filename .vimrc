@@ -65,13 +65,13 @@ set ai
 set si
 
 " move line
-nnoremap <C-down> :m .+1<CR>==
-nnoremap <C-up> :m .-2<CR>==
+nnoremap <C-j> :m .+1 <CR> ==
+nnoremap <C-k> :m .-2 <CR> ==
 
-inoremap <C-down> <Esc>:m .+1<CR>==gi
-inoremap <C-up> <Esc>:m .-2<CR>==gi
-vnoremap <C-down> :m '>+1<CR>gv=gv
-vnoremap <C-up> :m '<-2<CR>gv=gv
+inoremap <C-j> <Esc> :m .+1  <CR> ==gi
+inoremap <C-k> <Esc> :m .-2  <CR> ==gi
+vnoremap <C-j>       :m '>+1 <CR> gv=gv
+vnoremap <C-k>       :m '<-2 <CR> gv=gv
 
 " enable whitespace indicators
 set list
