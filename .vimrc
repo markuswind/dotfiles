@@ -15,8 +15,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'sheerun/vim-polyglot'
 " utilities
 Plug 'moll/vim-bbye'
-" Plug 'ap/vim-buftabline'
-Plug 'paradigm/vim-multicursor'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
 Plug 'vim-syntastic/syntastic'
@@ -27,26 +26,28 @@ call plug#end()
 " file type settings
 filetype plugin indent on
 
-set tabstop=4
+set tabstop=2
+set shiftwidth=4
 set expandtab
 
 autocmd Filetype html  setlocal ts=2 sw=2
 autocmd Filetype ruby  setlocal ts=2 sw=2
-autocmd Filetype swift setlocal ts=4 sw=4
-autocmd Filetype js    setlocal ts=4 sw=4
+autocmd Filetype swift setlocal ts=2 sw=4
+autocmd Filetype js    setlocal ts=2 sw=4
 
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
 au BufNewFile,BufRead *.swift set filetype=swift
 
-" Theming
+" theming
 syntax enable
 colorscheme PaperColor
 
 set background=light
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
-let g:Powerline_symbols = 'fancy'
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+set guioptions=aem
 
 " editor settings
+set encoding=utf8
 set noeol
 set autoread
 set ignorecase
@@ -57,26 +58,26 @@ set showmatch
 set cursorline
 set noshowmode
 set scrolloff=30
+set stal=2
 
-" turn off auto indenting
-set nocindent
-set nosmartindent
-set autoindent
-set indentexpr=
+" auto indenting
+set ai
+set si
 
-filetype indent off
-filetype plugin indent off
+" move line
+nnoremap <C-down> :m .+1<CR>==
+nnoremap <C-up> :m .-2<CR>==
 
-" enable react highlighting for .js extension
-let g:jsx_ext_required = 0
+inoremap <C-down> <Esc>:m .+1<CR>==gi
+inoremap <C-up> <Esc>:m .-2<CR>==gi
+vnoremap <C-down> :m '>+1<CR>gv=gv
+vnoremap <C-up> :m '<-2<CR>gv=gv
 
-" (disabled) enable whitespace indicators
+" enable whitespace indicators
 set list
 set listchars=tab:▸\ ,trail:·,eol:¬
 
-nmap <leader>l :set list!<CR>
-
-" Jump out of a block of parentheses (uses Delitmate)
+" jump out of a block of parentheses (uses Delitmate)
 imap <C-j> <C-g>g
 
 autocmd VimEnter * silent! autocmd! Explore
@@ -105,11 +106,17 @@ noremap <Down>  <Nop>
 noremap <Left>  <Nop>
 noremap <Right> <Nop>
 
-" binds for split movement
-noremap <Alt-k> :wincmd k<CR>
-noremap <Alt-j> :wincmd j<CR>
-noremap <Alt-h> :wincmd h<CR>
-noremap <Alt-l> :wincmd l<CR>
+" commands for split movement
+if !exists(':Wk')
+  command Wh wincmd h
+  command Wj wincmd j
+  command Wk wincmd k
+  command Wl wincmd l
+endif
+
+" multi cursor settings
+let g:multi_cursor_quit_key='<C-[>'
+let g:multi_cursor_exit_from_insert_mode=0
 
 " cmd-t settings
 nnoremap <C-p> :CommandT<Cr>
@@ -121,8 +128,11 @@ set encoding=utf-8
 
 scriptencoding utf-8
 
+let g:airline_detect_modified = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'
+let g:airline_section_z = ''
+
 let g:airline#extensions#tabline#enabled = 1
 
 " syntastic settings
@@ -143,11 +153,16 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 " Set centralize backups, swap files and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-set shortmess+=A
+set noswapfile
+set nowritebackup
+set nobackup
+
+" set backupdir=~/.vim/backups
+" set directory=~/.vim/swaps
+" set shortmess+=A
 
 if exists("&undodir")
+  call system('mkdir -p ~/dotfiles.config/vim/undo')
   set undodir=~/~dotfiles/.config/vim/undo
 endif
 
@@ -159,4 +174,19 @@ if has("clipboard")
     set clipboard+=unnamedplus
   endif
 endif
+
+" startify settings
+let g:startify_custom_header=['            __________                                   ',
+                            \ '           /----------\                                  ',
+                            \ '          | .--------. |                                 ',
+                            \ '          | |########| |       __________                ',
+                            \ '          | |########| |      /__________\               ',
+                            \ ' .--------| |--------| |------|    --=-- |-------------. ',
+                            \ ' |        .----,-.-----.      |o ======  |             | ',
+                            \ ' |       ______|_|_______     |__________|             | ',
+                            \ ' |      /  %%%%%%%%%%%%  \                             | ',
+                            \ ' |     /  %%%%%%%%%%%%%%  \                            | ',
+                            \ ' |     ^^^^^^^^^^^^^^^^^^^^                            | ',
+                            \ ' +-----------------------------------------------------+ ',
+                            \ '']
 

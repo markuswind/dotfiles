@@ -48,8 +48,8 @@ alias tabgit="nametab GIT && colortab red && clear"
 alias tabnode="nametab NODE && colortab orange && clear"
 
 # (brew)vi(m)
-# alias vim="/usr/local/Cellar/vim/8.0.0666_1/bin/vim"
-alias vim="vi"
+alias vim="/usr/local/Cellar/vim/8.0.0666_1/bin/vim"
+# alias vim="vi"
 
 # macvim
 alias mvim='open -a MacVim'
