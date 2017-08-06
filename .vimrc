@@ -51,14 +51,20 @@ set encoding=utf8
 set noeol
 set autoread
 set ignorecase
-set number
 set nolist
 set nowrap
 set showmatch
 set cursorline
 set noshowmode
+
+set number
+set relativenumber
+set numberwidth=5
 set scrolloff=30
-set stal=2
+
+" natural splits
+set splitbelow
+set splitright
 
 " auto indenting
 set ai
@@ -86,15 +92,20 @@ autocmd VimEnter * silent! autocmd! Explore
 let g:vimfiler_as_default_explorer  = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_time_format          = ''
+let g:vimfiler_ignore_pattern       = ['^\.git$', '^\.DS_Store$']
+
+if !exists(':Es')
+  command Es VimFilerSplit
+endif
 
 " vim-stay settings
 set viewoptions=cursor,folds,slash,unix
 
 " tab settings
 set hidden
+
 nnoremap <C-h> :bprevious<CR>
 nnoremap <C-l> :bnext<CR>
-nnoremap <C-w> :bdelete<CR>
 
 " disable arrow keys
 noremap <Up>    <Nop>
@@ -119,6 +130,7 @@ nnoremap <C-p> :CommandT<Cr>
 let g:CommandTWildIgnore=&wildignore . ",*.pyc,node_modules,build,carthage,coverage,gradle"
 
 " airline settings
+set showtabline=2
 set laststatus=2
 set encoding=utf-8
 
