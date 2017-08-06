@@ -1,11 +1,11 @@
 brew update
 brew upgrade
 
+# general brews
 brew install android-sdk
 brew install carthage
 brew install cmus
 brew install htop
-brew install mercurial
 brew install node
 brew install openssl
 brew install pidcat
@@ -25,6 +25,7 @@ nvm alias default iojs
 npm install -g ios-sim
 npm install -g react-native-cli
 
+# casks
 brew cask install alfred
 brew cask install android-studio
 brew cask install dropbox
@@ -38,9 +39,10 @@ brew cakk install sublime-text
 brew cask install telegram
 brew cask install transmission
 
-# install brew vim with clipboard support
-brew cask isntall xquartz
-brew install vim --with-client-server
+# nerd fonts
+brew tap caskroom/fonts
+brew cask install font-hack-nerd-font
 
 # gems
 gem install xcpretty
+gem install neovim

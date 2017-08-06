@@ -13,3 +13,6 @@ done
 
 echo "Creating symlink to .config/nvim folder"
 ln -sf $dir/.config/nvim ~/.config/nvim
+
+echo "Creating symlink for wind.zsh-theme"
+ln -sf ~/dotfiles/.oh-my-zsh/custom/themes/wind.zsh-theme ~/.oh-my-zsh/custom/themes/wind.zsh-theme
