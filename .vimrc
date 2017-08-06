@@ -90,10 +90,6 @@ let g:vimfiler_time_format          = ''
 " vim-stay settings
 set viewoptions=cursor,folds,slash,unix
 
-" Set wildignores for macvim's file explorer
-set wildignore+=.DS_Store,.git
-set wildignore+=Carthage/*,node_modules/*
-
 " tab settings
 set hidden
 nnoremap <C-h> :bprevious<CR>
@@ -115,8 +111,8 @@ if !exists(':Wk')
 endif
 
 " multi cursor settings
-let g:multi_cursor_quit_key='<C-[>'
-let g:multi_cursor_exit_from_insert_mode=0
+let g:multi_cursor_quit_key              = '<C-[>'
+let g:multi_cursor_exit_from_insert_mode = 0
 
 " cmd-t settings
 nnoremap <C-p> :CommandT<Cr>
@@ -128,17 +124,16 @@ set encoding=utf-8
 
 scriptencoding utf-8
 
-let g:airline_detect_modified = 0
-let g:airline_powerline_fonts = 1
-let g:airline_theme='papercolor'
-let g:airline_section_z = ''
-
+let g:airline_detect_modified            = 0
+let g:airline_powerline_fonts            = 1
+let g:airline_theme                      ='papercolor'
+let g:airline_section_z                  = ''
 let g:airline#extensions#tabline#enabled = 1
 
 " syntastic settings
 let g:syntastic_mode_map = {
-  \ 'mode': 'active',
-  \ 'active_filetypes': ['javascript'],
+  \ 'mode':              'active',
+  \ 'active_filetypes':  ['javascript'],
   \ 'passive_filetypes': []
   \ }
 
@@ -147,23 +142,19 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_auto_loc_list            = 1
+let g:syntastic_check_on_open            = 1
+let g:syntastic_check_on_wq              = 0
+let g:syntastic_javascript_checkers      = ['eslint']
 
-" Set centralize backups, swap files and undo history
+" disable swaps + backups
 set noswapfile
 set nowritebackup
 set nobackup
 
-" set backupdir=~/.vim/backups
-" set directory=~/.vim/swaps
-" set shortmess+=A
-
 if exists("&undodir")
   call system('mkdir -p ~/dotfiles.config/vim/undo')
-  set undodir=~/~dotfiles/.config/vim/undo
+  set undodir=~/dotfiles/.config/vim/undo
 endif
 
 " yank to clipboard
