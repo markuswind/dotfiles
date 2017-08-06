@@ -1,5 +1,5 @@
 " plugin manager
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 " file plugins
 Plug 'shougo/unite.vim' " used by vimfiler
 Plug 'shougo/vimfiler.vim'

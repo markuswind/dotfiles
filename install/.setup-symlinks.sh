@@ -11,5 +11,5 @@ do
    ln -sf $dir/.$file ~/.$file
 done
 
-echo "Creating symlink to .vim folder"
-ln -sf $dir/.vim ~/.vim
+echo "Creating symlink to .config/nvim folder"
+ln -sf $dir/.config/nvim ~/.config/nvim
