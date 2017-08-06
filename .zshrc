@@ -8,9 +8,8 @@ else
   echo 'oh-my-zsh is not installed (check: https://github.com/robbyrussell/oh-my-zsh for instructions)'
 fi
 
-# load spaceship theme + settings
-ZSH_THEME="spaceship"
-source $HOME/dotfiles/.spaceshiptheme
+# load custom zsh
+ZSH_THEME="wind"
 
 # zsh-syntax-highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
