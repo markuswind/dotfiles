@@ -165,8 +165,8 @@ set nowritebackup
 set nobackup
 
 if exists("&undodir")
-  call system('mkdir -p ~/dotfiles.config/vim/undo')
-  set undodir=~/dotfiles/.config/vim/undo
+  call system('mkdir -p ~/dotfiles/.config/nvim/undo')
+  set undodir=~/dotfiles/.config/nvim/undo
 endif
 
 " yank to clipboard
