@@ -1,17 +1,17 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# load oh-my-zsh if installed
+# Load oh-my-zsh if installed
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 else
   echo 'oh-my-zsh is not installed (check: https://github.com/robbyrussell/oh-my-zsh for instructions)'
 fi
 
-# load custom zsh
+# Load custom zsh
 ZSH_THEME="wind"
 
-# zsh-syntax-highlighting
+# Load zsh-syntax-highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
@@ -48,12 +48,8 @@ else
   export EDITOR='nvim'
 fi
 
-# ssh
+# SSH
 export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Virtualenv wrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/DjangoProjects
 
 # Source git-completion
 if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then

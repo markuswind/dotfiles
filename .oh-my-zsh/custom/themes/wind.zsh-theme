@@ -19,8 +19,7 @@ ZSH_THEME_GIT_PROMPT_RENAMED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_UNMERGED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="${PR_RESET}${PR_YELLOW}$${PR_RESET}"
 
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-local time_string=`date '+%T'`
+local return_code="%(?..%{$PR_RED%}%? ↵%{$PR_RESET%})"
 
 if [[ $UID -eq 0 ]]; then
     local user_host='%{$terminfo[bold]$fg[red]%}%n@%m%{$reset_color%} '
@@ -37,4 +36,4 @@ PROMPT="
 ╭─${user_host}${current_dir} ${git_branch}
 ╰─%B${user_symbol}%b"
 
-RPS1="%B${time_string}%b"
+RPS1="%B${return_code}%b"
