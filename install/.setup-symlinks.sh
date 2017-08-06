@@ -3,7 +3,7 @@
 dir=~/dotfiles
 cd $dir
 
-files="bash_aliases gitconfig githelpers zshrc vimrc xvimrc"
+files="bash_aliases gitconfig githelpers zshrc vimrc"
 
 for file in $files;
 do
