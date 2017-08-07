@@ -91,6 +91,25 @@ imap <C-j> <C-g>g
 
 autocmd VimEnter * silent! autocmd! Explore
 
+" disable swaps + backups
+set noswapfile
+set nowritebackup
+set nobackup
+
+if exists("&undodir")
+  call system('mkdir -p ~/dotfiles/.config/nvim/undo')
+  set undodir=~/dotfiles/.config/nvim/undo
+endif
+
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed
+
+  if has("unnamedplus")
+    set clipboard+=unnamedplus
+  endif
+endif
+
 " vimfiler settings
 let g:vimfiler_as_default_explorer  = 1
 let g:vimfiler_safe_mode_by_default = 0
@@ -202,25 +221,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " tern
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
-" disable swaps + backups
-set noswapfile
-set nowritebackup
-set nobackup
-
-if exists("&undodir")
-  call system('mkdir -p ~/dotfiles/.config/nvim/undo')
-  set undodir=~/dotfiles/.config/nvim/undo
-endif
-
-" yank to clipboard
-if has("clipboard")
-  set clipboard=unnamed
-
-  if has("unnamedplus")
-    set clipboard+=unnamedplus
-  endif
-endif
-
 " startify settings
 let g:startify_custom_header=['  __i                                                     ',
                             \ ' |---|                                                    ',
@@ -230,4 +230,3 @@ let g:startify_custom_header=['  __i                                            
                             \ ' `\   \                                                   ',
                             \ '   \_=_\                                                  ',
                             \ '']
-
