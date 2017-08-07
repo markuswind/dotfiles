@@ -56,11 +56,6 @@ if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash
 fi
 
-# Source django-completion
-if [ -f $HOME/dotfiles/.bin/django_bash_completion ]; then
-  . $HOME/dotfiles/.bin/django_baash_completion
-fi
-
 # Source aliases
 if [ -f $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
