@@ -8,6 +8,7 @@ brew install cmus
 brew install htop
 brew install node
 brew install openssl
+brew install python3
 brew install pidcat
 brew install ripgrep
 brew install tree
@@ -46,3 +47,6 @@ brew cask install font-hack-nerd-font
 # gems
 gem install xcpretty
 gem install neovim
+
+# pips
+pip3 install neovim

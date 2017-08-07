@@ -13,6 +13,9 @@ Plug 'lilydjwg/colorizer'
 Plug 'NLKNguyen/papercolor-theme'
 " syntax highlighting
 Plug 'sheerun/vim-polyglot'
+" autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " utilities
 Plug 'moll/vim-bbye'
 Plug 'terryma/vim-multiple-cursors'
@@ -167,6 +170,18 @@ function! SyntasticCheckHook(errors)
     endif
 endfunction
 
+" deocomplete settings
+let g:deoplete#enable_at_startup = 1
+let g:tern_request_timeout = 1
+let g:tern_show_signature_in_pum = '0'
+
+let g:tern#filetypes = [
+  \ 'jsx',
+  \ 'javascript.jsx',
+  \ 'vue',
+  \ '...'
+  \ ]
+
 " disable swaps + backups
 set noswapfile
 set nowritebackup
@@ -187,17 +202,12 @@ if has("clipboard")
 endif
 
 " startify settings
-let g:startify_custom_header=['            __________                                   ',
-                            \ '           /----------\                                  ',
-                            \ '          | .--------. |                                 ',
-                            \ '          | |########| |       __________                ',
-                            \ '          | |########| |      /__________\               ',
-                            \ ' .--------| |--------| |------|    --=-- |-------------. ',
-                            \ ' |        .----,-.-----.      |o ======  |             | ',
-                            \ ' |       ______|_|_______     |__________|             | ',
-                            \ ' |      /  %%%%%%%%%%%%  \                             | ',
-                            \ ' |     /  %%%%%%%%%%%%%%  \                            | ',
-                            \ ' |     ^^^^^^^^^^^^^^^^^^^^                            | ',
-                            \ ' +-----------------------------------------------------+ ',
+let g:startify_custom_header=['  __i                                                     ',
+                            \ ' |---|                                                    ',
+                            \ ' |[_]|  I`M WAITING IN LINE TO PUNCH PEOPLE WHO ARE       ',
+                            \ ' |:::|   WAITING IN LINE TO BE THE FIRST TO BUY AN IPHONE ',
+                            \ ' |:::|                                                    ',
+                            \ ' `\   \                                                   ',
+                            \ '   \_=_\                                                  ',
                             \ '']
 
