@@ -1,3 +1,5 @@
+RETVAL=$?
+
 for COLOR in CYAN WHITE YELLOW MAGENTA BLACK BLUE RED DEFAULT GREEN GREY; do
     eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
     eval PR_BRIGHT_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
@@ -21,12 +23,15 @@ ZSH_THEME_GIT_PROMPT_DELETED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_RENAMED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 
 ZSH_THEME_GIT_PROMPT_UNMERGED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="${PR_RESET}${PR_YELLOW}$${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 
-# TODO: - show error icon when command failed..
+# FIXME: - show error icon when command failed..
 if [[ $UID -eq 0 ]]; then
     local user_host='%{$terminfo[bold]$fg[red]%}%n@%m%{$reset_color%} '
-    local user_symbol=' '
+    local user_symbol=''
+elif [[ $RETVAL != 0 ]]; then
+    local user_host=''
+    local user_symbol='${PR_RED}➝ '
 else
     local user_host=''
     local user_symbol='${PR_GREEN}➝ '
