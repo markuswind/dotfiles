@@ -158,9 +158,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " syntastic settings
 let g:syntastic_mode_map = {
-  \ 'mode':              'active',
-  \ 'active_filetypes':  ['javascript'],
-  \ 'passive_filetypes': []
+  \ 'mode':              'passive',
+  \ 'active_filetypes':  [],
+  \ 'passive_filetypes': ['javascript']
   \ }
 
 set statusline+=%#warningmsg#
