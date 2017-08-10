@@ -51,6 +51,7 @@ set guioptions=aem
 
 " editor settings
 set encoding=utf8
+set regexpengine=1
 set noeol
 set autoread
 set ignorecase

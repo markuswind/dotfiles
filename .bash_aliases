@@ -2,6 +2,7 @@
 alias aliasconfig="vim ~/.bash_aliases"
 alias zshconfig="vim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
+alias szsh="source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc"
 
 # general

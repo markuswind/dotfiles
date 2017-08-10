@@ -1,5 +1,6 @@
 RETVAL=$?
 
+# NOTE: - Colors ..
 for COLOR in CYAN WHITE YELLOW MAGENTA BLACK BLUE RED DEFAULT GREEN GREY; do
     eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
     eval PR_BRIGHT_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
@@ -7,6 +8,7 @@ done
 
 PR_RESET="%{$reset_color%}"
 
+# NOTE: - GIT config
 VCS_DIRTY_COLOR="${PR_RESET}${PR_YELLOW}"
 VCS_CLEAN_COLOR="${PR_RESET}${PR_GREEN}"
 VCS_SUFIX_COLOR="${PR_RESET}"
@@ -25,21 +27,23 @@ ZSH_THEME_GIT_PROMPT_RENAMED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_UNMERGED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="${PR_RESET}${PR_YELLOW}${PR_RESET}"
 
-# FIXME: - show error icon when command failed..
+# NOTE: - am I root?
 if [[ $UID -eq 0 ]]; then
-    local user_host='%{$terminfo[bold]$fg[red]%}%n@%m%{$reset_color%} '
-    local user_symbol=''
-elif [[ $RETVAL != 0 ]]; then
-    local user_host=''
-    local user_symbol='${PR_RED}➝ '
+  local user_host='%{$terminfo[bold]$fg[red] %}%n@%m%{$PR_RESET%}'
 else
-    local user_host=''
-    local user_symbol='${PR_GREEN}➝ '
+  local user_host=''
+fi
+
+# NOTE: - was there an error?
+if [[ $RETVAL -ne 0 ]]; then
+  local user_symbol='${PR_RED}➝ '
+else
+  local user_symbol='${PR_GREEN}➝ '
 fi
 
 # FIXME: - show git status info
 local current_dir='${PR_BLUE}  %{$terminfo[bold]%}%~%{$PR_RESET%}'
-local git_branch='$(git_prompt_info)%{$PR_RESET%}'
+local git_branch='$(git_prompt_info)%{$git_status%}%{$PR_RESET%}'
 
 local return_code="%(?..%{$PR_RED%}%? ↵%{$PR_RESET%})"
 local time_str="%D{%T}"
