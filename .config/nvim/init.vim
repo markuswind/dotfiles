@@ -30,4 +30,11 @@ call plug#end()
 source $HOME/.config/nvim/theme.vim
 source $HOME/.config/nvim/general.vim
 source $HOME/.config/nvim/bindings.vim
-source $HOME/.config/nvim/plugins.vim
+
+" load plugin config files
+source $HOME/.config/nvim/pluginconfig/airline.vim
+source $HOME/.config/nvim/pluginconfig/cmdt.vim
+source $HOME/.config/nvim/pluginconfig/deocomplete.vim
+source $HOME/.config/nvim/pluginconfig/multicursor.vim
+source $HOME/.config/nvim/pluginconfig/startify.vim
+source $HOME/.config/nvim/pluginconfig/vimfiler.vim
