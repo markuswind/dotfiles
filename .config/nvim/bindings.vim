@@ -5,7 +5,7 @@ noremap <Left>  <Nop>
 noremap <Right> <Nop>
 
 " commands for split movement
-if !exists(':Wk')
+if !exists(':Wh')
   command Wh wincmd h
   command Wj wincmd j
   command Wk wincmd k

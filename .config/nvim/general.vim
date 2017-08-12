@@ -38,10 +38,6 @@ set scrolloff=30
 set splitbelow
 set splitright
 
-" enable whitespace indicators
-set list
-set listchars=tab:▸\ ,trail:·,eol:¬
-
 " tab settings
 set hidden
 
