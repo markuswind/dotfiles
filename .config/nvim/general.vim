@@ -23,16 +23,8 @@ set regexpengine=1
 set noeol
 set autoread
 set ignorecase
-set nolist
 set nowrap
 set showmatch
-set cursorline
-set noshowmode
-
-set number
-set relativenumber
-set numberwidth=5
-set scrolloff=30
 
 " natural splits
 set splitbelow

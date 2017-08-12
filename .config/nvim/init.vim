@@ -17,11 +17,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 " utilities
+Plug 'w0rp/ale'
 Plug 'moll/vim-bbye'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mhinz/vim-startify'
 Plug 'kopischke/vim-stay'
-Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
@@ -33,6 +33,7 @@ source $HOME/.config/nvim/bindings.vim
 
 " load plugin config files
 source $HOME/.config/nvim/pluginconfig/airline.vim
+source $HOME/.config/nvim/pluginconfig/ale.vim
 source $HOME/.config/nvim/pluginconfig/cmdt.vim
 source $HOME/.config/nvim/pluginconfig/deocomplete.vim
 source $HOME/.config/nvim/pluginconfig/multicursor.vim
