@@ -10,6 +10,7 @@ Plug 'wincent/command-t', {
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'lilydjwg/colorizer'
+Plug 'ryanoasis/vim-devicons'
 Plug 'NLKNguyen/papercolor-theme'
 " syntax highlighting
 Plug 'sheerun/vim-polyglot'
@@ -36,6 +37,7 @@ source $HOME/.config/nvim/pluginconfig/airline.vim
 source $HOME/.config/nvim/pluginconfig/ale.vim
 source $HOME/.config/nvim/pluginconfig/cmdt.vim
 source $HOME/.config/nvim/pluginconfig/deocomplete.vim
+source $HOME/.config/nvim/pluginconfig/devicons.vim
 source $HOME/.config/nvim/pluginconfig/multicursor.vim
 source $HOME/.config/nvim/pluginconfig/startify.vim
 source $HOME/.config/nvim/pluginconfig/vimfiler.vim

@@ -23,3 +23,6 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+
+let airline#extensions#ale#error_symbol = ' '
+let airline#extensions#ale#warning_symbol = ' '
