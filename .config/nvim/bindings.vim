@@ -11,3 +11,21 @@ if !exists(':Wh')
   command Wk wincmd k
   command Wl wincmd l
 endif
+
+" adds :H command for opening help in same window
+function! s:help(subject)
+  let buftype  = &buftype
+  let &buftype = 'help'
+  let v:errmsg = ''
+  let cmd      = "help " . a:subject
+
+  silent! execute  cmd
+  if v:errmsg != ''
+    let &buftype = buftype
+    return cmd
+  else
+    call setbufvar('#', '&buftype', buftype)
+  endif
+endfunction
+
+command! -nargs=? -bar -complete=help H execute <SID>help(<q-args>)
