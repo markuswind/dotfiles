@@ -1,15 +1,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Load custom zsh
+ZSH_THEME="wind"
+
 # Load oh-my-zsh if installed
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 else
   echo 'oh-my-zsh is not installed (check: https://github.com/robbyrussell/oh-my-zsh for instructions)'
 fi
-
-# Load custom zsh
-ZSH_THEME="wind"
 
 # Load zsh-syntax-highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
