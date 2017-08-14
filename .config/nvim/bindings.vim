@@ -12,6 +12,16 @@ if !exists(':Wh')
   command Wl wincmd l
 endif
 
+" keys for split movement
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-j> :wincmd j<CR>
+nnoremap <C-k> :wincmd k<CR>
+nnoremap <C-l> :wincmd l<CR>
+
+" keys for buffer movement
+nnoremap <C-[> :bprevious<CR>
+nnoremap <C-]> :bnext<CR>
+
 " adds :H command for opening help in same window
 function! s:help(subject)
   let buftype  = &buftype
@@ -20,6 +30,7 @@ function! s:help(subject)
   let cmd      = "help " . a:subject
 
   silent! execute  cmd
+
   if v:errmsg != ''
     let &buftype = buftype
     return cmd

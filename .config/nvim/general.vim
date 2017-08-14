@@ -43,9 +43,6 @@ set splitright
 " tab settings
 set hidden
 
-nnoremap <C-h> :bprevious<CR>
-nnoremap <C-l> :bnext<CR>
-
 " open explorer on open
 autocmd VimEnter * silent! autocmd! Explore
 
