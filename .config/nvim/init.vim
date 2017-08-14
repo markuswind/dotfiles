@@ -9,6 +9,7 @@ if empty($VIM_NO_EXTRA)
         Plug 'vim-airline/vim-airline-themes'
         Plug 'lilydjwg/colorizer'
         Plug 'ryanoasis/vim-devicons'
+        Plug 'Yggdroot/indentLine'
         Plug 'NLKNguyen/papercolor-theme'
         " syntax highlighting
         Plug 'sheerun/vim-polyglot'
@@ -38,6 +39,7 @@ let pluginConfigFiles = [
     \ 'ale',
     \ 'ctrlp',
     \ 'deocomplete', 
+    \ 'indentline',
     \ 'vim-airline',
     \ 'vim-devicons', 
     \ 'vim-multiple-cursors', 
@@ -56,11 +58,12 @@ if !empty($VIM_NO_EXTRA)
 endif
 
 " TODO: - temp fix for sourcing pluginconfig
-source ~/.config/nvim/pluginconfig/ale.vim
-source ~/.config/nvim/pluginconfig/ctrlp.vim
-source ~/.config/nvim/pluginconfig/deocomplete.vim
-source ~/.config/nvim/pluginconfig/vim-airline.vim
-source ~/.config/nvim/pluginconfig/vim-devicons.vim
-source ~/.config/nvim/pluginconfig/vim-multiple-cursors.vim
-source ~/.config/nvim/pluginconfig/vim-startify.vim
-source ~/.config/nvim/pluginconfig/vimfiler.vim
+source $HOME/.config/nvim/pluginconfig/ale.vim
+source $HOME/.config/nvim/pluginconfig/ctrlp.vim
+source $HOME/.config/nvim/pluginconfig/deocomplete.vim
+source $HOME/.config/nvim/pluginconfig/indentline.vim
+source $HOME/.config/nvim/pluginconfig/vim-airline.vim
+source $HOME/.config/nvim/pluginconfig/vim-devicons.vim
+source $HOME/.config/nvim/pluginconfig/vim-multiple-cursors.vim
+source $HOME/.config/nvim/pluginconfig/vim-startify.vim
+source $HOME/.config/nvim/pluginconfig/vimfiler.vim
