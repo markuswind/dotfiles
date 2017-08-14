@@ -1,3 +1,12 @@
+" enter the current millenium
+set nocompatible
+
+" search down in to subfolders
+set path+=**
+
+" display all matching files when we tab complete
+set wildmenu
+
 " indent settings
 filetype plugin indent on
 
@@ -25,6 +34,7 @@ set autoread
 set ignorecase
 set nowrap
 set showmatch
+set scrolloff=30
 
 " natural splits
 set splitbelow

@@ -16,7 +16,6 @@ set listchars=tab:▸\ ,trail:·,eol:¬
 set number
 set relativenumber
 set numberwidth=6
-set scrolloff=30
 
 " vertical split borders
 set fillchars+=vert:│ 
