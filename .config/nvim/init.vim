@@ -1,11 +1,9 @@
 " plugin manager
 call plug#begin('~/.config/nvim/plugged')
 " file plugins
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'shougo/unite.vim' " used by vimfiler
 Plug 'shougo/vimfiler.vim'
-Plug 'wincent/command-t', {
-    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-    \ }
 " theming plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -35,7 +33,7 @@ source $HOME/.config/nvim/bindings.vim
 " load plugin config files
 source $HOME/.config/nvim/pluginconfig/airline.vim
 source $HOME/.config/nvim/pluginconfig/ale.vim
-source $HOME/.config/nvim/pluginconfig/cmdt.vim
+source $HOME/.config/nvim/pluginconfig/ctrlp.vim
 source $HOME/.config/nvim/pluginconfig/deocomplete.vim
 source $HOME/.config/nvim/pluginconfig/devicons.vim
 source $HOME/.config/nvim/pluginconfig/multicursor.vim
