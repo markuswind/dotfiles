@@ -7,4 +7,9 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 sh .setup-symlinks.sh
 
 # setup osx settings
-sh .setup-osx.sh
+echo 'Done! 🙌'
+echo '..'
+echo 'now you can run other scripts in install/ folder ..'
+
+# sh .setup-osx.sh
+
