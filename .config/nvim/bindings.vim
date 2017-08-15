@@ -18,9 +18,41 @@ nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
 
-" keys for buffer movement
-nnoremap <C-,> :bprevious<CR>
-nnoremap <C-.> :bnext<CR>
+" adds :Sb <pattern> command for switching buffers
+" adds :Lb command for listing/switching all buffers
+function! SelectBuffer(pattern)
+  let bufcount           = bufnr("$")
+  let currbufnr          = 1
+  let nummatches         = 0
+  let firstmatchingbufnr = 0
+
+    while currbufnr <= bufcount
+        if(bufexists(currbufnr))
+            let currbufname = bufname(currbufnr)
+            if(match(currbufname, a:pattern) > -1)
+                echo currbufnr . ": ". bufname(currbufnr)
+                let nummatches += 1
+                let firstmatchingbufnr = currbufnr
+            endif
+        endif
+    let currbufnr = currbufnr + 1
+    endwhile
+
+    if(nummatches == 1)
+        execute ":buffer ". firstmatchingbufnr
+    elseif(nummatches > 1)
+        let desiredbufnr = input("Enter buffer number: ")
+
+        if(strlen(desiredbufnr) != 0)
+            execute ":buffer ". desiredbufnr
+        endif
+    else
+        echo "No matching buffers"
+    endif
+endfunction
+
+command! -nargs=1 Sb :call SelectBuffer("<args>")
+command! -nargs=0 Lb :call SelectBuffer(".*")
 
 " adds :H command for opening help in same window
 function! s:help(subject)
