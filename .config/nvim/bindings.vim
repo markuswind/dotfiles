@@ -19,8 +19,8 @@ nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
 
 " keys for buffer movement
-nnoremap <C-[> :bprevious<CR>
-nnoremap <C-]> :bnext<CR>
+nnoremap <C-,> :bprevious<CR>
+nnoremap <C-.> :bnext<CR>
 
 " adds :H command for opening help in same window
 function! s:help(subject)

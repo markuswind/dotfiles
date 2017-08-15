@@ -11,6 +11,7 @@ brew install openssl
 brew install python3
 brew install pidcat
 brew install ripgrep
+brew install shellcheck
 brew install tree
 brew install wget
 brew install zsh-syntax-highlighting

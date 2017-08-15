@@ -1,6 +1,9 @@
 " enter the current millenium
 set nocompatible
 
+" fix backspace behaviour
+set backspace=indent,eol,start
+
 " search down in to subfolders
 set path+=**
 
@@ -12,10 +15,12 @@ filetype plugin indent on
 
 set tabstop=2
 set shiftwidth=4
+let &softtabstop = &shiftwidth
+
 set expandtab
 
-set ai
-set si
+set autoindent
+set smartindent
 
 autocmd Filetype html  setlocal ts=2 sw=2
 autocmd Filetype ruby  setlocal ts=2 sw=2

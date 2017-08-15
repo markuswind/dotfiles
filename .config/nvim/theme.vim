@@ -5,6 +5,10 @@ set background=light
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 set guioptions=aem
 
+" transparancy ..
+highlight Normal  ctermbg=none
+highlight NonText ctermbg=none
+
 set cursorline
 set noshowmode
 
