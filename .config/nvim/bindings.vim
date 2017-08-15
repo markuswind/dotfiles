@@ -18,8 +18,10 @@ nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
 
-" adds :Sb <pattern> command for switching buffers
-" adds :Lb command for listing/switching all buffers
+" adds :Sb           <pattern>
+"      +SelectBuffer <pattern> command for switching buffers
+" adds :Lb
+"      +ListBuffers            command for listing/switching all buffers
 function! SelectBuffer(pattern)
   let bufcount           = bufnr("$")
   let currbufnr          = 1
@@ -52,7 +54,9 @@ function! SelectBuffer(pattern)
 endfunction
 
 command! -nargs=1 Sb :call SelectBuffer("<args>")
+command! -nargs=1 SelectBuffer :call SelectBuffer("<args>")
 command! -nargs=0 Lb :call SelectBuffer(".*")
+command! -nargs=0 ListBuffers :call SelectBuffer(".*")
 
 " adds :H command for opening help in same window
 function! s:help(subject)
