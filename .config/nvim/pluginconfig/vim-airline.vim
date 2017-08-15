@@ -23,16 +23,16 @@ let airline#extensions#ale#error_symbol   = ' '
 let airline#extensions#ale#warning_symbol = ' '
 "
 " bar shapes
-let g:airline_left_sep      = ''
-let g:airline_left_alt_sep  = ''
-let g:airline_right_sep     = ''
-let g:airline_right_alt_sep = ''
+" let g:airline_left_sep      = ''
+" let g:airline_left_alt_sep  = ''
+" let g:airline_right_sep     = ''
+" let g:airline_right_alt_sep = ''
 
 " arrow shapes
-" let g:airline_left_sep      = ''
-" let g:airline_left_alt_sep  = ''
-" let g:airline_right_sep     = ''
-" let g:airline_right_alt_sep = ''
+let g:airline_left_sep      = ''
+let g:airline_left_alt_sep  = ''
+let g:airline_right_sep     = ''
+let g:airline_right_alt_sep = ''
 
 " round shapes ..
 " let g:airline_left_sep      = ''
