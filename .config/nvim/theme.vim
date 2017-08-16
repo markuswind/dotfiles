@@ -2,7 +2,7 @@ syntax enable
 colorscheme PaperColor
 
 set background=light
-set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+set guifont=Sauce\ Code\ Pro\ for\ Powerline:h11
 set guioptions=aem
 
 " transparancy ..

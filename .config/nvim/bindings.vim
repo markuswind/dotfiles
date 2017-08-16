@@ -23,21 +23,23 @@ nnoremap <C-l> :wincmd l<CR>
 " adds :Lb
 "      +ListBuffers            command for listing/switching all buffers
 function! SelectBuffer(pattern)
-  let bufcount           = bufnr("$")
-  let currbufnr          = 1
-  let nummatches         = 0
-  let firstmatchingbufnr = 0
+    let bufcount           = bufnr("$")
+    let currbufnr          = 1
+    let nummatches         = 0
+    let firstmatchingbufnr = 0
 
     while currbufnr <= bufcount
         if(bufexists(currbufnr))
             let currbufname = bufname(currbufnr)
+
             if(match(currbufname, a:pattern) > -1)
                 echo currbufnr . ": ". bufname(currbufnr)
                 let nummatches += 1
                 let firstmatchingbufnr = currbufnr
             endif
         endif
-    let currbufnr = currbufnr + 1
+
+        let currbufnr = currbufnr + 1
     endwhile
 
     if(nummatches == 1)
@@ -60,19 +62,19 @@ command! -nargs=0 ListBuffers :call SelectBuffer(".*")
 
 " adds :H command for opening help in same window
 function! s:help(subject)
-  let buftype  = &buftype
-  let &buftype = 'help'
-  let v:errmsg = ''
-  let cmd      = "help " . a:subject
+    let buftype  = &buftype
+    let &buftype = 'help'
+    let v:errmsg = ''
+    let cmd      = "help " . a:subject
 
-  silent! execute  cmd
+    silent! execute  cmd
 
-  if v:errmsg != ''
-    let &buftype = buftype
-    return cmd
-  else
-    call setbufvar('#', '&buftype', buftype)
-  endif
+    if v:errmsg != ''
+        let &buftype = buftype
+        return cmd
+    else
+        call setbufvar('#', '&buftype', buftype)
+    endif
 endfunction
 
 command! -nargs=? -bar -complete=help H execute <SID>help(<q-args>)
