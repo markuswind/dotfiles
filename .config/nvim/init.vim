@@ -4,6 +4,8 @@ if empty($VIM_NO_EXTRA)
         Plug 'ctrlpvim/ctrlp.vim'
         Plug 'shougo/unite.vim' " used by vimfiler
         Plug 'shougo/vimfiler.vim'
+        " language plugins
+        Plug 'rust-lang/rust.vim'
         " theming plugins
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
@@ -32,6 +34,7 @@ endif
 " load config files
 source $HOME/.config/nvim/theme.vim
 source $HOME/.config/nvim/general.vim
+source $HOME/.config/nvim/commands.vim
 source $HOME/.config/nvim/bindings.vim
 
 " load plugin config files
