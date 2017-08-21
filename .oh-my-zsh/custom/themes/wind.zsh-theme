@@ -12,13 +12,13 @@ PR_RESET="%{$reset_color%}"
 VCS_DIRTY_COLOR="${PR_RESET}${PR_YELLOW}"
 VCS_CLEAN_COLOR="${PR_RESET}${PR_GREEN}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="${PR_YELLOW} "
+ZSH_THEME_GIT_PROMPT_PREFIX="${PR_YELLOW}" # 
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
-ZSH_THEME_GIT_PROMPT_ADDED="${VCS_DIRTY_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_DELETED="${VCS_DIRTY_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_RENAMED="${VCS_DIRTY_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_MODIFIED="${VCS_DIRTY_COLOR}  ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_ADDED="${VCS_DIRTY_COLOR} ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_DELETED="${VCS_DIRTY_COLOR} ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_RENAMED="${VCS_DIRTY_COLOR} ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_MODIFIED="${VCS_DIRTY_COLOR} ${PR_RESET}"
 
 ZSH_THEME_GIT_PROMPT_DIRTY="${VCS_DIRTY_COLOR}  ${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_CLEAN="${VCS_CLEAN_COLOR}  ${PR_RESET}"
@@ -41,7 +41,7 @@ prompt_dir() {
 }
 
 prompt_git() {
- echo -n " $(git_prompt_info)%{$git_status%}%{$PR_RESET%} "
+ echo -n "$(git_prompt_info)${PR_RESET%} "
 }
 
 prompt_linebreak() {
@@ -64,9 +64,30 @@ prompt_newline() {
 }
 
 # NOTE: - rps1 functions
+rps1_git_status() {
+  echo -n "$(git_prompt_status)%{$PR_RESET%}  "
+}
+
 rps1_time() {
-  local time_str="%D{%T}"
+  local time_str="%D{%T} "
   echo -n "$time_str"
+}
+
+rps1_exec_time() {
+  echo -n "$PR_BRIGHT_BLACK${ETIME}ms$PR_RESET% "
+}
+
+# NOTE: - used for showing execuction time
+function preexec() {
+    typeset -gi CALCTIME=1
+    typeset -gi CMDSTARTTIME=SECONDS
+}
+
+function precmd() {
+    if (( CALCTIME )) ; then
+        typeset -gi ETIME=SECONDS-CMDSTARTTIME
+    fi
+    typeset -gi CALCTIME=0
 }
 
 # NOTE: - main function
@@ -81,6 +102,12 @@ build_prompt() {
   prompt_status
 }
 
+build_rps1() {
+  rps1_git_status
+  rps1_time
+  rps1_exec_time
+}
+
 # Entry point
-PROMPT='$(build_prompt) '
-RPS1='$(rps1_time)'
+PROMPT='$(build_prompt)'
+RPS1='$(build_rps1)'
