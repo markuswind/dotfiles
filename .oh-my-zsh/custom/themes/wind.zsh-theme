@@ -12,7 +12,7 @@ PR_RESET="%{$reset_color%}"
 VCS_DIRTY_COLOR="${PR_RESET}${PR_YELLOW}"
 VCS_CLEAN_COLOR="${PR_RESET}${PR_GREEN}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="${PR_YELLOW}" # 
+ZSH_THEME_GIT_PROMPT_PREFIX="${PR_YELLOW} "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
 ZSH_THEME_GIT_PROMPT_ADDED="${VCS_DIRTY_COLOR} ${PR_RESET}"
@@ -20,10 +20,10 @@ ZSH_THEME_GIT_PROMPT_DELETED="${VCS_DIRTY_COLOR} ${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_RENAMED="${VCS_DIRTY_COLOR} ${PR_RESET}"
 ZSH_THEME_GIT_PROMPT_MODIFIED="${VCS_DIRTY_COLOR} ${PR_RESET}"
 
-ZSH_THEME_GIT_PROMPT_DIRTY="${VCS_DIRTY_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_CLEAN="${VCS_CLEAN_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_UNMERGED="${VCS_DIRTY_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="${VCS_DIRTY_COLOR}  ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_DIRTY=""     # "${VCS_DIRTY_COLOR}  ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""     # "${VCS_CLEAN_COLOR}  ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_UNMERGED=""  #"${VCS_DIRTY_COLOR}  ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="" # ${VCS_DIRTY_COLOR}  ${PR_RESET}"
 
 # NOTE: prompt functions
 prompt_prefix() {
@@ -57,6 +57,15 @@ prompt_status() {
   fi
 
   echo -n "${user_symbol}➝ ${PR_RESET}"
+}
+
+prompt_package() {
+  [[ -f package.json ]] || return
+
+  local package_version=$(grep '"version":' package.json | cut -d\" -f4 2> /dev/null)
+  package_version="v${package_version}"
+
+  echo -n "$PR_RED ${package_version}%{$PR_RESET%} "
 }
 
 prompt_newline() {
@@ -97,6 +106,7 @@ build_prompt() {
   prompt_prefix
   prompt_host
   prompt_dir
+  prompt_package
   prompt_git
   prompt_linebreak
   prompt_status
