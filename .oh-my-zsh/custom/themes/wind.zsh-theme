@@ -62,10 +62,11 @@ prompt_status() {
 prompt_package() {
   [[ -f package.json ]] || return
 
+  local package_symbol=""
   local package_version=$(grep '"version":' package.json | cut -d\" -f4 2> /dev/null)
   package_version="v${package_version}"
 
-  echo -n "$PR_RED ${package_version}%{$PR_RESET%} "
+  echo -n "$PR_RED${package_symbol} ${package_version}%{$PR_RESET%} "
 }
 
 prompt_newline() {
