@@ -38,6 +38,7 @@ set noeol
 set autoread
 set ignorecase
 set nowrap
+set mouse=a
 set showmatch
 set scrolloff=30
 
