@@ -7,8 +7,9 @@ if empty($VIM_NO_EXTRA)
         " language plugins
         Plug 'rust-lang/rust.vim'
         " theming plugins
-        Plug 'vim-airline/vim-airline'
-        Plug 'vim-airline/vim-airline-themes'
+        " Plug 'vim-airline/vim-airline'
+        " Plug 'vim-airline/vim-airline-themes'
+        Plug 'ap/vim-buftabline'
         Plug 'lilydjwg/colorizer'
         Plug 'ryanoasis/vim-devicons'
         Plug 'Yggdroot/indentLine'
@@ -43,7 +44,6 @@ let pluginConfigFiles = [
     \ 'ctrlp',
     \ 'deocomplete', 
     \ 'indentline',
-    \ 'vim-airline',
     \ 'vim-devicons', 
     \ 'vim-multiple-cursors', 
     \ 'vim-startify',
@@ -65,7 +65,8 @@ source $HOME/.config/nvim/pluginconfig/ale.vim
 source $HOME/.config/nvim/pluginconfig/ctrlp.vim
 source $HOME/.config/nvim/pluginconfig/deocomplete.vim
 source $HOME/.config/nvim/pluginconfig/indentline.vim
-source $HOME/.config/nvim/pluginconfig/vim-airline.vim
+" source $HOME/.config/nvim/pluginconfig/vim-airline.vim
+source $HOME/.config/nvim/pluginconfig/vim-buftabline.vim
 source $HOME/.config/nvim/pluginconfig/vim-devicons.vim
 source $HOME/.config/nvim/pluginconfig/vim-multiple-cursors.vim
 source $HOME/.config/nvim/pluginconfig/vim-startify.vim
