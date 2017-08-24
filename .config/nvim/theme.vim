@@ -10,7 +10,7 @@ highlight Normal  ctermbg=none
 highlight NonText ctermbg=none
 
 set cursorline
-set noshowmode
+" set noshowmode
 
 " enable whitespace indicators
 set list

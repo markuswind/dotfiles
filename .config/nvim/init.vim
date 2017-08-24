@@ -11,7 +11,7 @@ if empty($VIM_NO_EXTRA)
         " Plug 'vim-airline/vim-airline-themes'
         Plug 'ap/vim-buftabline'
         Plug 'lilydjwg/colorizer'
-        Plug 'ryanoasis/vim-devicons'
+        " Plug 'ryanoasis/vim-devicons'
         Plug 'Yggdroot/indentLine'
         Plug 'NLKNguyen/papercolor-theme'
         " syntax highlighting
@@ -37,6 +37,7 @@ source $HOME/.config/nvim/theme.vim
 source $HOME/.config/nvim/general.vim
 source $HOME/.config/nvim/commands.vim
 source $HOME/.config/nvim/bindings.vim
+source $HOME/.config/nvim/statusline.vim
 
 " load plugin config files
 let pluginConfigFiles = [
@@ -67,7 +68,7 @@ source $HOME/.config/nvim/pluginconfig/deocomplete.vim
 source $HOME/.config/nvim/pluginconfig/indentline.vim
 " source $HOME/.config/nvim/pluginconfig/vim-airline.vim
 source $HOME/.config/nvim/pluginconfig/vim-buftabline.vim
-source $HOME/.config/nvim/pluginconfig/vim-devicons.vim
+" source $HOME/.config/nvim/pluginconfig/vim-devicons.vim
 source $HOME/.config/nvim/pluginconfig/vim-multiple-cursors.vim
 source $HOME/.config/nvim/pluginconfig/vim-startify.vim
 source $HOME/.config/nvim/pluginconfig/vimfiler.vim
