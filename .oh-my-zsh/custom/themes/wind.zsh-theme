@@ -69,6 +69,28 @@ prompt_package() {
   echo -n "$PR_RED${package_symbol} ${package_version}%{$PR_RESET%} "
 }
 
+# TODO:  - this only works with react native projects atm, should work with native as well
+# FIXME: - the code for getting buildnr sucks (i'm a bash NOOB :cry:)..
+prompt_android_buildnr() {
+  [[ -f android/app/build.gradle ]] || return
+
+  local android_symbol=""
+  local android_buildnr=$(grep 'versionCode.\d*$' android/app/build.gradle | rev | cut -d\  -f1 | rev 2> /dev/null)
+  android_buildnr="${android_buildnr}"
+
+  echo -n "$PR_GREEN${android_symbol} ${android_buildnr}%{$PR_RESET%} "
+}
+
+# TODO: - show iOS build number ..
+prompt_ios_buildnr() {
+  [[ -f ios/ ]] || return 
+
+  local ios_symbol=""
+  local ios_buildnr="??"
+
+  echo -n "$PR_WHITE${ios_symbol} ${ios_buildnr}%{$PR_RESET%} "
+}
+
 prompt_newline() {
   echo -n "\n"
 }
@@ -108,6 +130,8 @@ build_prompt() {
   prompt_host
   prompt_dir
   prompt_package
+  prompt_android_buildnr
+  prompt_ios_buildnr
   prompt_git
   prompt_linebreak
   prompt_status
