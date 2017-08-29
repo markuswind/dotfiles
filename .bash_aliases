@@ -55,7 +55,7 @@ alias vi="nvim"
 # echo $PATH
 alias path='echo -e ${PATH//:/\\n}'
 
-# Xcode
+# xcode
 alias purgeallbuilds='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 
 alias iPhone4s="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-4s"
@@ -67,7 +67,7 @@ alias iPhoneSE="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceTy
 alias iPad5th="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPad--5th-generation-"
 alias iPadAir="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPad-Air"
 
-# Android devices
+# android devices
 alias nexus4="emulator -avd Nexus_4_API_16"
 alias nexus5="emulator -avd Nexus_5_API_25"
 alias nexusS="emulator -avd Nexus_S_API_25"
@@ -90,3 +90,6 @@ alias rngba="cd android && ./gradlew assembleRelease && cd .."
 alias rnri="react-native run-ios | xcpretty"
 alias rnli="nametab DEBUG && colortab purple && clear && react-native log-ios"
 alias rnbi="react-native bundle --platform ios --entry-file index.ios.js --dev false --bundle-output ./ios/main.jsbundle --assets-dest ./ios --sourcemap-output ./ios/sourcemap.js"
+
+# love game engine (love2d.org)
+alias love="/Applications/love.app/Contents/MacOS/love"
