@@ -23,12 +23,14 @@ set autoindent
 set smartindent
 
 autocmd Filetype html  setlocal ts=2 sw=2
+autocmd Filetype js    setlocal ts=2 sw=4
+autocmd Filetype lua   setlocal ts=2 sw=2
 autocmd Filetype ruby  setlocal ts=2 sw=2
 autocmd Filetype swift setlocal ts=2 sw=4
-autocmd Filetype js    setlocal ts=2 sw=4
 
 " file type settings
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
+au BufNewFile,BufRead *.lua set filetype=lua
 au BufNewFile,BufRead *.swift set filetype=swift
 
 " editor settings
@@ -39,7 +41,6 @@ set autoread
 set ignorecase
 set nowrap
 set mouse=a
-set showmatch
 set scrolloff=30
 
 " natural splits

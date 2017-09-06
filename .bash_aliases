@@ -84,7 +84,7 @@ alias pidcat="nametab DEBUG && colortab purple && clear && pidcat --clear --curr
 # react native shortcuts
 alias rnra="react-native run-android"
 alias rnla="nametab DEBUG && colortab purple && clear && pidcat --clear --current -t ReactNativeJS"
-alias rnba="react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug"
+alias rnba="react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug --sourcemap-output ./android/app/build/sourcemap.js"
 alias rngba="cd android && ./gradlew assembleRelease && cd .."
 
 alias rnri="react-native run-ios | xcpretty"
