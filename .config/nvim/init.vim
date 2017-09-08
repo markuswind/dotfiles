@@ -3,6 +3,7 @@ if empty($VIM_NO_EXTRA)
         " file plugins
         Plug 'ctrlpvim/ctrlp.vim'
         Plug 'shougo/unite.vim' " used by vimfiler
+        Plug 'shougo/vimproc.vim', { 'do': 'make' } " used by vimfiler
         Plug 'shougo/vimfiler.vim'
         " language plugins
         Plug 'rust-lang/rust.vim'
