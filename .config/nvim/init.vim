@@ -1,10 +1,12 @@
 if empty($VIM_NO_EXTRA)
     call plug#begin('$HOME/.config/nvim/plugged')
         " file plugins
-        Plug 'ctrlpvim/ctrlp.vim'
         Plug 'shougo/unite.vim' " used by vimfiler
         Plug 'shougo/vimproc.vim', { 'do': 'make' } " used by vimfiler
         Plug 'shougo/vimfiler.vim'
+        Plug 'wincent/command-t', {
+            \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+            \ } 
         " language plugins
         Plug 'rust-lang/rust.vim'
         " theming plugins
@@ -16,7 +18,6 @@ if empty($VIM_NO_EXTRA)
         " utilities
         Plug 'w0rp/ale'
         Plug 'moll/vim-bbye'
-        Plug 'terryma/vim-multiple-cursors'
         Plug 'mhinz/vim-startify'
         Plug 'kopischke/vim-stay'
         Plug 'tpope/vim-fugitive'
@@ -39,10 +40,9 @@ source $HOME/.config/nvim/statusline.vim
 " load plugin config files
 let pluginConfigFiles = [
     \ 'ale',
-    \ 'ctrlp',
+    \ 'command-t',
     \ 'deocomplete', 
     \ 'indentline',
-    \ 'vim-multiple-cursors', 
     \ 'vim-startify',
     \ 'vimfiler']
 
@@ -59,9 +59,8 @@ endif
 
 " TODO: - temp fix for sourcing pluginconfig
 source $HOME/.config/nvim/pluginconfig/ale.vim
-source $HOME/.config/nvim/pluginconfig/ctrlp.vim
+source $HOME/.config/nvim/pluginconfig/command-t.vim
 source $HOME/.config/nvim/pluginconfig/deocomplete.vim
 source $HOME/.config/nvim/pluginconfig/indentline.vim
-source $HOME/.config/nvim/pluginconfig/vim-multiple-cursors.vim
 source $HOME/.config/nvim/pluginconfig/vim-startify.vim
 source $HOME/.config/nvim/pluginconfig/vimfiler.vim
