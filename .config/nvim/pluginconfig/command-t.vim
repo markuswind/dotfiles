@@ -1,2 +1,2 @@
 nnoremap <C-p> :CommandT<Cr>
-let g:CommandTWildIgnore=&wildignore . ",*.pyc,node_modules,build,carthage,coverage,gradle"
+let g:CommandTWildIgnore=&wildignore . ",*.pyc,node_modules,assets,builds,ios,build,carthage,coverage,gradle"
