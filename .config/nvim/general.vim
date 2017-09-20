@@ -71,3 +71,19 @@ if has("clipboard")
     set clipboard+=unnamedplus
   endif
 endif
+
+" set working directory to git project root
+" or directory of current file if not git project
+function! SetProjectRoot()
+  lcd %:p:h
+
+  let git_dir        = system("git rev-parse --show-toplevel")
+  let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
+
+  if empty(is_not_git_dir)
+    lcd `=git_dir`
+  endif
+endfunction
+
+command! SetProjectRoot :call SetProjectRoot()
+autocmd BufRead * call SetProjectRoot()
