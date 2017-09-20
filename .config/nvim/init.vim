@@ -38,26 +38,6 @@ source $HOME/.config/nvim/bindings.vim
 source $HOME/.config/nvim/statusline.vim
 
 " load plugin config files
-let pluginConfigFiles = [
-    \ 'ale',
-    \ 'command-t',
-    \ 'deocomplete', 
-    \ 'indentline',
-    \ 'vim-startify',
-    \ 'vimfiler']
-
-" TODO: - this ain't working yet ..
-if !empty($VIM_NO_EXTRA)
-    for fileName in pluginConfigFiles
-        let basePath = '$HOME/.config/nvim'
-
-        " if !empty(glob(basePath + '/plugged/' + fileName))
-            " exec 'source ' + basePath' + /pluginconfig/' + fileName + '.vim'
-        " endif
-    endfor
-endif
-
-" TODO: - temp fix for sourcing pluginconfig
 source $HOME/.config/nvim/pluginconfig/ale.vim
 source $HOME/.config/nvim/pluginconfig/command-t.vim
 source $HOME/.config/nvim/pluginconfig/deocomplete.vim
