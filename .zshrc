@@ -52,6 +52,10 @@ fi
 # SSH
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Setup base16 shell (https://github.com/chriskempson/base16-shell)
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # Source git-completion
 if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash

@@ -10,6 +10,7 @@ if empty($VIM_NO_EXTRA)
         " language plugins
         Plug 'rust-lang/rust.vim'
         " theming plugins
+        Plug 'chriskempson/base16-vim'
         Plug 'lilydjwg/colorizer'
         Plug 'Yggdroot/indentLine'
         Plug 'NLKNguyen/papercolor-theme'

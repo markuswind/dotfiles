@@ -86,4 +86,3 @@ function! SetProjectRoot()
 endfunction
 
 command! SetProjectRoot :call SetProjectRoot()
-autocmd BufRead * call SetProjectRoot()

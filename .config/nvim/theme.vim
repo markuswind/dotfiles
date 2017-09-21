@@ -1,7 +1,11 @@
 syntax enable
-colorscheme PaperColor
+colorscheme base16-default-dark
 
-set background=light
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 set guifont=Sauce\ Code\ Pro\ for\ Powerline:h11
 set guioptions=aem
 
