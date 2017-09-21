@@ -14,6 +14,7 @@ if empty($VIM_NO_EXTRA)
         Plug 'lilydjwg/colorizer'
         Plug 'Yggdroot/indentLine'
         Plug 'NLKNguyen/papercolor-theme'
+        Plug 'wincent/pinnacle'
         " syntax highlighting
         Plug 'sheerun/vim-polyglot'
         " utilities
