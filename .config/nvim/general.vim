@@ -42,6 +42,7 @@ set ignorecase
 set nowrap
 set mouse=a
 set scrolloff=30
+set colorcolumn=80
 
 " natural splits
 set splitbelow
