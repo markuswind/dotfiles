@@ -1,5 +1,6 @@
 " enter the current millenium
 set nocompatible
+filetype plugin indent on
 
 " fix backspace behaviour
 set backspace=indent,eol,start
@@ -11,8 +12,6 @@ set path+=**
 set wildmenu
 
 " indent settings
-filetype plugin indent on
-
 set tabstop=2
 set shiftwidth=4
 let &softtabstop = &shiftwidth
@@ -75,18 +74,3 @@ if has("clipboard")
     set clipboard+=unnamedplus
   endif
 endif
-
-" set working directory to git project root
-" or directory of current file if not git project
-function! SetProjectRoot()
-  lcd %:p:h
-
-  let git_dir        = system("git rev-parse --show-toplevel")
-  let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
-
-  if empty(is_not_git_dir)
-    lcd `=git_dir`
-  endif
-endfunction
-
-command! SetProjectRoot :call SetProjectRoot()

@@ -32,6 +32,22 @@ endfunction
 command! Ub call s:BufferSelect()
 command! Uf call s:BufferFile()
 
+" adds :SetProjectRoot command ..
+" for settting working directory to git project root
+" or directory of current file if not git project
+function! SetProjectRoot()
+  lcd %:p:h
+
+  let git_dir        = system("git rev-parse --show-toplevel")
+  let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
+
+  if empty(is_not_git_dir)
+    lcd `=git_dir`
+  endif
+endfunction
+
+command! SetProjectRoot :call SetProjectRoot()
+
 " adds :Zt
 "      +ZoomToggle command for zooming/restoring window
 function! s:ZoomToggle() abort
