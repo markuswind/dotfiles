@@ -44,6 +44,9 @@ set mouse=a
 set scrolloff=30
 set colorcolumn=80
 
+" enable italic comments (see: .config/iterm2/xterm-256color-itcalic.terminfo)
+highlight Comment cterm=italic
+
 " natural splits
 set splitbelow
 set splitright
