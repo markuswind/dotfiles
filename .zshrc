@@ -38,6 +38,10 @@ export MANPATH="/usr/local/man:$MANPATH"
 export NVM_DIR="$HOME/.nvm"
 export WRITE_GOOD_GIT_ALLOW=1
 
+# Shortcuts
+export TODOS="$HOME/Documents/notites.md"
+export GOALS="$HOME/Documents/goals.md"
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_CTYPE="utf-8"
