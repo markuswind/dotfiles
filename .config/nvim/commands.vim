@@ -6,17 +6,17 @@ if !exists(':Wh')
   command Wl wincmd l
 endif
 
-" adds :TODOS command for opening todosfile
+" adds :NOTES command for opening notes file 
 " adds :GOALS command for opening goals file
-function! s:OpenTodos()
-    edit $TODOS
+function! s:OpenNotes()
+    edit $NOTES
 endfunction
 
 function! s:OpenGoals()
     edit $GOALS
 endfunction
 
-command! TODOS call s:OpenTodos()
+command! NOTES call s:OpenNotes()
 command! GOALS call s:OpenGoals()
 
 " adds :Ub command for opening Unite buffer
