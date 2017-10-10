@@ -1,3 +1,15 @@
+let g:WindColorColumnBlacklist    = ['diff', 'fugitiveblame', 'vimfiler', 'qf']
+let g:WindCursorlineBlacklist     = ['command-t']
+let g:WindMkviewFiletypeBlacklist = ['diff', 'hgcommit', 'gitcommit']
+
+function! wind#autocmds#should_colorcolumn() abort
+  return index(g:WindColorColumnBlacklist, &filetype) == -1
+endfunction
+
+function! wind#autocmds#should_cursorline() abort
+  return index(g:WindCursorlineBlacklist, &filetype) == -1
+endfunction
+
 function! wind#autocmds#blur_statusline() abort
   " Default blurred statusline (buffer number: filename).
   let l:blurred='%{wind#statusline#gutterpadding()}'

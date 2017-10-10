@@ -35,8 +35,7 @@ endfunction
 
 function! wind#statusline#lhs() abort
   let l:line=wind#statusline#gutterpadding()
-  " HEAVY BALLOT X - Unicode: U+2718, UTF-8: E2 9C 98
-  let l:line.=&modified ? '✘ ' : '  '
+  let l:line.=&modified ? '  ' : '  '
   return l:line
 endfunction
 
