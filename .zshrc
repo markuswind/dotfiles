@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Load custom zsh
-ZSH_THEME="wind"
+ZSH_THEME="wind" # Load custom zsh
+ENABLE_CORRECTION="true"
 
 # Load oh-my-zsh if installed
 if [ -f $ZSH/oh-my-zsh.sh ]; then
@@ -18,7 +18,17 @@ else
   echo "zsh-syntax-highlighting is not installed (check: https://github.com/zsh-users/zsh-syntax-highlighting for instructions)"
 fi
 
-ENABLE_CORRECTION="true"
+# Add auto ls after cd ..
+# Only in response to a user-initiated `cd`, not indirectly (eg. via another
+# function).
+function auto-ls-after-cd() {
+  emulate -L zsh
+  if [ "$ZSH_EVAL_CONTEXT" = "toplevel:shfunc" ]; then
+    ls -a
+  fi
+}
+
+add-zsh-hook chpwd auto-ls-after-cd
 
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
