@@ -4,6 +4,7 @@ brew upgrade
 # general brews
 brew install carthage
 brew install cmus
+brew install highlight
 brew install htop
 brew install node
 brew install openssl
