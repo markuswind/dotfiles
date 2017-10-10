@@ -1,5 +1,12 @@
 if has('autocmd')
   augroup WindAutocmds
+    if has('nvim')
+      " Sync with corresponding non-nvim settings in ~/.nvim/config/general.vim:
+      autocmd ColorScheme * highlight! link NonText ColorColumn
+      autocmd ColorScheme * highlight! link CursorLineNr DiffText
+      autocmd ColorScheme * highlight! link VertSplit LineNr
+    endif
+
     if exists('+winhighlight')
       autocmd BufEnter,FocusGained,VimEnter,WinEnter * if wind#autocmds#should_colorcolumn() | set winhighlight= | endif
       autocmd FocusLost,WinLeave * if wind#autocmds#should_colorcolumn() | set winhighlight=CursorLineNr:LineNr,IncSearch:ColorColumn,Normal:ColorColumn,NormalNC:ColorColumn,SignColumn:ColorColumn | endif
@@ -17,5 +24,8 @@ if has('autocmd')
       autocmd BufEnter,FocusGained,VimEnter,WinEnter * call wind#autocmds#focus_statusline()
       autocmd FocusLost,WinLeave * call wind#autocmds#blur_statusline()
     endif
+
+    autocmd BufEnter,FocusGained,VimEnter,WinEnter * call wind#autocmds#focus_window()
+    autocmd FocusLost,WinLeave * call wind#autocmds#blur_window()
   augroup end
 end

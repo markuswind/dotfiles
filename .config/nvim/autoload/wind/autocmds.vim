@@ -1,6 +1,5 @@
-let g:WindColorColumnBlacklist    = ['diff', 'fugitiveblame', 'vimfiler', 'qf']
-let g:WindCursorlineBlacklist     = ['command-t']
-let g:WindMkviewFiletypeBlacklist = ['diff', 'hgcommit', 'gitcommit']
+let g:WindColorColumnBlacklist = ['diff', 'fugitiveblame', 'vimfiler', 'qf']
+let g:WindCursorlineBlacklist  = ['command-t']
 
 function! wind#autocmds#should_colorcolumn() abort
   return index(g:WindColorColumnBlacklist, &filetype) == -1
@@ -8,6 +7,20 @@ endfunction
 
 function! wind#autocmds#should_cursorline() abort
   return index(g:WindCursorlineBlacklist, &filetype) == -1
+endfunction
+
+function! wind#autocmds#blur_window() abort
+  if wind#autocmds#should_colorcolumn()
+    ownsyntax off
+  endif
+endfunction
+
+function! wind#autocmds#focus_window() abort
+  if wind#autocmds#should_colorcolumn()
+    if !empty(&ft)
+      ownsyntax on
+    endif
+  endif
 endfunction
 
 function! wind#autocmds#blur_statusline() abort

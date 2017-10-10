@@ -66,6 +66,13 @@ if exists("&undodir")
   set undodir=~/dotfiles/.config/nvim/undo
 endif
 
+if !has('nvim')
+  " Sync with corresponding nvim settings in ~/.config/nvim/plugin/autocmds.vim:
+  set highlight+=@:ColorColumn        " ~/@ at end of window, 'showbreak'
+  set highlight+=N:DiffText           " make current line number stand out a little
+  set highlight+=c:LineNr             " blend vertical separators with line numbers
+endif
+
 " yank to clipboard
 if has("clipboard")
   set clipboard=unnamed
