@@ -1,5 +1,7 @@
 if has('autocmd')
   augroup WindAutocmds
+    autocmd!
+
     if has('nvim')
       " Sync with corresponding non-nvim settings in ~/.nvim/config/general.vim:
       autocmd ColorScheme * highlight! link NonText ColorColumn
