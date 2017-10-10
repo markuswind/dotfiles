@@ -37,7 +37,6 @@ source $HOME/.config/nvim/theme.vim
 source $HOME/.config/nvim/general.vim
 source $HOME/.config/nvim/commands.vim
 source $HOME/.config/nvim/bindings.vim
-source $HOME/.config/nvim/statusline.vim
 
 " load plugin config files
 source $HOME/.config/nvim/pluginconfig/ale.vim
