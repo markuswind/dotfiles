@@ -43,6 +43,9 @@ set mouse=a
 set scrolloff=30
 set colorcolumn=80
 
+" ignore annoying swapfile messages
+set shortmess+=A
+
 " enable italic comments (see: .config/iterm2/xterm-256color-itcalic.terminfo)
 highlight Comment cterm=italic
 
@@ -56,21 +59,68 @@ set hidden
 " open explorer on open
 autocmd VimEnter * silent! autocmd! Explore
 
-" disable swaps + backups
-set noswapfile
-set nowritebackup
-set nobackup
-
-if exists("&undodir")
-  call system('mkdir -p ~/dotfiles/.config/nvim/undo')
-  set undodir=~/dotfiles/.config/nvim/undo
+" setup tmp files
+if exists('$SUDO_USER')
+  set nobackup                                " don't create root-owned files
+  set nowritebackup                           " don't create root-owned files
+else
+  set backupdir=~/local/.config/nvim/tmp/backup
+  set backupdir+=~/.config/nvim/tmp/backup    " keep backup files out of the way
+  set backupdir+=.
 endif
 
+if exists('$SUDO_USER')
+  set noswapfile                              " don't create root-owned files
+else
+  set directory=~/local/.config/nvim/tmp/swap//
+  set directory+=~/.config/nvim/tmp/swap//    " keep swap files out of the way
+  set directory+=.
+endif
+
+if has('persistent_undo')
+  if exists('$SUDO_USER')
+    set noundofile                            " don't create root-owned files
+  else
+    set undodir=~/local/.config/nvim/tmp/undo
+    set undodir+=~/.config/nvim/tmp/undo      " keep undo files out of the way
+    set undodir+=.
+    set undofile                              " actually use undo files
+  endif
+endif
+
+if has('viminfo')
+  if exists('$SUDO_USER')
+    set viminfo=                      " don't create root-owned files
+  else
+    if isdirectory('~/local/.config/nvim/tmp')
+      set viminfo+=n~/local/.config/nvim/tmp/viminfo
+    else
+      set viminfo+=n~/.config/nvim/tmp/viminfo " override ~/.viminfo default
+    endif
+
+    if !empty(glob('~/.config/nvim/tmp/viminfo'))
+      if !filereadable(expand('~/.config/nvim/tmp/viminfo'))
+        echoerr 'warning: ~/.config/nvim/tmp/viminfo exists but is not readable'
+      endif
+    endif
+  endif
+endif
+
+if has('mksession')
+  if isdirectory('~/local/.config/nvim/tmp')
+    set viewdir=~/local/.config/nvim/tmp/view
+  else
+    set viewdir=~/.config/nvim/tmp/view       " override ~/.config/nvim/view default
+  endif
+  set viewoptions=cursor,folds        " save/restore just these (with `:{mk,load}view`)
+endif
+
+" setup highlight colors
 if !has('nvim')
-  " Sync with corresponding nvim settings in ~/.config/nvim/plugin/autocmds.vim:
-  set highlight+=@:ColorColumn        " ~/@ at end of window, 'showbreak'
-  set highlight+=N:DiffText           " make current line number stand out a little
-  set highlight+=c:LineNr             " blend vertical separators with line numbers
+  " sync with corresponding nvim settings in ~/.config/nvim/plugin/autocmds.vim:
+  set highlight+=@:ColorColumn " ~/@ at end of window, 'showbreak'
+  set highlight+=N:DiffText    " make current line number stand out a little
+  set highlight+=c:LineNr      " blend vertical separators with line numbers
 endif
 
 " yank to clipboard
