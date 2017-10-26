@@ -58,14 +58,13 @@ alias path='echo -e ${PATH//:/\\n}'
 # xcode
 alias purgeallbuilds='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 
-alias iPhone4s="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-4s"
-alias iPhone5s="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-5"
-alias iPhone6="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6"
-alias iPhone6Plus="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-6-Plus"
-alias iPhoneSE="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPhone-SE"
+alias iPhone5s="ios-sim start --devicetypeid iPhone-5s"
+alias iPhone6="ios-sim start --devicetypeid iPhone-6"
+alias iPhone6Plus="ios-sim start --devicetypeid iPhone-6-Plus"
+alias iPhoneSE="ios-sim start --devicetypeid iPhone-SE"
 
-alias iPad5th="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPad--5th-generation-"
-alias iPadAir="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.iPad-Air"
+alias iPad5th="ios-sim start --devicetypeid iPad--5th-generation-"
+alias iPadAir="ios-sim start --devicetypeid iPad-Air"
 
 # android devices
 alias nexus4="emulator -avd Nexus_4_API_16"
