@@ -586,13 +586,6 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x2d-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>28</integer>
-			<key>Text</key>
-			<string>2F9FE32F-11E9-4E87-8CA7-2D56CAB25BD7</string>
-		</dict>
 		<key>0x2e-0x100000</key>
 		<dict>
 			<key>Action</key>
@@ -772,11 +765,11 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>0 4 1280 796 0 0 1280 800 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>456 259 599 505 0 0 1280 800 </string>
+	<string>456 259 606 456 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>776 281 918 512 0 0 1920 1080 </string>
+	<string>334 175 937 465 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2 8 1276 787 0 0 1280 800 </string>
+	<string>0 0 1920 1080 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>555 22 650 657 0 0 1280 800 </string>
 	<key>New Bookmarks</key>
