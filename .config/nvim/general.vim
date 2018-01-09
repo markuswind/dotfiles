@@ -22,10 +22,10 @@ set autoindent
 set smartindent
 
 autocmd Filetype html  setlocal ts=2 sw=2
-autocmd Filetype js    setlocal ts=2 sw=4
+autocmd Filetype js    setlocal ts=2 sw=2
 autocmd Filetype lua   setlocal ts=2 sw=2
 autocmd Filetype ruby  setlocal ts=2 sw=2
-autocmd Filetype swift setlocal ts=2 sw=4
+autocmd Filetype swift setlocal ts=2 sw=2
 
 " file type settings
 au BufNewFile,BufRead .* call SetFileTypeSH("bash")
