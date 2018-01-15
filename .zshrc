@@ -42,6 +42,7 @@ export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4.1_1"
 
 export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
 export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export MANPATH="/usr/local/man:$MANPATH"
