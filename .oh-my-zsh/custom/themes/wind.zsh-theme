@@ -69,8 +69,17 @@ prompt_package() {
   echo -n "$PR_RED${package_symbol} ${package_version}%{$PR_RESET%} "
 }
 
+prompt_virtualenv() {
+  local virtualenv_path="$VIRTUAL_ENV"
+  local virtualenv_symbol=""
+
+  if [[ -n $virtualenv_path ]]; then
+    echo -n "$PR_GREEN${virtualenv_symbol} `basename $virtualenv_path`%{$PR_RESET%} "
+  fi
+}
+
 # TODO:  - this only works with react native projects atm, should work with native as well
-# FIXME: - the code for getting buildnr sucks (i'm a bash NOOB :cry:)..
+# FIXME: - the code for getting buildnr is bad..
 prompt_android_buildnr() {
   [[ -f android/app/build.gradle ]] || return
 
@@ -130,6 +139,7 @@ build_prompt() {
   prompt_host
   prompt_dir
   prompt_package
+  prompt_virtualenv
   prompt_android_buildnr
   prompt_ios_buildnr
   prompt_git
