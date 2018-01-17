@@ -90,5 +90,10 @@ alias rnri="react-native run-ios | xcpretty"
 alias rnli="nametab DEBUG && clear && react-native log-ios"
 alias rnbi="react-native bundle --platform ios --entry-file index.ios.js --dev false --bundle-output ./ios/main.jsbundle --assets-dest ./ios --sourcemap-output ./ios/sourcemap.js"
 
+# Django
+alias djangorun="python manage.py runserver"
+alias djangomigrate="python manage.py migrate"
+alias djangotest="python manage.py test"
+
 # love game engine (love2d.org)
 alias love="/Applications/love.app/Contents/MacOS/love"
