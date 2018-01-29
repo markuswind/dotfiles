@@ -48,23 +48,6 @@ endfunction
 
 command! SetProjectRoot :call SetProjectRoot()
 
-" adds :Zt
-"      +ZoomToggle command for zooming/restoring window
-function! s:ZoomToggle() abort
-    if exists('t:zoomed') && t:zoomed
-        execute t:zoom_winrestcmd
-        let t:zoomed = 0
-    else
-        let t:zoom_winrestcmd = winrestcmd()
-        resize
-        vertical resize
-        let t:zoomed = 1
-    endif
-endfunction
-
-command! ZoomToggle call s:ZoomToggle()
-command! Zt call s:ZoomToggle()
-
 " adds :H command for opening help in same window
 function! s:help(subject)
     let buftype  = &buftype
