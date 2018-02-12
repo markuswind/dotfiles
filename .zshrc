@@ -46,7 +46,6 @@ export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export MANPATH="/usr/local/man:$MANPATH"
-export NVM_DIR="$HOME/.nvm"
 export WRITE_GOOD_GIT_ALLOW=1
 
 # Shortcuts
@@ -92,3 +91,9 @@ fi
 if [ -f $HOME/dotfiles/.itermhelpers ]; then
   source $HOME/dotfiles/.itermhelpers
 fi
+
+# NVM, see: https://github.com/creationix/nvm#install-script
+export NVM_DIR="$HOME/.nvm"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
