@@ -28,11 +28,11 @@ alias up="cd .."
 alias ..="cd .."
 
 alias home="cd ~/"
+alias back="cd -"
+
 alias dotfiles="nametab DOTFILES && cd ~/dotfiles/" 
 alias downloads="cd ~/Downloads/"
 alias react="cd ~/ReactProjects/"
-alias work="cd ~/ReactProjects/simplicate-native/"
-alias selectinput="cd ~/ReactProjects/react-native-select-input-ios/"
 
 # list shortcuts
 alias ls="ls -CF"
