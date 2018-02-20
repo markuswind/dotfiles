@@ -8,7 +8,7 @@
 	name = Markus Wind
 	email = markuswind@gmail.com
 [push]
-	default = matching
+	default = simple
 [alias]
 	s = status
 	goodness = "!git diff $* | gn"
