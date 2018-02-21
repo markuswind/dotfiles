@@ -77,6 +77,9 @@ alias npmstart="nametab NODE && clear && npm start --reset-cache"
 alias npmglist="npm list -g --depth=0 2>/dev/null"
 alias npmlist="npm list --depth=0 2>/dev/null"
 
+# yarn shortcuts
+alias yarnstart="nametab NODE && clear && yarn && yarn start"
+
 # android debugging
 alias pidcat="nametab DEBUG && clear && pidcat --clear --current"
 
