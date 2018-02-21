@@ -1,43 +1,41 @@
 [core]
-	excludesfile = /Users/markus/.gitignore_global
+  excludesfile = /Users/markus/.gitignore_global
 [credential]
-    helper = osxkeychain	
+  helper = osxkeychain	
 [crential "https://github.com"]
-    username = markuswind
+  username = markuswind
 [user]
-	name = Markus Wind
-	email = markuswind@gmail.com
+  name = Markus Wind
+  email = markuswind@gmail.com
 [push]
-	default = simple
+  default = simple
 [alias]
-	s = status
-	goodness = "!git diff $* | gn"
-	aa = add .
-	ci = commit --verbose
-
-    # wip 'remote' stash
-    push-wip = "!. ~/.githelpers && push_wip"
-	pull-wip = "!. ~/.githelpers && pull_wip"
-
-	# log aliases
-	head = !git tree -1
-    tree = !GIT_NO_PAGER=1 git largetree -10
-	largetree = "!. ~/.githelpers && pretty_git_log"
+  s = status
+  goodness = "!git diff $* | gn"
+  aa = add .
+  ci = commit --verbose
+  # wip 'remote' stash
+  push-wip = "!. ~/.githelpers && push_wip"
+  pull-wip = "!. ~/.githelpers && pull_wip"
+  # log aliases
+  head = !git tree -1
+  tree = !GIT_NO_PAGER=1 git largetree -10
+  largetree = "!. ~/.githelpers && pretty_git_log"
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 [color "status"]
-	added = yellow bold
-	deleted = red
-	changed = green
-	untracked = cyan
+  added = yellow bold
+  deleted = red
+  changed = green
+  untracked = cyan
