@@ -19,8 +19,8 @@ if empty($VIM_NO_EXTRA)
         " utilities
         Plug 'editorconfig/editorconfig-vim'
         Plug 'w0rp/ale'
+        Plug 'rhysd/devdocs.vim'
         Plug 'moll/vim-bbye'
-        Plug 'mhinz/vim-startify'
         Plug 'kopischke/vim-stay'
         Plug 'tpope/vim-fugitive'
         Plug 'airblade/vim-gitgutter'
