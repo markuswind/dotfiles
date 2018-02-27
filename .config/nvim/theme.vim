@@ -25,5 +25,8 @@ set number
 set relativenumber
 set numberwidth=6
 
+" hide line numbers in terminal buffer
+au TermOpen * setlocal nonumber norelativenumber
+
 " vertical split borders
 set fillchars+=vert:│ 
