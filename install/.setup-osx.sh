@@ -53,12 +53,6 @@ defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
-# Enable automatic termination of inactive apps
-defaults write -g NSDisableAutomaticTermination -bool false
-
-# Set Help Viewer windows to non-floating mode
-defaults write com.apple.helpviewer DevMode -bool true
-
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
@@ -89,13 +83,6 @@ defaults write -g com.apple.mouse.scaling 2.5
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write -g AppleKeyboardUIMode -int 3
-
-# Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -168,25 +155,6 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	General -bool true \
 	OpenWith -bool true \
 	Privileges -bool true
-
-###############################################################################
-# Dock, Dashboard, and Hot Corners                                            #
-###############################################################################
-
-defaults write com.apple.dock mineffect -string "scale"
-defaults write com.apple.dock minimize-to-application -bool true 
-defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
-defaults write com.apple.dock show-process-indicators -bool true
-defaults write com.apple.dock launchanim -bool false
-
-defaults write com.apple.dock expose-animation-duration -float 0.175
-defaults write com.apple.dock expose-group-by-app -bool true
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-defaults write com.apple.dock mru-spaces -bool false
-defaults write com.apple.dock orientation left
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.Dock autohide-delay -float 0
 
 # Transmission                                                                #
 ###############################################################################
