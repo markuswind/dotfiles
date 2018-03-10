@@ -1,1 +1,1 @@
-let g:nvim_typescript#max_completion_detail = 0
+let g:nvim_typescript#max_completion_detail = 25
