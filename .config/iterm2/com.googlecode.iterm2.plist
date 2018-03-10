@@ -4,12 +4,18 @@
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>CopyLastNewline</key>
+	<true/>
+	<key>CopySelection</key>
+	<true/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>papercolor-light</key>
@@ -565,10 +571,16 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>2F9FE32F-11E9-4E87-8CA7-2D56CAB25BD7</string>
+	<string>7E71353E-63EC-4FF0-BE9A-80C671368F2A</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
+	<false/>
+	<key>EnableDivisionView</key>
+	<true/>
+	<key>EnableProxyIcon</key>
+	<false/>
+	<key>FlashTabBarInFullscreen</key>
 	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
@@ -592,13 +604,6 @@
 			<integer>30</integer>
 			<key>Text</key>
 			<string></string>
-		</dict>
-		<key>0x5c-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>29</integer>
-			<key>Text</key>
-			<string>2F9FE32F-11E9-4E87-8CA7-2D56CAB25BD7</string>
 		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
@@ -693,13 +698,13 @@
 		</dict>
 	</dict>
 	<key>HideActivityIndicator</key>
-	<false/>
+	<true/>
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
 	<false/>
 	<key>HideTabCloseButton</key>
-	<true/>
+	<false/>
 	<key>HideTabNumber</key>
 	<false/>
 	<key>HotKeyBookmark</key>
@@ -712,20 +717,18 @@
 	<integer>167</integer>
 	<key>HotkeyCode</key>
 	<integer>10</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1048840</integer>
+	<key>JobName</key>
+	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Desktop</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{868, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedStateForSaveMode</key>
-	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -741,7 +744,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdCGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -757,26 +760,15 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame ProfilesPanel</key>
-	<string>0 4 1280 796 0 0 1280 800 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>456 259 606 456 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>334 175 937 465 0 0 1280 800 </string>
+	<string>456 451 796 473 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1080 0 0 1920 1080 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>555 22 650 657 0 0 1280 800 </string>
+	<string>0 369 652 681 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
 			<key>ASCII Anti Aliased</key>
-			<true/>
+			<false/>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -1031,9 +1023,9 @@
 				<real>0.2357795387506485</real>
 			</dict>
 			<key>Guid</key>
-			<string>2F9FE32F-11E9-4E87-8CA7-2D56CAB25BD7</string>
+			<string>7E71353E-63EC-4FF0-BE9A-80C671368F2A</string>
 			<key>Horizontal Spacing</key>
-			<real>1</real>
+			<real>1.0580995858433735</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -1344,13 +1336,13 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Default</string>
+			<string>New Profile</string>
 			<key>Non Ascii Font</key>
 			<string>Monaco 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodeProNerdFontC-Regular 14</string>
+			<string>SauceCodeProNerdFontC-Regular 48</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1395,6 +1387,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color-italic</string>
+			<key>Thin Strokes</key>
+			<integer>0</integer>
 			<key>Transparency</key>
 			<real>0.075492326183431949</real>
 			<key>Unlimited Scrollback</key>
@@ -1420,15 +1414,9 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>81F1402F-3891-4500-A9F7-F4132B35EFD0</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<string>AB1B7B44-760B-4A1F-B6EF-AE38826FF7B9</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>509368743.25485402</real>
+	<real>541700902.23160994</real>
 	<key>OpenBookmark</key>
 	<false/>
 	<key>PointerActions</key>
@@ -1465,27 +1453,27 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/markuswind/dotfiles/.config/iterm2</string>
+	<string>~/.config/iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=25</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=1</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2017-08-29T10:38:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
-	<true/>
+	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>SmartPlacement</key>
 	<false/>
+	<key>StretchTabsToFillBar</key>
+	<true/>
 	<key>TabStyle</key>
 	<integer>0</integer>
 	<key>TabViewType</key>
@@ -1494,9 +1482,11 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
+	<key>WindowNumber</key>
+	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.5</string>
 </dict>
 </plist>
