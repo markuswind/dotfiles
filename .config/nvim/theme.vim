@@ -1,4 +1,5 @@
 syntax enable
+set termguicolors
 colorscheme base16-default-dark
 
 if filereadable(expand("~/.vimrc_background"))
