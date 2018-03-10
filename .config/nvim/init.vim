@@ -28,7 +28,6 @@ if empty($VIM_NO_EXTRA)
         if has("python3") == 1
             Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
             Plug 'mhartington/nvim-typescript'
-            Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
         endif
     call plug#end()
 endif
