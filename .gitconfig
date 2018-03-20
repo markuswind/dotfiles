@@ -14,9 +14,6 @@
   goodness = "!git diff $* | gn"
   aa = add .
   ci = commit --verbose
-  # wip 'remote' stash
-  push-wip = "!. ~/.githelpers && push_wip"
-  pull-wip = "!. ~/.githelpers && pull_wip"
   # log aliases
   head = !git tree -1
   tree = !GIT_NO_PAGER=1 git largetree -10
