@@ -40,7 +40,7 @@ set autoread
 set ignorecase
 set nowrap
 set mouse=a
-set scrolloff=30
+set scrolloff=10
 set colorcolumn=80
 
 " ignore annoying swapfile messages
