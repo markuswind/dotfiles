@@ -14,7 +14,9 @@
   goodness = "!git diff $* | gn"
   aa = add .
   ci = commit --verbose
+  ca = commit --amend
   # log aliases
+  logoneline = log --color=always --graph --oneline
   head = !git tree -1
   tree = !GIT_NO_PAGER=1 git largetree -10
   largetree = "!. ~/.githelpers && pretty_git_log"
