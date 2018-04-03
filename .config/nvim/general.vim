@@ -28,9 +28,11 @@ autocmd Filetype ruby  setlocal ts=2 sw=2
 autocmd Filetype swift setlocal ts=2 sw=2
 
 " file type settings
-au BufNewFile,BufRead .* call SetFileTypeSH("bash")
-au BufNewFile,BufRead *.lua set filetype=lua
+au BufNewFile,BufRead .*      call SetFileTypeSH("bash")
+au BufNewFile,BufRead *.lua   set filetype=lua
 au BufNewFile,BufRead *.swift set filetype=swift
+au BufNewFile,BufRead *.ts    set filetype=typescript
+au BufNewFile,BufRead *.tsx   set filetype=typescript
 
 " editor settings
 set encoding=utf8
