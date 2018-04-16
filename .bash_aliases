@@ -79,6 +79,7 @@ alias npmlist="npm list --depth=0 2>/dev/null"
 
 # yarn shortcuts
 alias yarnstart="nametab NODE && clear && yarn && yarn start"
+alias yarnstartold="nametab NODE && clear && yarn && yarn start-old" # used for crappy yarn build at current company
 
 # android debugging
 alias pidcat="nametab DEBUG && clear && pidcat --clear --current"
