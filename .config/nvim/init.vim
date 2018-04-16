@@ -27,6 +27,7 @@ if empty($VIM_NO_EXTRA)
         " autocompletion
         if has("python3") == 1
             Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+            Plug 'Shougo/echodoc.vim'
             Plug 'mhartington/nvim-typescript'
         endif
     call plug#end()

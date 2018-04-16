@@ -15,6 +15,7 @@ highlight Normal  ctermbg=none
 highlight NonText ctermbg=none
 
 set cursorline
+set cmdheight=2
 " set noshowmode
 
 " enable whitespace indicators
