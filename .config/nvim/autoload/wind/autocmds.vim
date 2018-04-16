@@ -1,4 +1,4 @@
-let g:WindColorColumnBlacklist = ['diff', 'fugitiveblame', 'vimfiler', 'qf']
+let g:WindColorColumnBlacklist = ['diff', 'fugitiveblame', 'vimfiler', 'qf', 'command-t']
 let g:WindCursorlineBlacklist  = ['command-t']
 
 function! wind#autocmds#should_colorcolumn() abort
