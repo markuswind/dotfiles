@@ -12,18 +12,18 @@ PR_RESET="%{$reset_color%}"
 VCS_DIRTY_COLOR="${PR_RESET}${PR_YELLOW}"
 VCS_CLEAN_COLOR="${PR_RESET}${PR_GREEN}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="${PR_YELLOW} "
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_PREFIX="${PR_RESET} ["
+ZSH_THEME_GIT_PROMPT_SUFFIX="${PR_RESET}]"
 
-ZSH_THEME_GIT_PROMPT_ADDED="${VCS_DIRTY_COLOR} ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_DELETED="${VCS_DIRTY_COLOR} ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_RENAMED="${VCS_DIRTY_COLOR} ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_MODIFIED="${VCS_DIRTY_COLOR} ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_DIRTY="${PR_RED}●${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_CLEAN="${PR_GREEN}●${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_UNMERGED="${PR_CYAN}●${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="${PR_YELLOW}●${PR_RESET}"
 
-ZSH_THEME_GIT_PROMPT_DIRTY=""     # "${VCS_DIRTY_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_CLEAN=""     # "${VCS_CLEAN_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_UNMERGED=""  #"${VCS_DIRTY_COLOR}  ${PR_RESET}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="" # ${VCS_DIRTY_COLOR}  ${PR_RESET}"
+ZSH_THEME_GIT_PROMPT_ADDED=""
+ZSH_THEME_GIT_PROMPT_DELETED=""
+ZSH_THEME_GIT_PROMPT_RENAMED=""
+ZSH_THEME_GIT_PROMPT_MODIFIED=""
 
 # NOTE: prompt functions
 prompt_prefix() {
@@ -31,17 +31,24 @@ prompt_prefix() {
 }
 
 prompt_host() {
-  if [[ $UID -eq 0 ]]; then
-    echo -n "%{$terminfo[bold]$PR_RED  %}%n@%m%{$PR_RESET%} "
-  fi
+  echo -n "%{$PR_BLUE ${PR_RESET}%n%} "
+}
+
+prompt_whitespace() {
+  local whitespace=""
+  local termwidth
+
+  (( termwidth = ${COLUMNS} - 17 - ${#${PWD/$HOME/~}} ))
+
+  for i in {1..$termwidth}; do
+    whitespace="${whitespace} "
+  done
+
+  echo -n $whitespace
 }
 
 prompt_dir() {
-  echo -n "${PR_BLUE}  %{$terminfo[bold]%}%~%{$PR_RESET%} "
-}
-
-prompt_git() {
- echo -n "$(git_prompt_info)${PR_RESET%} "
+  echo -n "${PR_BRIGHT_BLACK}%{$terminfo[bold]%}%~%{$PR_RESET%}"
 }
 
 prompt_linebreak() {
@@ -59,63 +66,22 @@ prompt_status() {
   echo -n "${user_symbol}➝ ${PR_RESET}"
 }
 
-prompt_package() {
-  [[ -f package.json ]] || return
-
-  local package_symbol=""
-  local package_version=$(grep '"version":' package.json | cut -d\" -f4 2> /dev/null)
-  package_version="v${package_version}"
-
-  echo -n "$PR_RED${package_symbol} ${package_version}%{$PR_RESET%} "
-}
-
-prompt_virtualenv() {
-  local virtualenv_path="$VIRTUAL_ENV"
-  local virtualenv_symbol=""
-
-  if [[ -n $virtualenv_path ]]; then
-    echo -n "$PR_GREEN${virtualenv_symbol} `basename $virtualenv_path`%{$PR_RESET%} "
-  fi
-}
-
-# TODO:  - this only works with react native projects atm, should work with native as well
-# FIXME: - the code for getting buildnr is bad..
-prompt_android_buildnr() {
-  [[ -f android/app/build.gradle ]] || return
-
-  local android_symbol=""
-  local android_buildnr=$(grep 'versionCode.\d*$' android/app/build.gradle | rev | cut -d\  -f1 | rev 2> /dev/null)
-  android_buildnr="${android_buildnr}"
-
-  echo -n "$PR_GREEN${android_symbol} ${android_buildnr}%{$PR_RESET%} "
-}
-
-# TODO: - show iOS build number ..
-prompt_ios_buildnr() {
-  [[ -f ios/ ]] || return 
-
-  local ios_symbol=""
-  local ios_buildnr="??"
-
-  echo -n "$PR_WHITE${ios_symbol} ${ios_buildnr}%{$PR_RESET%} "
-}
-
 prompt_newline() {
   echo -n "\n"
 }
 
 # NOTE: - rps1 functions
-rps1_git_status() {
-  echo -n "$(git_prompt_status)%{$PR_RESET%}  "
+
+rps1_git() {
+ echo -n "$(git_prompt_info)${PR_RESET%}"
 }
 
-rps1_time() {
-  local time_str="%D{%T} "
-  echo -n "$time_str"
+rps1_git_status() {
+  echo -n "$(git_prompt_status)$PR_RESET%}"
 }
 
 rps1_exec_time() {
-  echo -n "$PR_BRIGHT_BLACK${ETIME}ms$PR_RESET% "
+  echo -n "$PR_BRIGHT_MAGENTA${ETIME}ms$PR_RESET"
 }
 
 # NOTE: - used for showing execuction time
@@ -137,20 +103,16 @@ build_prompt() {
   prompt_newline
   prompt_prefix
   prompt_host
+  prompt_whitespace
   prompt_dir
-  prompt_package
-  prompt_virtualenv
-  prompt_android_buildnr
-  prompt_ios_buildnr
-  prompt_git
   prompt_linebreak
   prompt_status
 }
 
 build_rps1() {
-  rps1_git_status
-  rps1_time
   rps1_exec_time
+  rps1_git
+  rps1_git_status
 }
 
 # Entry point
