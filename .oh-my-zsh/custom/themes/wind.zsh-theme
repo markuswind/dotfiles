@@ -25,15 +25,13 @@ ZSH_THEME_GIT_PROMPT_RENAMED=""
 ZSH_THEME_GIT_PROMPT_MODIFIED=""
 
 # VI mode
-
-VI_MODE="nomode"
-VI_SYMBOL="${PR_YELLOW}"
+VI_SYMBOL=""
 
 function zle-line-init zle-keymap-select {
   case ${KEYMAP} in
-    (vicmd)      VI_MODE="normal" VI_SYMBOL="" ;;
-    (main|viins) VI_MODE="insert" VI_SYMBOL="" ;;
-    (*)          VI_MODE="insert" VI_SYMBOL="" ;;
+    (vicmd)      VI_SYMBOL="" ;;
+    (main|viins) VI_SYMBOL="" ;;
+    (*)          VI_SYMBOL="" ;;
   esac
 
   zle reset-prompt
@@ -62,7 +60,7 @@ prompt_whitespace() {
   local iconsOffset=6
 
   local termwidth
-  (( termwidth = ${COLUMNS} - ${iconsLength} - ${#${PWD/$HOME/~}}))
+  (( termwidth = ${COLUMNS} - ${iconsOffset} - ${#${PWD/$HOME/~}}))
 
   for i in {1..$termwidth}; do
     whitespace="${whitespace} "
