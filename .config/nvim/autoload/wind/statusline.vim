@@ -36,6 +36,7 @@ endfunction
 function! wind#statusline#lhs() abort
   let l:line=wind#statusline#gutterpadding()
   let l:line.=&modified ? '  ' : '  '
+
   return l:line
 endfunction
 
