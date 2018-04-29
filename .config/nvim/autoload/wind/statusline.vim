@@ -9,7 +9,7 @@ endfunction
 
 function! wind#statusline#fileprefix() abort
   let l:basename=expand('%:h')
-  if l:basename ==# '' || l:basename ==# '.'
+  if l:basename ==# '' || l:basename ==# '.' || l:basename =~ "term"
     return ''
   else
     " Make sure we show $HOME as ~.

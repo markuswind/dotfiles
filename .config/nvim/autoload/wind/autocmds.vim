@@ -24,6 +24,7 @@ function! wind#autocmds#focus_window() abort
 endfunction
 
 function! wind#autocmds#blur_statusline() abort
+  " TODO: - fix terminal name here
   " Default blurred statusline (buffer number: filename).
   let l:blurred='%{wind#statusline#gutterpadding()}'
   let l:blurred.='\ ' " space
