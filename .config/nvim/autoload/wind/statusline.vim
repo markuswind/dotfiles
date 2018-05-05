@@ -7,9 +7,25 @@ function! wind#statusline#gutterpadding() abort
   return l:padding
 endfunction
 
+function! wind#statusline#blurred_filename()
+  let l:current_filepath=expand('%:p')
+
+  if l:current_filepath =~ 'term'
+    return 'zsh'
+  elseif l:current_filepath =~ 'fugitiveblame'
+    return 'fugitiveblame'
+  endif
+
+  return expand('%:f')
+endfunction
+
 function! wind#statusline#fileprefix() abort
   let l:basename=expand('%:h')
-  if l:basename ==# '' || l:basename ==# '.' || l:basename =~ "term"
+  let l:filetype=&ft
+
+  if l:basename ==# '' || l:basename ==# '.' || l:basename =~ 'term'
+    return ''
+  elseif l:filetype =~ 'fugitiveblame'
     return ''
   else
     " Make sure we show $HOME as ~.
@@ -19,6 +35,10 @@ endfunction
 
 function! wind#statusline#ft() abort
   if strlen(&ft)
+    if &ft =~ 'fugitiveblame'
+      return ''
+    endif
+
     return ',' . &ft
   else
     return ''

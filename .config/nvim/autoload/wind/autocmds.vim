@@ -24,15 +24,13 @@ function! wind#autocmds#focus_window() abort
 endfunction
 
 function! wind#autocmds#blur_statusline() abort
-  " TODO: - fix terminal name here
-  " Default blurred statusline (buffer number: filename).
   let l:blurred='%{wind#statusline#gutterpadding()}'
   let l:blurred.='\ ' " space
   let l:blurred.='\ ' " space
   let l:blurred.='\ ' " space
   let l:blurred.='\ ' " space
   let l:blurred.='%<' " truncation point
-  let l:blurred.='%f' " filename
+  let l:blurred.='%{wind#statusline#blurred_filename()}'
   let l:blurred.='%=' " split left/right halves (makes background cover whole)
   call s:update_statusline(l:blurred, 'blur')
 endfunction
