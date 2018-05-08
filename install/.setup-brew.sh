@@ -19,12 +19,13 @@ brew install zsh-syntax-highlighting
 # casks
 brew cask install alfred
 brew cask install dropbox
+brew cask install eqmac
 brew cask install gimp
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
 brew cask install slack
-brew cakk install sublime-text
+brew cask install spotify
 brew cask install telegram
 brew cask install transmission
 
