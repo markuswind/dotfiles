@@ -2,25 +2,31 @@
 
 FORMAT="%h%C(reset)  %C(green)%ar%C(reset) %C(magenta)% D%C(reset)%n  %w($(($(tput cols) - 20)),0,2)%s%C(reset)%w() %C(yellow)- %an%C(reset)%n"
 
-show_git_head()
-{
-    pretty_head_log -1
-    git show -p --pretty="tformat:"
+pretty_git_log() {
+  git log --color=always --graph --pretty="tformat:${FORMAT}" "$*" |
+    sed -Ee 's/\|/│/g' \
+    -e 's/\/(\x1b\[m)/╱\1/g' \
+    -e 's/\\(\x1b\[m)/╲\1/g' |
+
+    # Page only if we're asked to.
+    if [ -n "$GIT_NO_PAGER" ]; then
+      cat
+    else
+      # Page only if needed.
+      less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
+    fi
 }
 
-pretty_git_log()
-{
-    git log --color=always --graph --pretty="tformat:${FORMAT}" $* |
-        sed -Ee 's/\|/│/g' \
-        -e 's/\/(\x1b\[m)/╱\1/g' \
-        -e 's/\\(\x1b\[m)/╲\1/g' |
-
-        # Page only if we're asked to.
-        if [ -n "$GIT_NO_PAGER" ]; then
-            cat
-        else
-            # Page only if needed.
-            less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
-        fi
+simple_git_head() {
+  git log --color=always --oneline "$*" | cat
 }
 
+simple_git_log() {
+  git log --color=always --oneline "$*" |
+    if [ -n "$GIT_NO_PAGER" ]; then
+      cat
+    else
+      # Page only if needed.
+      less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
+    fi
+}

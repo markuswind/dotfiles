@@ -1,7 +1,7 @@
 [core]
   excludesfile = /Users/markus/.gitignore_global
 [credential]
-  helper = osxkeychain	
+  helper = osxkeychain
 [crential "https://github.com"]
   username = markuswind
 [user]
@@ -15,9 +15,10 @@
   aa = add .
   ci = commit --verbose
   ca = commit --amend
+  lstash = "!git stash list | cat"
   # log aliases
-  logoneline = log --color=always --graph --oneline
-  head = !git tree -1
+  head = "!. ~/.githelpers && simple_git_head" -1
+  slog = "!. ~/.githelpers && simple_git_log" -15
   tree = !GIT_NO_PAGER=1 git largetree -10
   largetree = "!. ~/.githelpers && pretty_git_log"
 [color]
