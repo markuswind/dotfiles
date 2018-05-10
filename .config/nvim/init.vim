@@ -7,8 +7,6 @@ if empty($VIM_NO_EXTRA)
         Plug 'wincent/command-t', {
             \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
             \ } 
-        " language plugins
-        Plug 'rust-lang/rust.vim'
         " theming plugins
         Plug 'chriskempson/base16-vim'
         Plug 'lilydjwg/colorizer'
