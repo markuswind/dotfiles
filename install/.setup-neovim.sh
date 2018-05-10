@@ -3,4 +3,6 @@ brew upgrade
 
 brew install neovim
 gem install neovim
+
 pip3 install neovim
+pip3 install neovim-remote
