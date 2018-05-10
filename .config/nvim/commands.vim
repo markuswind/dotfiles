@@ -1,11 +1,3 @@
-" commands for split movement
-if !exists(':Wh')
-  command Wh wincmd h
-  command Wj wincmd j
-  command Wk wincmd k
-  command Wl wincmd l
-endif
-
 " adds :NOTES command for opening notes file 
 " adds :GOALS command for opening goals file
 function! s:OpenNotes()
@@ -18,19 +10,6 @@ endfunction
 
 command! NOTES call s:OpenNotes()
 command! GOALS call s:OpenGoals()
-
-" adds :Ub command for opening Unite buffer
-" adds :Uf command for opening Unite file
-function! s:BufferSelect() 
-    Unite buffer
-endfunction
-
-function! s:BufferFile()
-    Unite file
-endfunction
-
-command! Ub call s:BufferSelect()
-command! Uf call s:BufferFile()
 
 " adds :SetProjectRoot command ..
 " for settting working directory to git project root
