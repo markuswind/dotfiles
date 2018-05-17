@@ -8,10 +8,13 @@ let g:vimfiler_ignore_pattern = [
 \ ]
 
 if !exists(':VE')
-  command VE VimFilerExplorer
+  command VE VimFilerExplorer -winwidth=40 -preview-action=choose
 endif
 
 call vimfiler#custom#profile('default', 'context', {
 \   'safe': 0,
 \   'explorer': 1
 \ })
+
+autocmd FileType vimfiler
+  \ nmap <buffer> <2-LeftMouse> <Plug>(vimfiler_edit_file)
