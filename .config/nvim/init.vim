@@ -15,13 +15,14 @@ if empty($VIM_NO_EXTRA)
         " syntax highlighting
         Plug 'sheerun/vim-polyglot'
         " utilities
-        Plug 'editorconfig/editorconfig-vim'
         Plug 'w0rp/ale'
-        Plug 'rhysd/devdocs.vim'
         Plug 'moll/vim-bbye'
-        Plug 'kopischke/vim-stay'
+        Plug 'tpope/vim-commentary'
+        Plug 'rhysd/devdocs.vim'
+        Plug 'editorconfig/editorconfig-vim'
         Plug 'tpope/vim-fugitive'
         Plug 'airblade/vim-gitgutter'
+        Plug 'kopischke/vim-stay'
         " autocompletion
         if has("python3") == 1
             Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
