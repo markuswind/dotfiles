@@ -35,7 +35,7 @@ add-zsh-hook chpwd auto-ls-after-cd
 HIST_STAMPS="dd/mm/yyyy"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git)
+plugins=(git colored-man-pages)
 
 # VI mode
 bindkey -v
