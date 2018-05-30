@@ -18,6 +18,7 @@ brew install zsh-syntax-highlighting
 
 # casks
 brew cask install alfred
+brew cask install aseprite
 brew cask install dropbox
 brew cask install eqmac
 brew cask install gimp
@@ -28,6 +29,7 @@ brew cask install slack
 brew cask install spotify
 brew cask install telegram
 brew cask install transmission
+brew cask install zeplin
 
 # nerd fonts
 brew tap caskroom/fonts
