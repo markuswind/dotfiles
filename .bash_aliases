@@ -79,7 +79,6 @@ alias npmlist="npm list --depth=0 2>/dev/null"
 
 # yarn shortcuts
 alias yarnstart="nametab NODE && clear && yarn && yarn start"
-alias yarnstartold="nametab NODE && clear && yarn && yarn start-old" # used for crappy yarn build at current company
 
 # android debugging
 alias pidcat="nametab DEBUG && clear && pidcat --clear --current"
@@ -94,7 +93,7 @@ alias rnri="react-native run-ios | xcpretty"
 alias rnli="nametab DEBUG && clear && react-native log-ios"
 alias rnbi="react-native bundle --platform ios --entry-file index.ios.js --dev false --bundle-output ./ios/main.jsbundle --assets-dest ./ios --sourcemap-output ./ios/sourcemap.js"
 
-# Django
+# django
 alias djangorun="python manage.py runserver"
 alias djangomigrate="python manage.py migrate"
 alias djangotest="python manage.py test"
