@@ -1,3 +1,6 @@
+" Toggle fold at current position
+nnoremap <s-tab> za
+
 " disable arrow keys
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>

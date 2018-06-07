@@ -27,6 +27,10 @@ autocmd Filetype lua   setlocal ts=2 sw=2
 autocmd Filetype ruby  setlocal ts=2 sw=2
 autocmd Filetype swift setlocal ts=2 sw=2
 
+" fold settings
+set foldmethod=syntax
+set foldlevelstart=1
+
 " file type settings
 au BufNewFile,BufRead .*      call SetFileTypeSH("bash")
 au BufNewFile,BufRead *.lua   set filetype=lua
