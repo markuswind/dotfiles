@@ -25,9 +25,8 @@ if empty($VIM_NO_EXTRA)
         Plug 'kopischke/vim-stay'
         " autocompletion
         if has("python3") == 1
-            Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-            Plug 'Shougo/echodoc.vim'
-            Plug 'mhartington/nvim-typescript'
+            Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+            Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
         endif
     call plug#end()
 endif
