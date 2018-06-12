@@ -11,37 +11,17 @@ endfunction
 command! NOTES call s:OpenNotes()
 command! GOALS call s:OpenGoals()
 
-" adds :SetProjectRoot command ..
-" for settting working directory to git project root
-" or directory of current file if not git project
-function! SetProjectRoot()
-  lcd %:p:h
-
-  let git_dir        = system("git rev-parse --show-toplevel")
-  let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
-
-  if empty(is_not_git_dir)
-    lcd `=git_dir`
-  endif
+" adds :Vterm command for opening term buffer in vertical split
+" adds :Sterm command opening term buffer in horizontal split
+function! s:OpenTerminalInVerticalSplit()
+  vsplit
+  terminal
 endfunction
 
-command! SetProjectRoot :call SetProjectRoot()
-
-" adds :H command for opening help in same window
-function! s:help(subject)
-    let buftype  = &buftype
-    let &buftype = 'help'
-    let v:errmsg = ''
-    let cmd      = "help " . a:subject
-
-    silent! execute  cmd
-
-    if v:errmsg != ''
-        let &buftype = buftype
-        return cmd
-    else
-        call setbufvar('#', '&buftype', buftype)
-    endif
+function! s:OpenTerminalInHorizontalSplit()
+  split
+  terminal
 endfunction
 
-command! -nargs=? -bar -complete=help H execute <SID>help(<q-args>)
+command! Vterm call s:OpenTerminalInVerticalSplit()
+command! Sterm call s:OpenTerminalInHorizontalSplit()
