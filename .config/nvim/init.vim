@@ -15,6 +15,7 @@ if empty($VIM_NO_EXTRA)
         " syntax highlighting
         Plug 'sheerun/vim-polyglot'
         " utilities
+        Plug 'mileszs/ack.vim'
         Plug 'w0rp/ale'
         Plug 'moll/vim-bbye'
         Plug 'tpope/vim-commentary'

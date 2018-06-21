@@ -2,6 +2,7 @@ brew update
 brew upgrade
 
 # general brews
+brew install ack
 brew install carthage
 brew install cmus
 brew install highlight
