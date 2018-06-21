@@ -32,7 +32,7 @@ set foldmethod=syntax
 " set foldlevelstart=1
 
 " file type settings
-au BufNewFile,BufRead .*      call SetFileTypeSH("bash")
+au BufNewFile,BufRead .*      set filetype=sh
 au BufNewFile,BufRead *.lua   set filetype=lua
 au BufNewFile,BufRead *.swift set filetype=swift
 au BufNewFile,BufRead *.ts    set filetype=typescript
