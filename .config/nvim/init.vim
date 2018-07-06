@@ -22,6 +22,7 @@ if empty($VIM_NO_EXTRA)
         Plug 'editorconfig/editorconfig-vim'
         Plug 'tpope/vim-fugitive'
         Plug 'airblade/vim-gitgutter'
+        Plug 'mhinz/vim-grepper'
         Plug 'kopischke/vim-stay'
         " autocompletion
         if has("python3") == 1
