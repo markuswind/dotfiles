@@ -94,6 +94,10 @@ if [ -f $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
 fi
 
+if [ -f $HOME/.secret_bash_aliases ]; then
+  source $HOME/.secret_bash_aliases
+fi
+
 # Source iterm2 helpers
 if [ -f $HOME/dotfiles/.itermhelpers ]; then
   source $HOME/dotfiles/.itermhelpers
