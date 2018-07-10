@@ -20,9 +20,11 @@ brew install zsh-syntax-highlighting
 # casks
 brew cask install alfred
 brew cask install aseprite
+brew cask install blender
 brew cask install dropbox
 brew cask install eqmac
 brew cask install gimp
+brew cask install godot
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
