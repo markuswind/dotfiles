@@ -35,7 +35,7 @@ alias downloads="cd ~/Downloads/"
 alias react="cd ~/ReactProjects/"
 
 # list shortcuts
-alias ls="ls -CF"
+alias ls="ls -G -CF"
 alias ll="ls -CFlhA"
 alias lsh='ls -d .*'
 alias lstree='find . -type f'
