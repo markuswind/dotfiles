@@ -5,6 +5,10 @@ alias sourcezsh="source ~/.zshrc"
 alias szsh="source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc"
 
+# notes
+
+alias notes="vim +'normal Go' +'r!date' \$NOTES"
+
 # general
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
