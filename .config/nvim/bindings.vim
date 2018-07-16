@@ -1,11 +1,9 @@
-" Toggle fold at current position
-nnoremap <s-tab> za
+" deletes empty lines without affecting unnamed register
+" FIXME: this is not working..
+nnoremap <expr> dd (getline('.') =~ '^\s*$' && v:register == '"' ? '"_' : '').'dd'
 
-" disable arrow keys
-noremap <Up>    <Nop>
-noremap <Down>  <Nop>
-noremap <Left>  <Nop>
-noremap <Right> <Nop>
+" toggle fold at current position
+nnoremap <s-tab> za
 
 " keys for split movement
 nnoremap <C-h> :wincmd h<CR>
