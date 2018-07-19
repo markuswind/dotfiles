@@ -34,6 +34,9 @@ brew cask install telegram
 brew cask install transmission
 brew cask install zeplin
 
+# work brews
+brew install zaquestion/tap/lab
+
 # nerd fonts
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
