@@ -14,6 +14,7 @@ if empty($VIM_NO_EXTRA)
         Plug 'wincent/pinnacle'
         " syntax highlighting
         Plug 'sheerun/vim-polyglot'
+        Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
         " utilities
         Plug 'w0rp/ale'
         Plug 'moll/vim-bbye'
