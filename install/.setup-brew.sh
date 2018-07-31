@@ -20,6 +20,7 @@ brew install zsh-syntax-highlighting
 # casks
 brew cask install alfred
 brew cask install aseprite
+brew cask install beardedspice
 brew cask install blender
 brew cask install dropbox
 brew cask install eqmac
