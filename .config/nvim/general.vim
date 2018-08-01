@@ -37,6 +37,7 @@ au BufNewFile,BufRead *.lua   set filetype=lua
 au BufNewFile,BufRead *.swift set filetype=swift
 au BufNewFile,BufRead *.ts    set filetype=typescript
 au BufNewFile,BufRead *.tsx   set filetype=typescript
+au BufNewFile,BufRead *.json  set fdm=syntax " make folding work for json files
 
 " editor settings
 set encoding=utf8
