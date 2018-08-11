@@ -29,7 +29,7 @@ autocmd Filetype swift setlocal ts=2 sw=2
 
 " fold settings
 set foldmethod=syntax
-" set foldlevelstart=1
+set foldlevelstart=99
 
 " file type settings
 au BufNewFile,BufRead .*      set filetype=sh
