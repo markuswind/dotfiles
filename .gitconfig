@@ -13,8 +13,9 @@
   s = status
   goodness = "!git diff $* | gn"
   aa = add .
-  ci = commit --verbose
   ca = commit --amend
+  ci = commit --verbose
+  co = checkout
   lstash = "!git stash list | cat"
   # log aliases
   head = "!. ~/.githelpers && simple_git_head" -1
