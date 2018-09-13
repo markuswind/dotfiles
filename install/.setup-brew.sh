@@ -34,6 +34,7 @@ brew cask install slack
 brew cask install spotify
 brew cask install telegram
 brew cask install transmission
+brew cask install virtualbox
 brew cask install zeplin
 
 # work brews
