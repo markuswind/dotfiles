@@ -88,6 +88,7 @@ function! wind#statusline#rhs() abort
     if len(l:column) < 2
       let l:rhs.=' '
     endif
+
     if len(l:width) < 2
       let l:rhs.=' '
     endif
@@ -152,7 +153,7 @@ function! wind#statusline#update_highlight() abort
         \   'term': 'bold'
         \ })
 
-  " Right-hand side section.
+    " Right-hand side section.
   let l:bg=pinnacle#extract_fg('Cursor')
   let l:fg=pinnacle#extract_fg('User3')
   execute 'highlight User5 ' .
