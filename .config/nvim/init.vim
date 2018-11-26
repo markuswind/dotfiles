@@ -16,7 +16,6 @@ if empty($VIM_NO_EXTRA)
         Plug 'sheerun/vim-polyglot'
         Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
         " utilities
-        " Plug 'w0rp/ale'
         Plug 'moll/vim-bbye'
         Plug 'tpope/vim-commentary'
         Plug 'rhysd/devdocs.vim'
@@ -27,10 +26,6 @@ if empty($VIM_NO_EXTRA)
         Plug 'kopischke/vim-stay'
         " Conquere of Completion
         Plug 'neoclide/coc.nvim', { 'tag': '*', 'do': { -> coc#util#install() } }
-        " if has("python3") == 1
-        "     Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-        "     Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-        " endif
     call plug#end()
 endif
 
