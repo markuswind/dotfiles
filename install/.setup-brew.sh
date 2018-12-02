@@ -14,6 +14,7 @@ brew install pidcat
 brew install ripgrep
 brew install shellcheck
 brew install thefuck
+brew install tig
 brew install tree
 brew install wget
 brew install zsh-syntax-highlighting
