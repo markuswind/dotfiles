@@ -37,6 +37,9 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git colored-man-pages)
 
+# The fuck brew, TODO: should be loaded from plugin?
+eval $(thefuck --alias)
+
 # VI mode
 bindkey -v
 export KEYTIMEOUT=1
