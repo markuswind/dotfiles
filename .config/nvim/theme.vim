@@ -1,17 +1,26 @@
 syntax enable
 set termguicolors
-let ayucolor="light" 
+
+" set ayu color according to iterm profile
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == "AyuDark"
+  let ayucolor="mirage"
+else
+  let ayucolor="light"
+endif
+
 colorscheme ayu
 
+" misc..
 set guifont=Sauce\ Code\ Pro\ for\ Powerline:h11
 set guioptions=aem
+
+set cursorline
+set cmdheight=2
 
 " transparancy ..
 highlight Normal  ctermbg=none
 highlight NonText ctermbg=none
-
-set cursorline
-set cmdheight=2
 
 " enable whitespace indicators
 set list

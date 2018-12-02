@@ -48,6 +48,11 @@ set ignorecase
 set nowrap
 set mouse=a
 set scrolloff=10
+set colorcolumn=80
+
+" coc.nvim settings
+set updatetime=300
+set signcolumn=yes
 
 " ignore annoying swapfile messages
 set shortmess+=A

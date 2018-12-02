@@ -36,7 +36,7 @@ if has('statusline')
   set statusline+=%*              " Reset highlight group.
 
   if has('autocmd')
-    augroup windStatusline
+    augroup WindStatusline
       autocmd!
       autocmd ColorScheme * call wind#statusline#update_highlight()
       autocmd User FerretAsyncStart call wind#statusline#async_start()
