@@ -8,7 +8,7 @@ if empty($VIM_NO_EXTRA)
             \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
             \ } 
         " theming plugins
-        Plug 'chriskempson/base16-vim'
+        Plug 'ayu-theme/ayu-vim'
         Plug 'lilydjwg/colorizer'
         Plug 'Yggdroot/indentLine'
         Plug 'wincent/pinnacle'

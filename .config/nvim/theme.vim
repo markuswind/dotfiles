@@ -1,22 +1,26 @@
 syntax enable
 set termguicolors
-colorscheme base16-default-dark
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
+" set ayu color according to iterm profile
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == "AyuDark"
+  let ayucolor="mirage"
+else
+  let ayucolor="light"
 endif
 
+colorscheme ayu
+
+" misc..
 set guifont=Sauce\ Code\ Pro\ for\ Powerline:h11
 set guioptions=aem
+
+set cursorline
+set cmdheight=2
 
 " transparancy ..
 highlight Normal  ctermbg=none
 highlight NonText ctermbg=none
-
-set cursorline
-set cmdheight=2
-" set noshowmode
 
 " enable whitespace indicators
 set list
