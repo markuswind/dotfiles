@@ -13,6 +13,7 @@ if empty($VIM_NO_EXTRA)
         Plug 'Yggdroot/indentLine'
         Plug 'wincent/pinnacle'
         " syntax highlighting
+        Plug 'neoclide/jsonc.vim'
         Plug 'sheerun/vim-polyglot'
         Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
         " utilities
