@@ -23,7 +23,7 @@ highlight Normal  ctermbg=none
 highlight NonText ctermbg=none
 
 " enable whitespace indicators
-set list
+" set list
 set listchars=tab:▸\ ,trail:·,eol:¬
 
 " show line numbers
