@@ -2,6 +2,9 @@
 set nocompatible
 filetype plugin indent on
 
+" use zsh shell
+set shell=/bin/zsh
+
 " fix backspace behaviour
 set backspace=indent,eol,start
 
