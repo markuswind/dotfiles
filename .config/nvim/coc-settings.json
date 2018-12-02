@@ -4,7 +4,20 @@
   "coc.preferences.diagnostic.hintSign": "",
   "coc.preferences.diagnostic.errorSign": "",
   "coc.preferences.diagnostic.warningSign": "",
-  // settings
+  // general
   "coc.preferences.autoTrigger": "trigger",
-  "coc.preferences.timeout": 3000
+  "coc.preferences.timeout": 3000,
+  // tsserver
+  "javascript.validate.enable": true,
+  "typescript.validate.enable": true,
+  // prettier
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "js",
+    "json",
+    "jsx",
+    "Markdown",
+    "ts",
+    "tsx"
+  ]
 }
