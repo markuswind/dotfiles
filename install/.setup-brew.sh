@@ -20,6 +20,7 @@ brew install wget
 brew install zsh-syntax-highlighting
 
 # casks
+brew cask install aerial
 brew cask install alfred
 brew cask install aseprite
 brew cask install beardedspice
