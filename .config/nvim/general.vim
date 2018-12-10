@@ -72,6 +72,16 @@ set hidden
 
 " open explorer on open
 autocmd VimEnter * silent! autocmd! Explore
+"
+" autoread and autowrite
+augroup save
+  au!
+  au FocusLost * wall
+augroup END
+
+" ignore warning about updated files
+set autoread
+autocmd FocusGained,CursorHold ?* if getcmdwintype() == '' | checktime | endif
 
 " setup tmp files
 if exists('$SUDO_USER')
