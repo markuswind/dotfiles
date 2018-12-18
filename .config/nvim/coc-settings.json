@@ -9,7 +9,7 @@
   "coc.preferences.timeout": 3000,
   // tsserver
   "javascript.validate.enable": true,
-  "typescript.validate.enable": true,
+  "typescript.validate.enable": false,
   // prettier
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
@@ -19,5 +19,20 @@
     "Markdown",
     "ts",
     "tsx"
-  ]
+  ],
+  // (dart) language server(s)
+  "languageserver": {
+    "dart": {
+      "command": "dart_language_server",
+      "args": [],
+      "filetypes": ["dart"],
+      "initializationOptions": {},
+      "settings": {
+        "dart": {
+          "validation": {},
+          "completion": {}
+        }
+      }
+    }
+  }
 }

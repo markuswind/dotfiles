@@ -51,8 +51,11 @@ bindkey '^F' history-incremental-search-backward
 export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4.1_1"
 
 export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
-export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
+
+export PATH="/usr/local/opt/flutter/bin/cache/dart-sdk/bin:$HOME/.pub-cache/bin:$PATH"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
