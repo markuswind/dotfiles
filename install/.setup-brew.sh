@@ -33,6 +33,7 @@ brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
 brew cask install ngrok
+brew cask install sequel-pro
 brew cask install slack
 brew cask install spotify
 brew cask install telegram
