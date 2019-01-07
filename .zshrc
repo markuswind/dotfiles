@@ -47,20 +47,27 @@ export KEYTIMEOUT=1
 bindkey '^R' history-incremental-search-backward
 bindkey '^F' history-incremental-search-backward
 
-# User configuration
-export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4.1_1"
+# PATH configuration
 
 export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
 export PATH="/usr/local/mysql/bin:$PATH"
 
+# ANDROID PATH configuration
+
+export JAVA_HOME="${/usr/libexec/java_home -v 1.8}"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/tools/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+
+# FLUTTER PATH configuration
 export PATH="/usr/local/opt/flutter/bin/cache/dart-sdk/bin:$HOME/.pub-cache/bin:$PATH"
-export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# MAN PATH Configuration
 export MANPATH="/usr/local/man:$MANPATH"
-export WRITE_GOOD_GIT_ALLOW=1
 
 # Shortcuts
 export NOTES="$HOME/Documents/notes.md"

@@ -72,7 +72,7 @@ alias iPadAir="ios-sim start --devicetypeid iPad-Air"
 
 # android devices
 alias nexus4="emulator -avd Nexus_4_API_16"
-alias nexus5="emulator -avd Nexus_5_API_25"
+alias nexus5="emulator -avd Nexus_5X_API_28_x86"
 alias nexusS="emulator -avd Nexus_S_API_25"
 alias pixelXL="emulator -avd Pixel_XL_API_26"
 
