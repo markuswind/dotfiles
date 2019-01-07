@@ -10,3 +10,4 @@ brew install --HEAD libimobiledevice
 brew install ideviceinstaller
 
 brew install ios-deploy
+brew install cocoapods
