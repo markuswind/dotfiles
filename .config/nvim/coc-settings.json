@@ -9,7 +9,7 @@
   "coc.preferences.timeout": 3000,
   // tsserver
   "javascript.validate.enable": true,
-  "typescript.validate.enable": false,
+  "typescript.validate.enable": true,
   // prettier
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
