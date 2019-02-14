@@ -11,6 +11,10 @@ alias notes="vim +'normal Go' +'r!date' \$NOTES"
 
 # general
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+alias vc-pipe="/tmp/log.txt & code /tmp/log.txt"
+
+# find-file
+alias ff="find-file.sh"
 
 # file/dir creation
 alias mkdir="mkdir -pv"
@@ -55,6 +59,9 @@ alias tabnode="nametab NODE && clear"
 # neovim
 alias vim="nvim"
 alias vi="nvim"
+
+# visual code
+alias vc="code"
 
 # echo $PATH
 alias path='echo -e ${PATH//:/\\n}'
