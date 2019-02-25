@@ -1,4 +1,5 @@
 [core]
+  editor = "nvim"
   excludesfile = /Users/markus/.gitignore_global
 [credential]
   helper = osxkeychain
