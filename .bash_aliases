@@ -84,7 +84,7 @@ alias nexusS="emulator -avd Nexus_S_API_25"
 alias pixelXL="emulator -avd Pixel_XL_API_26"
 
 # npm shortcuts
-alias npmstart="nametab NODE && clear && npm start --reset-cache"
+alias npmstart="clear && npm start --reset-cache"
 alias npmglist="npm list -g --depth=0 2>/dev/null"
 alias npmlist="npm list --depth=0 2>/dev/null"
 
