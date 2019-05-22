@@ -18,6 +18,8 @@ alias ff="find-file.sh"
 
 # file/dir creation
 alias mkdir="mkdir -pv"
+# file/dir copy with progress
+alias cpr="rsync -a --human-readable --progress"
 
 # colorize the grep command output
 alias grep='rg'
@@ -40,7 +42,8 @@ alias back="cd -"
 
 alias dotfiles="nametab DOTFILES && cd ~/dotfiles/" 
 alias downloads="cd ~/Downloads/"
-alias react="cd ~/ReactProjects/"
+alias projects="cd ~/Projects"
+alias react="cd ~/Projects/react"
 
 # list shortcuts
 alias ls="ls -G -CF"
