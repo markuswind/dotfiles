@@ -26,6 +26,9 @@ set smartindent
 
 autocmd Filetype html  setlocal ts=2 sw=2
 autocmd Filetype js    setlocal ts=2 sw=2
+autocmd Filetype jsx   setlocal ts=2 sw=2
+autocmd Filetype ts    setlocal ts=2 sw=2
+autocmd Filetype tsx   setlocal ts=2 sw=2
 autocmd Filetype lua   setlocal ts=2 sw=2
 autocmd Filetype ruby  setlocal ts=2 sw=2
 autocmd Filetype swift setlocal ts=2 sw=2
@@ -38,8 +41,9 @@ set foldlevelstart=99
 au BufNewFile,BufRead .*      set filetype=sh
 au BufNewFile,BufRead *.lua   set filetype=lua
 au BufNewFile,BufRead *.swift set filetype=swift
+au BufNewFile,BufRead *.jsx   set filetype=javascript,jsx
 au BufNewFile,BufRead *.ts    set filetype=typescript
-au BufNewFile,BufRead *.tsx   set filetype=typescript
+au BufNewFile,BufRead *.tsx   set filetype=typescript,tsx
 au BufNewFile,BufRead *.json  set fdm=syntax " make folding work for json files
 
 " editor settings
