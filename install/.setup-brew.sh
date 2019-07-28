@@ -25,6 +25,7 @@ brew cask install aerial
 brew cask install alfred
 brew cask install aseprite
 brew cask install blender
+brew cask install docker
 brew cask install dropbox
 brew cask install eqmac
 brew cask install gimp
