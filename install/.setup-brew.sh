@@ -5,6 +5,7 @@ brew upgrade
 brew install ack
 brew install carthage
 brew install cmus
+brew install git-quick-stats
 brew install highlight
 brew install htop
 brew install nnn
@@ -22,6 +23,7 @@ brew install wget
 brew install zsh-syntax-highlighting
 
 # casks
+brew cask install abstract
 brew cask install aerial
 brew cask install alfred
 brew cask install aseprite
@@ -41,6 +43,7 @@ brew cask install slack
 brew cask install spotify
 brew cask install telegram
 brew cask install transmission
+brek cask install tunnelblick
 brew cask install virtualbox
 brew cask install zeplin
 
