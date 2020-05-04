@@ -45,6 +45,9 @@ alias downloads="cd ~/Downloads/"
 alias projects="cd ~/Projects"
 alias react="cd ~/Projects/react"
 
+# git templates
+alias prtemplate="cat ~/Dotfiles/assets/pr_template.md | pbcopy"
+
 # list shortcuts
 alias ls="ls -G -CF"
 alias ll="ls -CFlhA"
@@ -92,7 +95,8 @@ alias npmglist="npm list -g --depth=0 2>/dev/null"
 alias npmlist="npm list --depth=0 2>/dev/null"
 
 # yarn shortcuts
-alias yarnstart="nametab NODE && clear && yarn && yarn start"
+alias yarnstart="clear && yarn start"
+alias yarndev="clear && yarn dev"
 
 # android debugging
 alias pidcat="nametab DEBUG && clear && pidcat --clear --current"
