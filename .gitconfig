@@ -23,6 +23,8 @@
   # log aliases
   head = "!. ~/.githelpers && simple_git_head" -1
   slog = "!. ~/.githelpers && simple_git_log" -15
+  # delete local branches which are 'gone'
+  gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs git branch -D"
 [color]
   branch = auto
   diff = auto
