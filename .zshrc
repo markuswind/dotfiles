@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Theme
 ZSH_THEME="wind" # Load custom zsh
 ENABLE_CORRECTION="true"
 
@@ -51,15 +52,17 @@ bindkey '^F' history-incremental-search-backward
 
 export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
 export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # ANDROID PATH configuration
 
-export JAVA_HOME="${/usr/libexec/java_home -v 1.8}"
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_HOME/emulator:$PATH"
-export PATH="$ANDROID_HOME/tools:$PATH"
-export PATH="$ANDROID_HOME/tools/bin:$PATH"
-export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # FLUTTER PATH configuration
 export PATH="/usr/local/opt/flutter/bin/cache/dart-sdk/bin:$HOME/.pub-cache/bin:$PATH"
@@ -73,9 +76,13 @@ export MANPATH="/usr/local/man:$MANPATH"
 export NOTES="$HOME/Documents/notes.md"
 export GOALS="$HOME/Documents/goals.md"
 
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^x^x' edit-command-line
+
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
-export LC_CTYPE="utf-8"
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -111,3 +118,5 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
