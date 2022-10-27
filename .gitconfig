@@ -40,8 +40,10 @@
   new = green bold
 [color "status"]
   added = yellow bold
-  deleted = red
+  deleted = red strike
   changed = green
   untracked = cyan
 [tig "color"]
   cursor = white red bold
+[pull]
+	rebase = false
