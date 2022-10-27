@@ -1,6 +1,8 @@
 nnoremap <C-p> :CommandT<Cr>
 nnoremap <C-b> :CommandTBuffer<Cr>
 
+let g:CommandTPreferredImplementation='lua'
+
 " TODO: fix string being too long..
 let g:CommandTWildIgnore=&wildignore . ",*.pyc,node_modules,assets,builds,ios,build,Carthage,coverage,gradle,cicd,cypress,dist,error_pages"
 
