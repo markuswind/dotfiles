@@ -51,12 +51,13 @@ bindkey '^F' history-incremental-search-backward
 # PATH configuration
 
 export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # ANDROID PATH configuration
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
