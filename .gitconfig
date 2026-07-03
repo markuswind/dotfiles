@@ -8,6 +8,7 @@
 [user]
   name = Markus Wind
   email = markuswind@gmail.com
+  signingkey = 23C0F1364DFEC55F
 [push]
   default = simple
 [alias]
@@ -47,3 +48,5 @@
   cursor = white red bold
 [pull]
 	rebase = false
+[commit]
+  gpgsign = true
