@@ -26,9 +26,9 @@ ln -sf $dir/.config/base16-shell ~/.config/base16-shell
 echo "Creating symlink for wind.zsh-theme"
 ln -sf ~/dotfiles/.oh-my-zsh/custom/themes/wind.zsh-theme ~/.oh-my-zsh/custom/themes/wind.zsh-theme
 
-if [ -f ~/dotfiles/.secret_bash_aliases ]; then
-  echo "Creating symlink for secret bash aliases"
-  ln -sf ~/dotfiles/.secret_bash_aliases ~/.secret_bash_aliases
+if [ -f ~/dotfiles/.secret_zshrc ]; then
+  echo "Creating symlink for secret zshrc"
+  ln -sf ~/dotfiles/.secret_zshrc ~/.secret_zshrc
 fi
 
 echo "Creating symlinks for cursor skills"
