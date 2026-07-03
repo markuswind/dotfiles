@@ -6,7 +6,7 @@ require('nvim-tree').setup({
   filters = { custom = { '^\\.git$', '^\\.DS_Store$' } },
   renderer = {
     icons = {
-      show = { file = false, folder = false, folder_arrow = false, git = false },
+      show = { file = true, folder = true, folder_arrow = true, git = false },
     },
   },
 })
