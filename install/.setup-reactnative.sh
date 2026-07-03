@@ -5,7 +5,7 @@ brew install nvm
 brew install flow
 brew install watchman
 
-brew cask install react-native-debugger
+brew install --cask react-native-debugger
 
 nvm install iojs
 nvm alias default iojs

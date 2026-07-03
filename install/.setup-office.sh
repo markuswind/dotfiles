@@ -1,4 +1,4 @@
-brew install microsoft-excel
-brew install microsoft-outlook
-brew install microsoft-teams
-brew install microsoft-word
+brew install --cask microsoft-excel
+brew install --cask microsoft-outlook
+brew install --cask microsoft-teams
+brew install --cask microsoft-word

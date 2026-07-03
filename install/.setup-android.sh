@@ -1,4 +1,4 @@
-brew cask install homebrew/cask-versions/java8
+brew install --cask homebrew/cask-versions/java8
 
-brew cask install android-sdk
-brew cask install android-studio
+brew install --cask android-sdk
+brew install --cask android-studio
