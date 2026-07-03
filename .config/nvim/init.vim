@@ -1,9 +1,11 @@
+" nvim-tree needs netrw disabled before it loads so it can hijack directories.
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 if empty($VIM_NO_EXTRA)
     call plug#begin('$HOME/.config/nvim/plugged')
         " file plugins
-        Plug 'shougo/unite.vim' " used by vimfiler
-        Plug 'shougo/vimproc.vim', { 'do': 'make' } " used by vimfiler
-        Plug 'shougo/vimfiler.vim'
+        Plug 'nvim-tree/nvim-tree.lua'
         Plug 'wincent/command-t', {
             \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
             \ } 

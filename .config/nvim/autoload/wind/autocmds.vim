@@ -1,4 +1,4 @@
-let g:WindColorColumnBlacklist = ['diff', 'fugitiveblame', 'vimfiler', 'qf', 'command-t']
+let g:WindColorColumnBlacklist = ['diff', 'fugitiveblame', 'NvimTree', 'qf', 'command-t']
 let g:WindCursorlineBlacklist  = ['command-t']
 
 function! wind#autocmds#should_colorcolumn() abort
@@ -64,8 +64,8 @@ function! s:get_custom_statusline(action) abort
     return '\ \ ' . substitute(bufname('%'), ' ', '\\ ', 'g')
   elseif &ft ==# 'diff' && exists('t:diffpanel') && t:diffpanel.bufname ==# bufname('%')
     return 'Undotree\ preview' " Less ugly, and nothing really useful to show.
-  elseif &ft ==# 'vimfiler'
-    return 'Vimfiler'
+  elseif &ft ==# 'NvimTree'
+    return 'NvimTree'
   elseif &ft ==# 'qf'
     if a:action ==# 'blur'
       return 'Quickfix'

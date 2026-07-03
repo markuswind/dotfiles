@@ -1,5 +1,14 @@
 scriptencoding utf-8
 
+" pinnacle#extract_* reads the cterm attribute in a terminal (even with
+" termguicolors on), but gui-only colorschemes like ayu leave cterm empty,
+" producing `guibg=` with no value -> E417. Read the mode pinnacle writes.
+let s:mode = (has('gui_running') || (has('termguicolors') && &termguicolors)) ? 'gui' : 'cterm'
+
+function! s:extract(group, component) abort
+  return synIDattr(synIDtrans(hlID(a:group)), a:component, s:mode)
+endfunction
+
 function! wind#statusline#gutterpadding() abort
   let l:minwidth=2
   let l:gutterWidth=max([strlen(line('$')) + 1, &numberwidth, l:minwidth])
@@ -141,21 +150,21 @@ function! wind#statusline#update_highlight() abort
   execute 'highlight User3 ' . l:highlight
 
   " Inverted Error styling, for left-hand side "Powerline" triangle.
-  let l:fg=pinnacle#extract_fg(s:wind_statusline_status_highlight)
-  let l:bg=pinnacle#extract_bg('StatusLine')
+  let l:fg=s:extract(s:wind_statusline_status_highlight, 'fg')
+  let l:bg=s:extract('StatusLine', 'bg')
   execute 'highlight User4 ' . pinnacle#highlight({'bg': l:bg, 'fg': l:fg})
 
   " And opposite for the buffer number area.
   execute 'highlight User7 ' .
         \ pinnacle#highlight({
         \   'bg': l:fg,
-        \   'fg': pinnacle#extract_fg('Normal'),
+        \   'fg': s:extract('Normal', 'fg'),
         \   'term': 'bold'
         \ })
 
     " Right-hand side section.
-  let l:bg=pinnacle#extract_fg('Cursor')
-  let l:fg=pinnacle#extract_fg('User3')
+  let l:bg=s:extract('Cursor', 'fg')
+  let l:fg=s:extract('User3', 'fg')
   execute 'highlight User5 ' .
         \ pinnacle#highlight({
         \   'bg': l:fg,
