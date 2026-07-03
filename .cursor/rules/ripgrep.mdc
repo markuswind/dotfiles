@@ -1,0 +1,11 @@
+---
+description: Prefer ripgrep over grep for searches
+alwaysApply: true
+---
+
+# Search with ripgrep
+
+Use `rg` (ripgrep) for text searches instead of `grep`. Fall back to `grep` only when `rg` is not installed.
+
+- Prefer: `rg pattern`, `rg -n 'foo' src/`
+- Check availability: `command -v rg >/dev/null 2>&1 && rg pattern || grep -rn pattern .`
