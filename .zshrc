@@ -5,6 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="wind" # Load custom zsh
 ENABLE_CORRECTION="true"
 
+alias python="python3"
+
 # Load oh-my-zsh if installed
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
@@ -53,21 +55,27 @@ bindkey '^F' history-incremental-search-backward
 export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="/opt/homebrew/opt/dotnet@8/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # ANDROID PATH configuration
 
 # export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
 # FLUTTER PATH configuration
 export PATH="/usr/local/opt/flutter/bin/cache/dart-sdk/bin:$HOME/.pub-cache/bin:$PATH"
-
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # MAN PATH Configuration
@@ -95,6 +103,9 @@ fi
 # SSH
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Source git-completion
 if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
   source $HOME/dotfiles/.bin/git-completion.bash
@@ -121,3 +132,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
