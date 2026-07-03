@@ -37,3 +37,6 @@ for skill_dir in ~/dotfiles/.agents/skills/*/; do
   skill_name=$(basename "$skill_dir")
   ln -sfn "$skill_dir" ~/.cursor/skills-cursor/"$skill_name"
 done
+
+echo "Creating symlink for cursor rules"
+ln -sf $dir/.cursor/rules ~/.cursor/rules
