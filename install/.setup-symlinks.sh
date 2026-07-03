@@ -30,3 +30,10 @@ if [ -f ~/dotfiles/.secret_bash_aliases ]; then
   echo "Creating symlink for secret bash aliases"
   ln -sf ~/dotfiles/.secret_bash_aliases ~/.secret_bash_aliases
 fi
+
+echo "Creating symlinks for cursor skills"
+mkdir -p ~/.cursor/skills-cursor
+for skill_dir in ~/dotfiles/.agents/skills/*/; do
+  skill_name=$(basename "$skill_dir")
+  ln -sfn "$skill_dir" ~/.cursor/skills-cursor/"$skill_name"
+done
