@@ -44,9 +44,6 @@ alias downloads="cd ~/Downloads/"
 alias projects="cd ~/Projects"
 alias react="cd ~/Projects/react"
 
-# git templates
-alias prtemplate="cat ~/Dotfiles/assets/pr_template.md | pbcopy"
-
 # list shortcuts
 alias ls="ls -G -CF"
 alias ll="ls -CFlhA"

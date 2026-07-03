@@ -107,8 +107,8 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 export GPG_TTY=$(tty)
 
 # Source git-completion
-if [ -f $HOME/dotfiles/.bin/git-completion.bash ]; then
-  source $HOME/dotfiles/.bin/git-completion.bash
+if [ -f $HOME/dotfiles/bin/git-completion.bash ]; then
+  source $HOME/dotfiles/bin/git-completion.bash
 fi
 
 # Source aliases

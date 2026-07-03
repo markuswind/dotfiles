@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # see: https://github.com/eclewlow/homebrew-formulas
 brew install eclewlow/formulas/flutter
 

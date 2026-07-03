@@ -24,7 +24,7 @@ mkdir -p "$cursor_skills_dir"
 for skill_spec in "${skills[@]}"; do
   repo=$(echo "$skill_spec" | awk '{print $1}')
 
-  if [ -d "$agents_skills_dir" ] && ls "$agents_skills_dir" | grep -q "^${repo##*/}"; then
+  if [ -d "$agents_skills_dir/${repo##*/}" ]; then
     echo "Updating skills from: $repo"
     npx skills update $skill_spec
   else
