@@ -27,6 +27,17 @@ ZSH_THEME_GIT_PROMPT_MODIFIED=""
 # VI mode
 VI_SYMBOL=""
 
+function git_branch_name() {
+  branch=$(git symbolic-ref --short -q HEAD 2> /dev/null)
+
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo $branch
+  fi
+}
+
 function zle-line-init zle-keymap-select {
   case ${KEYMAP} in
     (vicmd)      VI_SYMBOL="" ;;
@@ -88,7 +99,7 @@ prompt_newline() {
 
 # RPS1 functions
 rps1_git() {
- echo -n "$(git_prompt_info)${PR_RESET%}"
+  echo -n "$(git_branch_name)$PR_RESET%}"
 }
 
 rps1_git_status() {
