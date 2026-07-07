@@ -90,7 +90,7 @@ prompt_linebreak() {
 }
 
 prompt_vi_mode() {
-  echo -n "${VI_SYMBOL}➝ "
+  echo -n "${VI_SYMBOL} ➝ "
 }
 
 prompt_newline() {
