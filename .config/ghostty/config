@@ -1,6 +1,9 @@
 font-family = "SauceCodePro Nerd Font"
 font-size = 16
 
+cursor-style= "block"
+cursor-style-blink = false
+
 # Ayu Light — https://cmuxthemes.com/themes/ayu-light/
 foreground = #5c6166
 background = #f8f9fa
