@@ -39,4 +39,4 @@ for skill_dir in ~/dotfiles/.agents/skills/*/; do
 done
 
 echo "Creating symlink for cursor rules"
-ln -sf "$dir/.cursor/rules" ~/.cursor/rules
+ln -sfn "$dir/.cursor/rules" ~/.cursor/rules
