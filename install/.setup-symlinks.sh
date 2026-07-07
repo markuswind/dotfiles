@@ -20,6 +20,9 @@ ln -sf "$dir/.config/htop" ~/.config/htop
 echo "Creating symlink to .config/iterm2 folder"
 ln -sf "$dir/.config/iterm2" ~/.config/iterm2
 
+echo "Creating symlink to .config/ghostty folder"
+ln -sf "$dir/.config/ghostty" ~/.config/ghostty
+
 echo "Creating symlink for wind.zsh-theme"
 ln -sf ~/dotfiles/.oh-my-zsh/custom/themes/wind.zsh-theme ~/.oh-my-zsh/custom/themes/wind.zsh-theme
 
