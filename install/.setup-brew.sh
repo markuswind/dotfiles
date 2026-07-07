@@ -93,3 +93,4 @@ brew install --cask zulu@17
 # casks — fonts
 brew install --cask font-hack
 brew install --cask font-hack-nerd-font
+brew install --cask font-sauce-code-pro-nerd-font
