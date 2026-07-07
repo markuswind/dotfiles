@@ -65,14 +65,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
-# export ANDROID_HOME=$HOME/Library/Android/sdk
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$ANDROID_HOME/tools
-# export PATH=$PATH:$ANDROID_HOME/tools/bin
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # FLUTTER PATH configuration
 export PATH="/usr/local/opt/flutter/bin/cache/dart-sdk/bin:$HOME/.pub-cache/bin:$PATH"
