@@ -56,6 +56,7 @@ brew install --cask aseprite
 brew install --cask audacity
 brew install --cask blender
 brew install --cask brave-browser
+brew install --cask cmux
 brew install --cask cursor
 brew install --cask docker-desktop
 brew install --cask dropbox
