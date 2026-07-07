@@ -106,20 +106,8 @@ rps1_git_status() {
   echo -n "$(git_prompt_status)$PR_RESET%}"
 }
 
-rps1_exec_time() {
-  echo -n " $PR_BRIGHT_CYAN${ETIME}ms${PR_RESET}"
-}
-
-function preexec() {
-  typeset -gi CALCTIME=1
-  typeset -gi CMDSTARTTIME=SECONDS
-}
-
-function precmd() {
-  if (( CALCTIME )) ; then
-    typeset -gi ETIME=SECONDS-CMDSTARTTIME
-  fi
-  typeset -gi CALCTIME=0
+rps1_time() {
+  echo -n " $PR_BRIGHT_CYAN%*${PR_RESET}"
 }
 
 # MAIN functions
@@ -137,7 +125,7 @@ build_prompt() {
 build_rps1() {
   rps1_git
   rps1_git_status
-  rps1_exec_time
+  rps1_time
 }
 
 PROMPT='$(build_prompt)'
