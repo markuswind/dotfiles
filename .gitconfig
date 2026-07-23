@@ -9,6 +9,8 @@
   name = Markus Wind
   email = markuswind@gmail.com
   signingkey = 23C0F1364DFEC55F
+[init]
+  defaultBranch = main
 [push]
   default = simple
 [alias]
